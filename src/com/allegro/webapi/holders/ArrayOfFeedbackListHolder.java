@@ -1,0 +1,20 @@
+/**
+ * ArrayOfFeedbackListHolder.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package com.allegro.webapi.holders;
+
+public final class ArrayOfFeedbackListHolder implements javax.xml.rpc.holders.Holder {
+    public com.allegro.webapi.FeedbackList[] value;
+
+    public ArrayOfFeedbackListHolder() {
+    }
+
+    public ArrayOfFeedbackListHolder(com.allegro.webapi.FeedbackList[] value) {
+        this.value = value;
+    }
+
+}
