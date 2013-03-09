@@ -8,58 +8,82 @@
 package com.allegro.webapi;
 
 public class TransactionPayByLinkStruct  implements java.io.Serializable {
-    private java.lang.String postAction;
+    private java.lang.String actionHttpMethod;
 
-    private com.allegro.webapi.PostActionDataStruct[] postActionData;
+    private java.lang.String actionUrl;
+
+    private com.allegro.webapi.ActionDataStruct[] actionData;
 
     public TransactionPayByLinkStruct() {
     }
 
     public TransactionPayByLinkStruct(
-           java.lang.String postAction,
-           com.allegro.webapi.PostActionDataStruct[] postActionData) {
-           this.postAction = postAction;
-           this.postActionData = postActionData;
+           java.lang.String actionHttpMethod,
+           java.lang.String actionUrl,
+           com.allegro.webapi.ActionDataStruct[] actionData) {
+           this.actionHttpMethod = actionHttpMethod;
+           this.actionUrl = actionUrl;
+           this.actionData = actionData;
     }
 
 
     /**
-     * Gets the postAction value for this TransactionPayByLinkStruct.
+     * Gets the actionHttpMethod value for this TransactionPayByLinkStruct.
      * 
-     * @return postAction
+     * @return actionHttpMethod
      */
-    public java.lang.String getPostAction() {
-        return postAction;
+    public java.lang.String getActionHttpMethod() {
+        return actionHttpMethod;
     }
 
 
     /**
-     * Sets the postAction value for this TransactionPayByLinkStruct.
+     * Sets the actionHttpMethod value for this TransactionPayByLinkStruct.
      * 
-     * @param postAction
+     * @param actionHttpMethod
      */
-    public void setPostAction(java.lang.String postAction) {
-        this.postAction = postAction;
+    public void setActionHttpMethod(java.lang.String actionHttpMethod) {
+        this.actionHttpMethod = actionHttpMethod;
     }
 
 
     /**
-     * Gets the postActionData value for this TransactionPayByLinkStruct.
+     * Gets the actionUrl value for this TransactionPayByLinkStruct.
      * 
-     * @return postActionData
+     * @return actionUrl
      */
-    public com.allegro.webapi.PostActionDataStruct[] getPostActionData() {
-        return postActionData;
+    public java.lang.String getActionUrl() {
+        return actionUrl;
     }
 
 
     /**
-     * Sets the postActionData value for this TransactionPayByLinkStruct.
+     * Sets the actionUrl value for this TransactionPayByLinkStruct.
      * 
-     * @param postActionData
+     * @param actionUrl
      */
-    public void setPostActionData(com.allegro.webapi.PostActionDataStruct[] postActionData) {
-        this.postActionData = postActionData;
+    public void setActionUrl(java.lang.String actionUrl) {
+        this.actionUrl = actionUrl;
+    }
+
+
+    /**
+     * Gets the actionData value for this TransactionPayByLinkStruct.
+     * 
+     * @return actionData
+     */
+    public com.allegro.webapi.ActionDataStruct[] getActionData() {
+        return actionData;
+    }
+
+
+    /**
+     * Sets the actionData value for this TransactionPayByLinkStruct.
+     * 
+     * @param actionData
+     */
+    public void setActionData(com.allegro.webapi.ActionDataStruct[] actionData) {
+        this.actionData = actionData;
     }
 
     private java.lang.Object __equalsCalc = null;
@@ -74,12 +98,15 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.postAction==null && other.getPostAction()==null) || 
-             (this.postAction!=null &&
-              this.postAction.equals(other.getPostAction()))) &&
-            ((this.postActionData==null && other.getPostActionData()==null) || 
-             (this.postActionData!=null &&
-              java.util.Arrays.equals(this.postActionData, other.getPostActionData())));
+            ((this.actionHttpMethod==null && other.getActionHttpMethod()==null) || 
+             (this.actionHttpMethod!=null &&
+              this.actionHttpMethod.equals(other.getActionHttpMethod()))) &&
+            ((this.actionUrl==null && other.getActionUrl()==null) || 
+             (this.actionUrl!=null &&
+              this.actionUrl.equals(other.getActionUrl()))) &&
+            ((this.actionData==null && other.getActionData()==null) || 
+             (this.actionData!=null &&
+              java.util.Arrays.equals(this.actionData, other.getActionData())));
         __equalsCalc = null;
         return _equals;
     }
@@ -91,14 +118,17 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getPostAction() != null) {
-            _hashCode += getPostAction().hashCode();
+        if (getActionHttpMethod() != null) {
+            _hashCode += getActionHttpMethod().hashCode();
         }
-        if (getPostActionData() != null) {
+        if (getActionUrl() != null) {
+            _hashCode += getActionUrl().hashCode();
+        }
+        if (getActionData() != null) {
             for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPostActionData());
+                 i<java.lang.reflect.Array.getLength(getActionData());
                  i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPostActionData(), i);
+                java.lang.Object obj = java.lang.reflect.Array.get(getActionData(), i);
                 if (obj != null &&
                     !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
@@ -116,15 +146,21 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
     static {
         typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "TransactionPayByLinkStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postAction");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-action"));
+        elemField.setFieldName("actionHttpMethod");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "action-http-method"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postActionData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-action-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostActionDataStruct"));
+        elemField.setFieldName("actionUrl");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "action-url"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("actionData");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "action-data"));
+        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ActionDataStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

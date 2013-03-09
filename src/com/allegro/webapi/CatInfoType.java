@@ -16,6 +16,8 @@ public class CatInfoType  implements java.io.Serializable {
 
     private int catPosition;
 
+    private int catIsProductCatalogueEnabled;
+
     public CatInfoType() {
     }
 
@@ -23,11 +25,13 @@ public class CatInfoType  implements java.io.Serializable {
            int catId,
            java.lang.String catName,
            int catParent,
-           int catPosition) {
+           int catPosition,
+           int catIsProductCatalogueEnabled) {
            this.catId = catId;
            this.catName = catName;
            this.catParent = catParent;
            this.catPosition = catPosition;
+           this.catIsProductCatalogueEnabled = catIsProductCatalogueEnabled;
     }
 
 
@@ -110,6 +114,26 @@ public class CatInfoType  implements java.io.Serializable {
         this.catPosition = catPosition;
     }
 
+
+    /**
+     * Gets the catIsProductCatalogueEnabled value for this CatInfoType.
+     * 
+     * @return catIsProductCatalogueEnabled
+     */
+    public int getCatIsProductCatalogueEnabled() {
+        return catIsProductCatalogueEnabled;
+    }
+
+
+    /**
+     * Sets the catIsProductCatalogueEnabled value for this CatInfoType.
+     * 
+     * @param catIsProductCatalogueEnabled
+     */
+    public void setCatIsProductCatalogueEnabled(int catIsProductCatalogueEnabled) {
+        this.catIsProductCatalogueEnabled = catIsProductCatalogueEnabled;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof CatInfoType)) return false;
@@ -127,7 +151,8 @@ public class CatInfoType  implements java.io.Serializable {
              (this.catName!=null &&
               this.catName.equals(other.getCatName()))) &&
             this.catParent == other.getCatParent() &&
-            this.catPosition == other.getCatPosition();
+            this.catPosition == other.getCatPosition() &&
+            this.catIsProductCatalogueEnabled == other.getCatIsProductCatalogueEnabled();
         __equalsCalc = null;
         return _equals;
     }
@@ -145,6 +170,7 @@ public class CatInfoType  implements java.io.Serializable {
         }
         _hashCode += getCatParent();
         _hashCode += getCatPosition();
+        _hashCode += getCatIsProductCatalogueEnabled();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -176,6 +202,12 @@ public class CatInfoType  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("catPosition");
         elemField.setXmlName(new javax.xml.namespace.QName("", "cat-position"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("catIsProductCatalogueEnabled");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "cat-is-product-catalogue-enabled"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

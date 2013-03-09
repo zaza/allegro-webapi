@@ -24,6 +24,8 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
 
     private int dealBuyerId;
 
+    private int dealQuantity;
+
     public SiteJournalDealsStruct() {
     }
 
@@ -35,7 +37,8 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
            long dealTransactionId,
            int dealSellerId,
            long dealItemId,
-           int dealBuyerId) {
+           int dealBuyerId,
+           int dealQuantity) {
            this.dealEventId = dealEventId;
            this.dealEventType = dealEventType;
            this.dealEventTime = dealEventTime;
@@ -44,6 +47,7 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
            this.dealSellerId = dealSellerId;
            this.dealItemId = dealItemId;
            this.dealBuyerId = dealBuyerId;
+           this.dealQuantity = dealQuantity;
     }
 
 
@@ -206,6 +210,26 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
         this.dealBuyerId = dealBuyerId;
     }
 
+
+    /**
+     * Gets the dealQuantity value for this SiteJournalDealsStruct.
+     * 
+     * @return dealQuantity
+     */
+    public int getDealQuantity() {
+        return dealQuantity;
+    }
+
+
+    /**
+     * Sets the dealQuantity value for this SiteJournalDealsStruct.
+     * 
+     * @param dealQuantity
+     */
+    public void setDealQuantity(int dealQuantity) {
+        this.dealQuantity = dealQuantity;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof SiteJournalDealsStruct)) return false;
@@ -225,7 +249,8 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
             this.dealTransactionId == other.getDealTransactionId() &&
             this.dealSellerId == other.getDealSellerId() &&
             this.dealItemId == other.getDealItemId() &&
-            this.dealBuyerId == other.getDealBuyerId();
+            this.dealBuyerId == other.getDealBuyerId() &&
+            this.dealQuantity == other.getDealQuantity();
         __equalsCalc = null;
         return _equals;
     }
@@ -245,6 +270,7 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
         _hashCode += getDealSellerId();
         _hashCode += new Long(getDealItemId()).hashCode();
         _hashCode += getDealBuyerId();
+        _hashCode += getDealQuantity();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -300,6 +326,12 @@ public class SiteJournalDealsStruct  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("dealBuyerId");
         elemField.setXmlName(new javax.xml.namespace.QName("", "deal-buyer-id"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("dealQuantity");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "deal-quantity"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

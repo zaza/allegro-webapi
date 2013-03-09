@@ -1,5 +1,5 @@
 /**
- * ItemImageOptionsStruct.java
+ * ItemReminderStruct.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,65 +7,65 @@
 
 package com.allegro.webapi;
 
-public class ItemImageOptionsStruct  implements java.io.Serializable {
-    private int itemImageFieldId;
+public class ItemReminderStruct  implements java.io.Serializable {
+    private int reminderType;
 
-    private int itemImageActionType;
+    private int reminderTime;
 
-    public ItemImageOptionsStruct() {
+    public ItemReminderStruct() {
     }
 
-    public ItemImageOptionsStruct(
-           int itemImageFieldId,
-           int itemImageActionType) {
-           this.itemImageFieldId = itemImageFieldId;
-           this.itemImageActionType = itemImageActionType;
-    }
-
-
-    /**
-     * Gets the itemImageFieldId value for this ItemImageOptionsStruct.
-     * 
-     * @return itemImageFieldId
-     */
-    public int getItemImageFieldId() {
-        return itemImageFieldId;
+    public ItemReminderStruct(
+           int reminderType,
+           int reminderTime) {
+           this.reminderType = reminderType;
+           this.reminderTime = reminderTime;
     }
 
 
     /**
-     * Sets the itemImageFieldId value for this ItemImageOptionsStruct.
+     * Gets the reminderType value for this ItemReminderStruct.
      * 
-     * @param itemImageFieldId
+     * @return reminderType
      */
-    public void setItemImageFieldId(int itemImageFieldId) {
-        this.itemImageFieldId = itemImageFieldId;
+    public int getReminderType() {
+        return reminderType;
     }
 
 
     /**
-     * Gets the itemImageActionType value for this ItemImageOptionsStruct.
+     * Sets the reminderType value for this ItemReminderStruct.
      * 
-     * @return itemImageActionType
+     * @param reminderType
      */
-    public int getItemImageActionType() {
-        return itemImageActionType;
+    public void setReminderType(int reminderType) {
+        this.reminderType = reminderType;
     }
 
 
     /**
-     * Sets the itemImageActionType value for this ItemImageOptionsStruct.
+     * Gets the reminderTime value for this ItemReminderStruct.
      * 
-     * @param itemImageActionType
+     * @return reminderTime
      */
-    public void setItemImageActionType(int itemImageActionType) {
-        this.itemImageActionType = itemImageActionType;
+    public int getReminderTime() {
+        return reminderTime;
+    }
+
+
+    /**
+     * Sets the reminderTime value for this ItemReminderStruct.
+     * 
+     * @param reminderTime
+     */
+    public void setReminderTime(int reminderTime) {
+        this.reminderTime = reminderTime;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof ItemImageOptionsStruct)) return false;
-        ItemImageOptionsStruct other = (ItemImageOptionsStruct) obj;
+        if (!(obj instanceof ItemReminderStruct)) return false;
+        ItemReminderStruct other = (ItemReminderStruct) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -74,8 +74,8 @@ public class ItemImageOptionsStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.itemImageFieldId == other.getItemImageFieldId() &&
-            this.itemImageActionType == other.getItemImageActionType();
+            this.reminderType == other.getReminderType() &&
+            this.reminderTime == other.getReminderTime();
         __equalsCalc = null;
         return _equals;
     }
@@ -87,27 +87,27 @@ public class ItemImageOptionsStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += getItemImageFieldId();
-        _hashCode += getItemImageActionType();
+        _hashCode += getReminderType();
+        _hashCode += getReminderTime();
         __hashCodeCalc = false;
         return _hashCode;
     }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(ItemImageOptionsStruct.class, true);
+        new org.apache.axis.description.TypeDesc(ItemReminderStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemImageOptionsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemReminderStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("itemImageFieldId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-image-field-id"));
+        elemField.setFieldName("reminderType");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "reminder-type"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("itemImageActionType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-image-action-type"));
+        elemField.setFieldName("reminderTime");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "reminder-time"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

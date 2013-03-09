@@ -54,6 +54,8 @@ public class SearchResponseType  implements java.io.Serializable {
 
     private int sItHasFreeShipping;
 
+    private int sItInstallmentsAvailable;
+
     private int sItOrderFulfillmentTime;
 
     private com.allegro.webapi.AdvertInfoStruct sItAdvertInfo;
@@ -91,6 +93,7 @@ public class SearchResponseType  implements java.io.Serializable {
            int sItIsTablicaAdvert,
            int sItIsAllegroStandard,
            int sItHasFreeShipping,
+           int sItInstallmentsAvailable,
            int sItOrderFulfillmentTime,
            com.allegro.webapi.AdvertInfoStruct sItAdvertInfo,
            com.allegro.webapi.SellerInfoStruct sItSellerInfo,
@@ -119,6 +122,7 @@ public class SearchResponseType  implements java.io.Serializable {
            this.sItIsTablicaAdvert = sItIsTablicaAdvert;
            this.sItIsAllegroStandard = sItIsAllegroStandard;
            this.sItHasFreeShipping = sItHasFreeShipping;
+           this.sItInstallmentsAvailable = sItInstallmentsAvailable;
            this.sItOrderFulfillmentTime = sItOrderFulfillmentTime;
            this.sItAdvertInfo = sItAdvertInfo;
            this.sItSellerInfo = sItSellerInfo;
@@ -588,6 +592,26 @@ public class SearchResponseType  implements java.io.Serializable {
 
 
     /**
+     * Gets the sItInstallmentsAvailable value for this SearchResponseType.
+     * 
+     * @return sItInstallmentsAvailable
+     */
+    public int getSItInstallmentsAvailable() {
+        return sItInstallmentsAvailable;
+    }
+
+
+    /**
+     * Sets the sItInstallmentsAvailable value for this SearchResponseType.
+     * 
+     * @param sItInstallmentsAvailable
+     */
+    public void setSItInstallmentsAvailable(int sItInstallmentsAvailable) {
+        this.sItInstallmentsAvailable = sItInstallmentsAvailable;
+    }
+
+
+    /**
      * Gets the sItOrderFulfillmentTime value for this SearchResponseType.
      * 
      * @return sItOrderFulfillmentTime
@@ -727,6 +751,7 @@ public class SearchResponseType  implements java.io.Serializable {
             this.sItIsTablicaAdvert == other.getSItIsTablicaAdvert() &&
             this.sItIsAllegroStandard == other.getSItIsAllegroStandard() &&
             this.sItHasFreeShipping == other.getSItHasFreeShipping() &&
+            this.sItInstallmentsAvailable == other.getSItInstallmentsAvailable() &&
             this.sItOrderFulfillmentTime == other.getSItOrderFulfillmentTime() &&
             ((this.sItAdvertInfo==null && other.getSItAdvertInfo()==null) || 
              (this.sItAdvertInfo!=null &&
@@ -778,6 +803,7 @@ public class SearchResponseType  implements java.io.Serializable {
         _hashCode += getSItIsTablicaAdvert();
         _hashCode += getSItIsAllegroStandard();
         _hashCode += getSItHasFreeShipping();
+        _hashCode += getSItInstallmentsAvailable();
         _hashCode += getSItOrderFulfillmentTime();
         if (getSItAdvertInfo() != null) {
             _hashCode += getSItAdvertInfo().hashCode();
@@ -942,6 +968,12 @@ public class SearchResponseType  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("SItHasFreeShipping");
         elemField.setXmlName(new javax.xml.namespace.QName("", "s-it-has-free-shipping"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("SItInstallmentsAvailable");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "s-it-installments-available"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

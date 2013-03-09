@@ -84,6 +84,8 @@ public class ItemInfoExt  implements java.io.Serializable {
 
     private int itIsAllegroStandard;
 
+    private int itIsNewUsed;
+
     public ItemInfoExt() {
     }
 
@@ -125,7 +127,8 @@ public class ItemInfoExt  implements java.io.Serializable {
            int itHasProduct,
            int itOrderFulfillmentTime,
            int itEndingInfo,
-           int itIsAllegroStandard) {
+           int itIsAllegroStandard,
+           int itIsNewUsed) {
            this.itId = itId;
            this.itCountry = itCountry;
            this.itName = itName;
@@ -164,6 +167,7 @@ public class ItemInfoExt  implements java.io.Serializable {
            this.itOrderFulfillmentTime = itOrderFulfillmentTime;
            this.itEndingInfo = itEndingInfo;
            this.itIsAllegroStandard = itIsAllegroStandard;
+           this.itIsNewUsed = itIsNewUsed;
     }
 
 
@@ -926,6 +930,26 @@ public class ItemInfoExt  implements java.io.Serializable {
         this.itIsAllegroStandard = itIsAllegroStandard;
     }
 
+
+    /**
+     * Gets the itIsNewUsed value for this ItemInfoExt.
+     * 
+     * @return itIsNewUsed
+     */
+    public int getItIsNewUsed() {
+        return itIsNewUsed;
+    }
+
+
+    /**
+     * Sets the itIsNewUsed value for this ItemInfoExt.
+     * 
+     * @param itIsNewUsed
+     */
+    public void setItIsNewUsed(int itIsNewUsed) {
+        this.itIsNewUsed = itIsNewUsed;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ItemInfoExt)) return false;
@@ -993,7 +1017,8 @@ public class ItemInfoExt  implements java.io.Serializable {
             this.itHasProduct == other.getItHasProduct() &&
             this.itOrderFulfillmentTime == other.getItOrderFulfillmentTime() &&
             this.itEndingInfo == other.getItEndingInfo() &&
-            this.itIsAllegroStandard == other.getItIsAllegroStandard();
+            this.itIsAllegroStandard == other.getItIsAllegroStandard() &&
+            this.itIsNewUsed == other.getItIsNewUsed();
         __equalsCalc = null;
         return _equals;
     }
@@ -1061,6 +1086,7 @@ public class ItemInfoExt  implements java.io.Serializable {
         _hashCode += getItOrderFulfillmentTime();
         _hashCode += getItEndingInfo();
         _hashCode += getItIsAllegroStandard();
+        _hashCode += getItIsNewUsed();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -1296,6 +1322,12 @@ public class ItemInfoExt  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itIsAllegroStandard");
         elemField.setXmlName(new javax.xml.namespace.QName("", "it-is-allegro-standard"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itIsNewUsed");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "it-is-new-used"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

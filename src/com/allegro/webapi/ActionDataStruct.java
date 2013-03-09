@@ -1,5 +1,5 @@
 /**
- * PostActionDataStruct.java
+ * ActionDataStruct.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,65 +7,65 @@
 
 package com.allegro.webapi;
 
-public class PostActionDataStruct  implements java.io.Serializable {
-    private java.lang.String postActionKey;
+public class ActionDataStruct  implements java.io.Serializable {
+    private java.lang.String actionKey;
 
-    private java.lang.String postActionValue;
+    private java.lang.String actionValue;
 
-    public PostActionDataStruct() {
+    public ActionDataStruct() {
     }
 
-    public PostActionDataStruct(
-           java.lang.String postActionKey,
-           java.lang.String postActionValue) {
-           this.postActionKey = postActionKey;
-           this.postActionValue = postActionValue;
-    }
-
-
-    /**
-     * Gets the postActionKey value for this PostActionDataStruct.
-     * 
-     * @return postActionKey
-     */
-    public java.lang.String getPostActionKey() {
-        return postActionKey;
+    public ActionDataStruct(
+           java.lang.String actionKey,
+           java.lang.String actionValue) {
+           this.actionKey = actionKey;
+           this.actionValue = actionValue;
     }
 
 
     /**
-     * Sets the postActionKey value for this PostActionDataStruct.
+     * Gets the actionKey value for this ActionDataStruct.
      * 
-     * @param postActionKey
+     * @return actionKey
      */
-    public void setPostActionKey(java.lang.String postActionKey) {
-        this.postActionKey = postActionKey;
+    public java.lang.String getActionKey() {
+        return actionKey;
     }
 
 
     /**
-     * Gets the postActionValue value for this PostActionDataStruct.
+     * Sets the actionKey value for this ActionDataStruct.
      * 
-     * @return postActionValue
+     * @param actionKey
      */
-    public java.lang.String getPostActionValue() {
-        return postActionValue;
+    public void setActionKey(java.lang.String actionKey) {
+        this.actionKey = actionKey;
     }
 
 
     /**
-     * Sets the postActionValue value for this PostActionDataStruct.
+     * Gets the actionValue value for this ActionDataStruct.
      * 
-     * @param postActionValue
+     * @return actionValue
      */
-    public void setPostActionValue(java.lang.String postActionValue) {
-        this.postActionValue = postActionValue;
+    public java.lang.String getActionValue() {
+        return actionValue;
+    }
+
+
+    /**
+     * Sets the actionValue value for this ActionDataStruct.
+     * 
+     * @param actionValue
+     */
+    public void setActionValue(java.lang.String actionValue) {
+        this.actionValue = actionValue;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof PostActionDataStruct)) return false;
-        PostActionDataStruct other = (PostActionDataStruct) obj;
+        if (!(obj instanceof ActionDataStruct)) return false;
+        ActionDataStruct other = (ActionDataStruct) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -74,12 +74,12 @@ public class PostActionDataStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.postActionKey==null && other.getPostActionKey()==null) || 
-             (this.postActionKey!=null &&
-              this.postActionKey.equals(other.getPostActionKey()))) &&
-            ((this.postActionValue==null && other.getPostActionValue()==null) || 
-             (this.postActionValue!=null &&
-              this.postActionValue.equals(other.getPostActionValue())));
+            ((this.actionKey==null && other.getActionKey()==null) || 
+             (this.actionKey!=null &&
+              this.actionKey.equals(other.getActionKey()))) &&
+            ((this.actionValue==null && other.getActionValue()==null) || 
+             (this.actionValue!=null &&
+              this.actionValue.equals(other.getActionValue())));
         __equalsCalc = null;
         return _equals;
     }
@@ -91,11 +91,11 @@ public class PostActionDataStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getPostActionKey() != null) {
-            _hashCode += getPostActionKey().hashCode();
+        if (getActionKey() != null) {
+            _hashCode += getActionKey().hashCode();
         }
-        if (getPostActionValue() != null) {
-            _hashCode += getPostActionValue().hashCode();
+        if (getActionValue() != null) {
+            _hashCode += getActionValue().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -103,19 +103,19 @@ public class PostActionDataStruct  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(PostActionDataStruct.class, true);
+        new org.apache.axis.description.TypeDesc(ActionDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostActionDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ActionDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postActionKey");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-action-key"));
+        elemField.setFieldName("actionKey");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "action-key"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("postActionValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-action-value"));
+        elemField.setFieldName("actionValue");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "action-value"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -34,6 +34,8 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
 
     private int payTransIncomplete;
 
+    private long payTransMainId;
+
     public UserIncomingPaymentStruct() {
     }
 
@@ -50,7 +52,8 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
            int payTransCount,
            float payTransPostageAmount,
            com.allegro.webapi.PaymentDetailsStruct[] payTransDetails,
-           int payTransIncomplete) {
+           int payTransIncomplete,
+           long payTransMainId) {
            this.payTransId = payTransId;
            this.payTransItId = payTransItId;
            this.payTransBuyerId = payTransBuyerId;
@@ -64,6 +67,7 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
            this.payTransPostageAmount = payTransPostageAmount;
            this.payTransDetails = payTransDetails;
            this.payTransIncomplete = payTransIncomplete;
+           this.payTransMainId = payTransMainId;
     }
 
 
@@ -326,6 +330,26 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
         this.payTransIncomplete = payTransIncomplete;
     }
 
+
+    /**
+     * Gets the payTransMainId value for this UserIncomingPaymentStruct.
+     * 
+     * @return payTransMainId
+     */
+    public long getPayTransMainId() {
+        return payTransMainId;
+    }
+
+
+    /**
+     * Sets the payTransMainId value for this UserIncomingPaymentStruct.
+     * 
+     * @param payTransMainId
+     */
+    public void setPayTransMainId(long payTransMainId) {
+        this.payTransMainId = payTransMainId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof UserIncomingPaymentStruct)) return false;
@@ -356,7 +380,8 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
             ((this.payTransDetails==null && other.getPayTransDetails()==null) || 
              (this.payTransDetails!=null &&
               java.util.Arrays.equals(this.payTransDetails, other.getPayTransDetails()))) &&
-            this.payTransIncomplete == other.getPayTransIncomplete();
+            this.payTransIncomplete == other.getPayTransIncomplete() &&
+            this.payTransMainId == other.getPayTransMainId();
         __equalsCalc = null;
         return _equals;
     }
@@ -395,6 +420,7 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
             }
         }
         _hashCode += getPayTransIncomplete();
+        _hashCode += new Long(getPayTransMainId()).hashCode();
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -481,6 +507,12 @@ public class UserIncomingPaymentStruct  implements java.io.Serializable {
         elemField.setFieldName("payTransIncomplete");
         elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-incomplete"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("payTransMainId");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-main-id"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -1,5 +1,5 @@
 /**
- * TranslatedProductStruct.java
+ * FutureFilterOptionsStruct.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,41 +7,41 @@
 
 package com.allegro.webapi;
 
-public class TranslatedProductStruct  implements java.io.Serializable {
-    private long productId;
+public class FutureFilterOptionsStruct  implements java.io.Serializable {
+    private int filterFormat;
 
-    public TranslatedProductStruct() {
+    public FutureFilterOptionsStruct() {
     }
 
-    public TranslatedProductStruct(
-           long productId) {
-           this.productId = productId;
-    }
-
-
-    /**
-     * Gets the productId value for this TranslatedProductStruct.
-     * 
-     * @return productId
-     */
-    public long getProductId() {
-        return productId;
+    public FutureFilterOptionsStruct(
+           int filterFormat) {
+           this.filterFormat = filterFormat;
     }
 
 
     /**
-     * Sets the productId value for this TranslatedProductStruct.
+     * Gets the filterFormat value for this FutureFilterOptionsStruct.
      * 
-     * @param productId
+     * @return filterFormat
      */
-    public void setProductId(long productId) {
-        this.productId = productId;
+    public int getFilterFormat() {
+        return filterFormat;
+    }
+
+
+    /**
+     * Sets the filterFormat value for this FutureFilterOptionsStruct.
+     * 
+     * @param filterFormat
+     */
+    public void setFilterFormat(int filterFormat) {
+        this.filterFormat = filterFormat;
     }
 
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof TranslatedProductStruct)) return false;
-        TranslatedProductStruct other = (TranslatedProductStruct) obj;
+        if (!(obj instanceof FutureFilterOptionsStruct)) return false;
+        FutureFilterOptionsStruct other = (FutureFilterOptionsStruct) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -50,7 +50,7 @@ public class TranslatedProductStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.productId == other.getProductId();
+            this.filterFormat == other.getFilterFormat();
         __equalsCalc = null;
         return _equals;
     }
@@ -62,21 +62,21 @@ public class TranslatedProductStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += new Long(getProductId()).hashCode();
+        _hashCode += getFilterFormat();
         __hashCodeCalc = false;
         return _hashCode;
     }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(TranslatedProductStruct.class, true);
+        new org.apache.axis.description.TypeDesc(FutureFilterOptionsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "TranslatedProductStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FutureFilterOptionsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("productId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setFieldName("filterFormat");
+        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-format"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

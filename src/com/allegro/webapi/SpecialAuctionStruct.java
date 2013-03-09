@@ -14,8 +14,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
 
     private float itPrice;
 
-    private int itIsBuyNow;
-
     private float itBuyNowPrice;
 
     private int itBidCount;
@@ -53,7 +51,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
            long itId,
            java.lang.String itName,
            float itPrice,
-           int itIsBuyNow,
            float itBuyNowPrice,
            int itBidCount,
            int itFotoCount,
@@ -72,7 +69,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
            this.itId = itId;
            this.itName = itName;
            this.itPrice = itPrice;
-           this.itIsBuyNow = itIsBuyNow;
            this.itBuyNowPrice = itBuyNowPrice;
            this.itBidCount = itBidCount;
            this.itFotoCount = itFotoCount;
@@ -148,26 +144,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
      */
     public void setItPrice(float itPrice) {
         this.itPrice = itPrice;
-    }
-
-
-    /**
-     * Gets the itIsBuyNow value for this SpecialAuctionStruct.
-     * 
-     * @return itIsBuyNow
-     */
-    public int getItIsBuyNow() {
-        return itIsBuyNow;
-    }
-
-
-    /**
-     * Sets the itIsBuyNow value for this SpecialAuctionStruct.
-     * 
-     * @param itIsBuyNow
-     */
-    public void setItIsBuyNow(int itIsBuyNow) {
-        this.itIsBuyNow = itIsBuyNow;
     }
 
 
@@ -487,7 +463,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
              (this.itName!=null &&
               this.itName.equals(other.getItName()))) &&
             this.itPrice == other.getItPrice() &&
-            this.itIsBuyNow == other.getItIsBuyNow() &&
             this.itBuyNowPrice == other.getItBuyNowPrice() &&
             this.itBidCount == other.getItBidCount() &&
             this.itFotoCount == other.getItFotoCount() &&
@@ -521,7 +496,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
             _hashCode += getItName().hashCode();
         }
         _hashCode += new Float(getItPrice()).hashCode();
-        _hashCode += getItIsBuyNow();
         _hashCode += new Float(getItBuyNowPrice()).hashCode();
         _hashCode += getItBidCount();
         _hashCode += getItFotoCount();
@@ -573,12 +547,6 @@ public class SpecialAuctionStruct  implements java.io.Serializable {
         elemField.setFieldName("itPrice");
         elemField.setXmlName(new javax.xml.namespace.QName("", "it-price"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("itIsBuyNow");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "it-is-buy-now"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
