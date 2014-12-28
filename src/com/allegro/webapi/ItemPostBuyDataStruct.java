@@ -10,14 +10,14 @@ package com.allegro.webapi;
 public class ItemPostBuyDataStruct  implements java.io.Serializable {
     private long itemId;
 
-    private com.allegro.webapi.UserPostBuyDataStruct[] usersPostBuyData;
+    private com.allegro.webapi.ArrayOfUserpostbuydatastruct usersPostBuyData;
 
     public ItemPostBuyDataStruct() {
     }
 
     public ItemPostBuyDataStruct(
            long itemId,
-           com.allegro.webapi.UserPostBuyDataStruct[] usersPostBuyData) {
+           com.allegro.webapi.ArrayOfUserpostbuydatastruct usersPostBuyData) {
            this.itemId = itemId;
            this.usersPostBuyData = usersPostBuyData;
     }
@@ -48,7 +48,7 @@ public class ItemPostBuyDataStruct  implements java.io.Serializable {
      * 
      * @return usersPostBuyData
      */
-    public com.allegro.webapi.UserPostBuyDataStruct[] getUsersPostBuyData() {
+    public com.allegro.webapi.ArrayOfUserpostbuydatastruct getUsersPostBuyData() {
         return usersPostBuyData;
     }
 
@@ -58,7 +58,7 @@ public class ItemPostBuyDataStruct  implements java.io.Serializable {
      * 
      * @param usersPostBuyData
      */
-    public void setUsersPostBuyData(com.allegro.webapi.UserPostBuyDataStruct[] usersPostBuyData) {
+    public void setUsersPostBuyData(com.allegro.webapi.ArrayOfUserpostbuydatastruct usersPostBuyData) {
         this.usersPostBuyData = usersPostBuyData;
     }
 
@@ -77,7 +77,7 @@ public class ItemPostBuyDataStruct  implements java.io.Serializable {
             this.itemId == other.getItemId() &&
             ((this.usersPostBuyData==null && other.getUsersPostBuyData()==null) || 
              (this.usersPostBuyData!=null &&
-              java.util.Arrays.equals(this.usersPostBuyData, other.getUsersPostBuyData())));
+              this.usersPostBuyData.equals(other.getUsersPostBuyData())));
         __equalsCalc = null;
         return _equals;
     }
@@ -91,15 +91,7 @@ public class ItemPostBuyDataStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getItemId()).hashCode();
         if (getUsersPostBuyData() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUsersPostBuyData());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUsersPostBuyData(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getUsersPostBuyData().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -110,17 +102,18 @@ public class ItemPostBuyDataStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ItemPostBuyDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemPostBuyDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemPostBuyDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("usersPostBuyData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "users-post-buy-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "UserPostBuyDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "usersPostBuyData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfUserpostbuydatastruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -102,17 +102,17 @@ public class PayoutAutoSettingsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PayoutAutoSettingsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PayoutAutoSettingsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PayoutAutoSettingsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payoutAutoAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "payout-auto-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payoutAutoAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payoutAutoFrequency");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "payout-auto-frequency"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PayoutAutoFrequencyStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payoutAutoFrequency"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PayoutAutoFrequencyStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

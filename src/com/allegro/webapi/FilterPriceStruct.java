@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class FilterPriceStruct  implements java.io.Serializable {
-    private float filterPriceFrom;
+    private java.lang.Float filterPriceFrom;
 
-    private float filterPriceTo;
+    private java.lang.Float filterPriceTo;
 
     public FilterPriceStruct() {
     }
 
     public FilterPriceStruct(
-           float filterPriceFrom,
-           float filterPriceTo) {
+           java.lang.Float filterPriceFrom,
+           java.lang.Float filterPriceTo) {
            this.filterPriceFrom = filterPriceFrom;
            this.filterPriceTo = filterPriceTo;
     }
@@ -28,7 +28,7 @@ public class FilterPriceStruct  implements java.io.Serializable {
      * 
      * @return filterPriceFrom
      */
-    public float getFilterPriceFrom() {
+    public java.lang.Float getFilterPriceFrom() {
         return filterPriceFrom;
     }
 
@@ -38,7 +38,7 @@ public class FilterPriceStruct  implements java.io.Serializable {
      * 
      * @param filterPriceFrom
      */
-    public void setFilterPriceFrom(float filterPriceFrom) {
+    public void setFilterPriceFrom(java.lang.Float filterPriceFrom) {
         this.filterPriceFrom = filterPriceFrom;
     }
 
@@ -48,7 +48,7 @@ public class FilterPriceStruct  implements java.io.Serializable {
      * 
      * @return filterPriceTo
      */
-    public float getFilterPriceTo() {
+    public java.lang.Float getFilterPriceTo() {
         return filterPriceTo;
     }
 
@@ -58,7 +58,7 @@ public class FilterPriceStruct  implements java.io.Serializable {
      * 
      * @param filterPriceTo
      */
-    public void setFilterPriceTo(float filterPriceTo) {
+    public void setFilterPriceTo(java.lang.Float filterPriceTo) {
         this.filterPriceTo = filterPriceTo;
     }
 
@@ -74,8 +74,12 @@ public class FilterPriceStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.filterPriceFrom == other.getFilterPriceFrom() &&
-            this.filterPriceTo == other.getFilterPriceTo();
+            ((this.filterPriceFrom==null && other.getFilterPriceFrom()==null) || 
+             (this.filterPriceFrom!=null &&
+              this.filterPriceFrom.equals(other.getFilterPriceFrom()))) &&
+            ((this.filterPriceTo==null && other.getFilterPriceTo()==null) || 
+             (this.filterPriceTo!=null &&
+              this.filterPriceTo.equals(other.getFilterPriceTo())));
         __equalsCalc = null;
         return _equals;
     }
@@ -87,8 +91,12 @@ public class FilterPriceStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += new Float(getFilterPriceFrom()).hashCode();
-        _hashCode += new Float(getFilterPriceTo()).hashCode();
+        if (getFilterPriceFrom() != null) {
+            _hashCode += getFilterPriceFrom().hashCode();
+        }
+        if (getFilterPriceTo() != null) {
+            _hashCode += getFilterPriceTo().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -98,17 +106,19 @@ public class FilterPriceStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FilterPriceStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FilterPriceStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FilterPriceStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterPriceFrom");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-price-from"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterPriceFrom"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterPriceTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-price-to"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterPriceTo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

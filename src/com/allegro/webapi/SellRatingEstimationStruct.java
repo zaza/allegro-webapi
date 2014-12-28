@@ -12,7 +12,7 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
 
     private int sellRatingGroupEstimation;
 
-    private int sellRatingReasonId;
+    private java.lang.Integer sellRatingReasonId;
 
     public SellRatingEstimationStruct() {
     }
@@ -20,7 +20,7 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
     public SellRatingEstimationStruct(
            int sellRatingGroupId,
            int sellRatingGroupEstimation,
-           int sellRatingReasonId) {
+           java.lang.Integer sellRatingReasonId) {
            this.sellRatingGroupId = sellRatingGroupId;
            this.sellRatingGroupEstimation = sellRatingGroupEstimation;
            this.sellRatingReasonId = sellRatingReasonId;
@@ -72,7 +72,7 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
      * 
      * @return sellRatingReasonId
      */
-    public int getSellRatingReasonId() {
+    public java.lang.Integer getSellRatingReasonId() {
         return sellRatingReasonId;
     }
 
@@ -82,7 +82,7 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
      * 
      * @param sellRatingReasonId
      */
-    public void setSellRatingReasonId(int sellRatingReasonId) {
+    public void setSellRatingReasonId(java.lang.Integer sellRatingReasonId) {
         this.sellRatingReasonId = sellRatingReasonId;
     }
 
@@ -100,7 +100,9 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
         _equals = true && 
             this.sellRatingGroupId == other.getSellRatingGroupId() &&
             this.sellRatingGroupEstimation == other.getSellRatingGroupEstimation() &&
-            this.sellRatingReasonId == other.getSellRatingReasonId();
+            ((this.sellRatingReasonId==null && other.getSellRatingReasonId()==null) || 
+             (this.sellRatingReasonId!=null &&
+              this.sellRatingReasonId.equals(other.getSellRatingReasonId())));
         __equalsCalc = null;
         return _equals;
     }
@@ -114,7 +116,9 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += getSellRatingGroupId();
         _hashCode += getSellRatingGroupEstimation();
-        _hashCode += getSellRatingReasonId();
+        if (getSellRatingReasonId() != null) {
+            _hashCode += getSellRatingReasonId().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -124,23 +128,24 @@ public class SellRatingEstimationStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SellRatingEstimationStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingEstimationStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellRatingEstimationStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingGroupId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-group-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingGroupId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingGroupEstimation");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-group-estimation"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingGroupEstimation"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingReasonId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-reason-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingReasonId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

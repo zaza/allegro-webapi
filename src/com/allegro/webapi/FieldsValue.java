@@ -12,13 +12,13 @@ public class FieldsValue  implements java.io.Serializable {
 
     private java.lang.String fvalueString;
 
-    private int fvalueInt;
+    private java.lang.Integer fvalueInt;
 
-    private float fvalueFloat;
+    private java.lang.Float fvalueFloat;
 
     private byte[] fvalueImage;
 
-    private float fvalueDatetime;
+    private java.lang.Float fvalueDatetime;
 
     private java.lang.String fvalueDate;
 
@@ -34,10 +34,10 @@ public class FieldsValue  implements java.io.Serializable {
     public FieldsValue(
            int fid,
            java.lang.String fvalueString,
-           int fvalueInt,
-           float fvalueFloat,
+           java.lang.Integer fvalueInt,
+           java.lang.Float fvalueFloat,
            byte[] fvalueImage,
-           float fvalueDatetime,
+           java.lang.Float fvalueDatetime,
            java.lang.String fvalueDate,
            com.allegro.webapi.RangeIntValueStruct fvalueRangeInt,
            com.allegro.webapi.RangeFloatValueStruct fvalueRangeFloat,
@@ -100,7 +100,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @return fvalueInt
      */
-    public int getFvalueInt() {
+    public java.lang.Integer getFvalueInt() {
         return fvalueInt;
     }
 
@@ -110,7 +110,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @param fvalueInt
      */
-    public void setFvalueInt(int fvalueInt) {
+    public void setFvalueInt(java.lang.Integer fvalueInt) {
         this.fvalueInt = fvalueInt;
     }
 
@@ -120,7 +120,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @return fvalueFloat
      */
-    public float getFvalueFloat() {
+    public java.lang.Float getFvalueFloat() {
         return fvalueFloat;
     }
 
@@ -130,7 +130,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @param fvalueFloat
      */
-    public void setFvalueFloat(float fvalueFloat) {
+    public void setFvalueFloat(java.lang.Float fvalueFloat) {
         this.fvalueFloat = fvalueFloat;
     }
 
@@ -160,7 +160,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @return fvalueDatetime
      */
-    public float getFvalueDatetime() {
+    public java.lang.Float getFvalueDatetime() {
         return fvalueDatetime;
     }
 
@@ -170,7 +170,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @param fvalueDatetime
      */
-    public void setFvalueDatetime(float fvalueDatetime) {
+    public void setFvalueDatetime(java.lang.Float fvalueDatetime) {
         this.fvalueDatetime = fvalueDatetime;
     }
 
@@ -270,12 +270,18 @@ public class FieldsValue  implements java.io.Serializable {
             ((this.fvalueString==null && other.getFvalueString()==null) || 
              (this.fvalueString!=null &&
               this.fvalueString.equals(other.getFvalueString()))) &&
-            this.fvalueInt == other.getFvalueInt() &&
-            this.fvalueFloat == other.getFvalueFloat() &&
+            ((this.fvalueInt==null && other.getFvalueInt()==null) || 
+             (this.fvalueInt!=null &&
+              this.fvalueInt.equals(other.getFvalueInt()))) &&
+            ((this.fvalueFloat==null && other.getFvalueFloat()==null) || 
+             (this.fvalueFloat!=null &&
+              this.fvalueFloat.equals(other.getFvalueFloat()))) &&
             ((this.fvalueImage==null && other.getFvalueImage()==null) || 
              (this.fvalueImage!=null &&
               java.util.Arrays.equals(this.fvalueImage, other.getFvalueImage()))) &&
-            this.fvalueDatetime == other.getFvalueDatetime() &&
+            ((this.fvalueDatetime==null && other.getFvalueDatetime()==null) || 
+             (this.fvalueDatetime!=null &&
+              this.fvalueDatetime.equals(other.getFvalueDatetime()))) &&
             ((this.fvalueDate==null && other.getFvalueDate()==null) || 
              (this.fvalueDate!=null &&
               this.fvalueDate.equals(other.getFvalueDate()))) &&
@@ -303,8 +309,12 @@ public class FieldsValue  implements java.io.Serializable {
         if (getFvalueString() != null) {
             _hashCode += getFvalueString().hashCode();
         }
-        _hashCode += getFvalueInt();
-        _hashCode += new Float(getFvalueFloat()).hashCode();
+        if (getFvalueInt() != null) {
+            _hashCode += getFvalueInt().hashCode();
+        }
+        if (getFvalueFloat() != null) {
+            _hashCode += getFvalueFloat().hashCode();
+        }
         if (getFvalueImage() != null) {
             for (int i=0;
                  i<java.lang.reflect.Array.getLength(getFvalueImage());
@@ -316,7 +326,9 @@ public class FieldsValue  implements java.io.Serializable {
                 }
             }
         }
-        _hashCode += new Float(getFvalueDatetime()).hashCode();
+        if (getFvalueDatetime() != null) {
+            _hashCode += getFvalueDatetime().hashCode();
+        }
         if (getFvalueDate() != null) {
             _hashCode += getFvalueDate().hashCode();
         }
@@ -338,65 +350,74 @@ public class FieldsValue  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FieldsValue.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FieldsValue"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FieldsValue"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fid");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fid"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fid"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueString");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueString"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueInt");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-int"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueInt"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueFloat");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-float"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueFloat"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueImage");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-image"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueImage"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "base64Binary"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueDatetime");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-datetime"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueDatetime"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-date"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueRangeInt");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-range-int"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RangeIntValueStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueRangeInt"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RangeIntValueStruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueRangeFloat");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-range-float"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RangeFloatValueStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueRangeFloat"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RangeFloatValueStruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueRangeDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-range-date"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RangeDateValueStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueRangeDate"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RangeDateValueStruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

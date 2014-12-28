@@ -12,7 +12,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
 
     private java.lang.String actionUrl;
 
-    private com.allegro.webapi.ActionDataStruct[] actionData;
+    private com.allegro.webapi.ArrayOfActiondatastruct actionData;
 
     public TransactionPayByLinkStruct() {
     }
@@ -20,7 +20,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
     public TransactionPayByLinkStruct(
            java.lang.String actionHttpMethod,
            java.lang.String actionUrl,
-           com.allegro.webapi.ActionDataStruct[] actionData) {
+           com.allegro.webapi.ArrayOfActiondatastruct actionData) {
            this.actionHttpMethod = actionHttpMethod;
            this.actionUrl = actionUrl;
            this.actionData = actionData;
@@ -72,7 +72,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
      * 
      * @return actionData
      */
-    public com.allegro.webapi.ActionDataStruct[] getActionData() {
+    public com.allegro.webapi.ArrayOfActiondatastruct getActionData() {
         return actionData;
     }
 
@@ -82,7 +82,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
      * 
      * @param actionData
      */
-    public void setActionData(com.allegro.webapi.ActionDataStruct[] actionData) {
+    public void setActionData(com.allegro.webapi.ArrayOfActiondatastruct actionData) {
         this.actionData = actionData;
     }
 
@@ -106,7 +106,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
               this.actionUrl.equals(other.getActionUrl()))) &&
             ((this.actionData==null && other.getActionData()==null) || 
              (this.actionData!=null &&
-              java.util.Arrays.equals(this.actionData, other.getActionData())));
+              this.actionData.equals(other.getActionData())));
         __equalsCalc = null;
         return _equals;
     }
@@ -125,15 +125,7 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
             _hashCode += getActionUrl().hashCode();
         }
         if (getActionData() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getActionData());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getActionData(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getActionData().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -144,23 +136,24 @@ public class TransactionPayByLinkStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(TransactionPayByLinkStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "TransactionPayByLinkStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "TransactionPayByLinkStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("actionHttpMethod");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "action-http-method"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "actionHttpMethod"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("actionUrl");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "action-url"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "actionUrl"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("actionData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "action-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ActionDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "actionData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfActiondatastruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

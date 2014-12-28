@@ -10,14 +10,14 @@ package com.allegro.webapi;
 public class ItemImagesStruct  implements java.io.Serializable {
     private long itemId;
 
-    private com.allegro.webapi.ItemImageList[] itemImages;
+    private com.allegro.webapi.ArrayOfItemimagelist itemImages;
 
     public ItemImagesStruct() {
     }
 
     public ItemImagesStruct(
            long itemId,
-           com.allegro.webapi.ItemImageList[] itemImages) {
+           com.allegro.webapi.ArrayOfItemimagelist itemImages) {
            this.itemId = itemId;
            this.itemImages = itemImages;
     }
@@ -48,7 +48,7 @@ public class ItemImagesStruct  implements java.io.Serializable {
      * 
      * @return itemImages
      */
-    public com.allegro.webapi.ItemImageList[] getItemImages() {
+    public com.allegro.webapi.ArrayOfItemimagelist getItemImages() {
         return itemImages;
     }
 
@@ -58,7 +58,7 @@ public class ItemImagesStruct  implements java.io.Serializable {
      * 
      * @param itemImages
      */
-    public void setItemImages(com.allegro.webapi.ItemImageList[] itemImages) {
+    public void setItemImages(com.allegro.webapi.ArrayOfItemimagelist itemImages) {
         this.itemImages = itemImages;
     }
 
@@ -77,7 +77,7 @@ public class ItemImagesStruct  implements java.io.Serializable {
             this.itemId == other.getItemId() &&
             ((this.itemImages==null && other.getItemImages()==null) || 
              (this.itemImages!=null &&
-              java.util.Arrays.equals(this.itemImages, other.getItemImages())));
+              this.itemImages.equals(other.getItemImages())));
         __equalsCalc = null;
         return _equals;
     }
@@ -91,15 +91,7 @@ public class ItemImagesStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getItemId()).hashCode();
         if (getItemImages() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemImages());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemImages(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemImages().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -110,17 +102,18 @@ public class ItemImagesStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ItemImagesStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemImagesStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemImagesStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemImages");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-images"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemImageList"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemImages"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemimagelist"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -10,14 +10,14 @@ package com.allegro.webapi;
 public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
     private java.lang.String sellRatingMonth;
 
-    private com.allegro.webapi.SellRatingStatsStruct[] sellRatingAverageValues;
+    private com.allegro.webapi.ArrayOfSellratingstatsstruct sellRatingAverageValues;
 
     public SellRatingAveragePerMonthStruct() {
     }
 
     public SellRatingAveragePerMonthStruct(
            java.lang.String sellRatingMonth,
-           com.allegro.webapi.SellRatingStatsStruct[] sellRatingAverageValues) {
+           com.allegro.webapi.ArrayOfSellratingstatsstruct sellRatingAverageValues) {
            this.sellRatingMonth = sellRatingMonth;
            this.sellRatingAverageValues = sellRatingAverageValues;
     }
@@ -48,7 +48,7 @@ public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
      * 
      * @return sellRatingAverageValues
      */
-    public com.allegro.webapi.SellRatingStatsStruct[] getSellRatingAverageValues() {
+    public com.allegro.webapi.ArrayOfSellratingstatsstruct getSellRatingAverageValues() {
         return sellRatingAverageValues;
     }
 
@@ -58,7 +58,7 @@ public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
      * 
      * @param sellRatingAverageValues
      */
-    public void setSellRatingAverageValues(com.allegro.webapi.SellRatingStatsStruct[] sellRatingAverageValues) {
+    public void setSellRatingAverageValues(com.allegro.webapi.ArrayOfSellratingstatsstruct sellRatingAverageValues) {
         this.sellRatingAverageValues = sellRatingAverageValues;
     }
 
@@ -79,7 +79,7 @@ public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
               this.sellRatingMonth.equals(other.getSellRatingMonth()))) &&
             ((this.sellRatingAverageValues==null && other.getSellRatingAverageValues()==null) || 
              (this.sellRatingAverageValues!=null &&
-              java.util.Arrays.equals(this.sellRatingAverageValues, other.getSellRatingAverageValues())));
+              this.sellRatingAverageValues.equals(other.getSellRatingAverageValues())));
         __equalsCalc = null;
         return _equals;
     }
@@ -95,15 +95,7 @@ public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
             _hashCode += getSellRatingMonth().hashCode();
         }
         if (getSellRatingAverageValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSellRatingAverageValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSellRatingAverageValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getSellRatingAverageValues().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -114,17 +106,18 @@ public class SellRatingAveragePerMonthStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SellRatingAveragePerMonthStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingAveragePerMonthStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellRatingAveragePerMonthStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingMonth");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-month"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingMonth"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingAverageValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-average-values"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingStatsStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingAverageValues"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfSellratingstatsstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

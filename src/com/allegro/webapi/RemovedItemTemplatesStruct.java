@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class RemovedItemTemplatesStruct  implements java.io.Serializable {
-    private int[] itemTemplateIds;
+    private com.allegro.webapi.ArrayOfInt itemTemplateIds;
 
-    private int[] itemTemplateIncorrectIds;
+    private com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds;
 
     public RemovedItemTemplatesStruct() {
     }
 
     public RemovedItemTemplatesStruct(
-           int[] itemTemplateIds,
-           int[] itemTemplateIncorrectIds) {
+           com.allegro.webapi.ArrayOfInt itemTemplateIds,
+           com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds) {
            this.itemTemplateIds = itemTemplateIds;
            this.itemTemplateIncorrectIds = itemTemplateIncorrectIds;
     }
@@ -28,7 +28,7 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @return itemTemplateIds
      */
-    public int[] getItemTemplateIds() {
+    public com.allegro.webapi.ArrayOfInt getItemTemplateIds() {
         return itemTemplateIds;
     }
 
@@ -38,7 +38,7 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @param itemTemplateIds
      */
-    public void setItemTemplateIds(int[] itemTemplateIds) {
+    public void setItemTemplateIds(com.allegro.webapi.ArrayOfInt itemTemplateIds) {
         this.itemTemplateIds = itemTemplateIds;
     }
 
@@ -48,7 +48,7 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @return itemTemplateIncorrectIds
      */
-    public int[] getItemTemplateIncorrectIds() {
+    public com.allegro.webapi.ArrayOfInt getItemTemplateIncorrectIds() {
         return itemTemplateIncorrectIds;
     }
 
@@ -58,7 +58,7 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @param itemTemplateIncorrectIds
      */
-    public void setItemTemplateIncorrectIds(int[] itemTemplateIncorrectIds) {
+    public void setItemTemplateIncorrectIds(com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds) {
         this.itemTemplateIncorrectIds = itemTemplateIncorrectIds;
     }
 
@@ -76,10 +76,10 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.itemTemplateIds==null && other.getItemTemplateIds()==null) || 
              (this.itemTemplateIds!=null &&
-              java.util.Arrays.equals(this.itemTemplateIds, other.getItemTemplateIds()))) &&
+              this.itemTemplateIds.equals(other.getItemTemplateIds()))) &&
             ((this.itemTemplateIncorrectIds==null && other.getItemTemplateIncorrectIds()==null) || 
              (this.itemTemplateIncorrectIds!=null &&
-              java.util.Arrays.equals(this.itemTemplateIncorrectIds, other.getItemTemplateIncorrectIds())));
+              this.itemTemplateIncorrectIds.equals(other.getItemTemplateIncorrectIds())));
         __equalsCalc = null;
         return _equals;
     }
@@ -92,26 +92,10 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getItemTemplateIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemTemplateIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemTemplateIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemTemplateIds().hashCode();
         }
         if (getItemTemplateIncorrectIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemTemplateIncorrectIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemTemplateIncorrectIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemTemplateIncorrectIds().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -122,17 +106,19 @@ public class RemovedItemTemplatesStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RemovedItemTemplatesStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RemovedItemTemplatesStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RemovedItemTemplatesStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemTemplateIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-template-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemTemplateIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfInt"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemTemplateIncorrectIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-template-incorrect-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemTemplateIncorrectIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfInt"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
-    private com.allegro.webapi.SellerShipmentDataStruct[] sellerShipmentData;
+    private com.allegro.webapi.ArrayOfSellershipmentdatastruct sellerShipmentData;
 
     public RelatedItemsShipmentDataStruct() {
     }
 
     public RelatedItemsShipmentDataStruct(
-           com.allegro.webapi.SellerShipmentDataStruct[] sellerShipmentData) {
+           com.allegro.webapi.ArrayOfSellershipmentdatastruct sellerShipmentData) {
            this.sellerShipmentData = sellerShipmentData;
     }
 
@@ -24,7 +24,7 @@ public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
      * 
      * @return sellerShipmentData
      */
-    public com.allegro.webapi.SellerShipmentDataStruct[] getSellerShipmentData() {
+    public com.allegro.webapi.ArrayOfSellershipmentdatastruct getSellerShipmentData() {
         return sellerShipmentData;
     }
 
@@ -34,7 +34,7 @@ public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
      * 
      * @param sellerShipmentData
      */
-    public void setSellerShipmentData(com.allegro.webapi.SellerShipmentDataStruct[] sellerShipmentData) {
+    public void setSellerShipmentData(com.allegro.webapi.ArrayOfSellershipmentdatastruct sellerShipmentData) {
         this.sellerShipmentData = sellerShipmentData;
     }
 
@@ -52,7 +52,7 @@ public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.sellerShipmentData==null && other.getSellerShipmentData()==null) || 
              (this.sellerShipmentData!=null &&
-              java.util.Arrays.equals(this.sellerShipmentData, other.getSellerShipmentData())));
+              this.sellerShipmentData.equals(other.getSellerShipmentData())));
         __equalsCalc = null;
         return _equals;
     }
@@ -65,15 +65,7 @@ public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getSellerShipmentData() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSellerShipmentData());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSellerShipmentData(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getSellerShipmentData().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -84,11 +76,12 @@ public class RelatedItemsShipmentDataStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RelatedItemsShipmentDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RelatedItemsShipmentDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RelatedItemsShipmentDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerShipmentData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-shipment-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellerShipmentDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerShipmentData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfSellershipmentdatastruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -10,7 +10,7 @@ package com.allegro.webapi;
 public class FeedbackManyStruct  implements java.io.Serializable {
     private long feItemId;
 
-    private int feUseCommentTemplate;
+    private java.lang.Integer feUseCommentTemplate;
 
     private int feToUserId;
 
@@ -20,19 +20,19 @@ public class FeedbackManyStruct  implements java.io.Serializable {
 
     private int feOp;
 
-    private com.allegro.webapi.SellRatingEstimationStruct[] feRating;
+    private com.allegro.webapi.ArrayOfSellratingestimationstruct feRating;
 
     public FeedbackManyStruct() {
     }
 
     public FeedbackManyStruct(
            long feItemId,
-           int feUseCommentTemplate,
+           java.lang.Integer feUseCommentTemplate,
            int feToUserId,
            java.lang.String feComment,
            java.lang.String feCommentType,
            int feOp,
-           com.allegro.webapi.SellRatingEstimationStruct[] feRating) {
+           com.allegro.webapi.ArrayOfSellratingestimationstruct feRating) {
            this.feItemId = feItemId;
            this.feUseCommentTemplate = feUseCommentTemplate;
            this.feToUserId = feToUserId;
@@ -68,7 +68,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
      * 
      * @return feUseCommentTemplate
      */
-    public int getFeUseCommentTemplate() {
+    public java.lang.Integer getFeUseCommentTemplate() {
         return feUseCommentTemplate;
     }
 
@@ -78,7 +78,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
      * 
      * @param feUseCommentTemplate
      */
-    public void setFeUseCommentTemplate(int feUseCommentTemplate) {
+    public void setFeUseCommentTemplate(java.lang.Integer feUseCommentTemplate) {
         this.feUseCommentTemplate = feUseCommentTemplate;
     }
 
@@ -168,7 +168,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
      * 
      * @return feRating
      */
-    public com.allegro.webapi.SellRatingEstimationStruct[] getFeRating() {
+    public com.allegro.webapi.ArrayOfSellratingestimationstruct getFeRating() {
         return feRating;
     }
 
@@ -178,7 +178,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
      * 
      * @param feRating
      */
-    public void setFeRating(com.allegro.webapi.SellRatingEstimationStruct[] feRating) {
+    public void setFeRating(com.allegro.webapi.ArrayOfSellratingestimationstruct feRating) {
         this.feRating = feRating;
     }
 
@@ -195,7 +195,9 @@ public class FeedbackManyStruct  implements java.io.Serializable {
         boolean _equals;
         _equals = true && 
             this.feItemId == other.getFeItemId() &&
-            this.feUseCommentTemplate == other.getFeUseCommentTemplate() &&
+            ((this.feUseCommentTemplate==null && other.getFeUseCommentTemplate()==null) || 
+             (this.feUseCommentTemplate!=null &&
+              this.feUseCommentTemplate.equals(other.getFeUseCommentTemplate()))) &&
             this.feToUserId == other.getFeToUserId() &&
             ((this.feComment==null && other.getFeComment()==null) || 
              (this.feComment!=null &&
@@ -206,7 +208,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
             this.feOp == other.getFeOp() &&
             ((this.feRating==null && other.getFeRating()==null) || 
              (this.feRating!=null &&
-              java.util.Arrays.equals(this.feRating, other.getFeRating())));
+              this.feRating.equals(other.getFeRating())));
         __equalsCalc = null;
         return _equals;
     }
@@ -219,7 +221,9 @@ public class FeedbackManyStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         _hashCode += new Long(getFeItemId()).hashCode();
-        _hashCode += getFeUseCommentTemplate();
+        if (getFeUseCommentTemplate() != null) {
+            _hashCode += getFeUseCommentTemplate().hashCode();
+        }
         _hashCode += getFeToUserId();
         if (getFeComment() != null) {
             _hashCode += getFeComment().hashCode();
@@ -229,15 +233,7 @@ public class FeedbackManyStruct  implements java.io.Serializable {
         }
         _hashCode += getFeOp();
         if (getFeRating() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFeRating());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFeRating(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getFeRating().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -248,47 +244,50 @@ public class FeedbackManyStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FeedbackManyStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FeedbackManyStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FeedbackManyStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feItemId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-item-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feItemId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feUseCommentTemplate");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-use-comment-template"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feUseCommentTemplate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feToUserId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-to-user-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feToUserId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feComment");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-comment"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feComment"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feCommentType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-comment-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feCommentType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feOp");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-op"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feOp"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feRating");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fe-rating"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingEstimationStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feRating"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfSellratingestimationstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class FutureFilterOptionsStruct  implements java.io.Serializable {
-    private int filterFormat;
+    private java.lang.Integer filterFormat;
 
     public FutureFilterOptionsStruct() {
     }
 
     public FutureFilterOptionsStruct(
-           int filterFormat) {
+           java.lang.Integer filterFormat) {
            this.filterFormat = filterFormat;
     }
 
@@ -24,7 +24,7 @@ public class FutureFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @return filterFormat
      */
-    public int getFilterFormat() {
+    public java.lang.Integer getFilterFormat() {
         return filterFormat;
     }
 
@@ -34,7 +34,7 @@ public class FutureFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @param filterFormat
      */
-    public void setFilterFormat(int filterFormat) {
+    public void setFilterFormat(java.lang.Integer filterFormat) {
         this.filterFormat = filterFormat;
     }
 
@@ -50,7 +50,9 @@ public class FutureFilterOptionsStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.filterFormat == other.getFilterFormat();
+            ((this.filterFormat==null && other.getFilterFormat()==null) || 
+             (this.filterFormat!=null &&
+              this.filterFormat.equals(other.getFilterFormat())));
         __equalsCalc = null;
         return _equals;
     }
@@ -62,7 +64,9 @@ public class FutureFilterOptionsStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += getFilterFormat();
+        if (getFilterFormat() != null) {
+            _hashCode += getFilterFormat().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -72,11 +76,12 @@ public class FutureFilterOptionsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FutureFilterOptionsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FutureFilterOptionsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FutureFilterOptionsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-format"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterFormat"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

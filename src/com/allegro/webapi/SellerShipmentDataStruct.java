@@ -12,14 +12,22 @@ public class SellerShipmentDataStruct  implements java.io.Serializable {
 
     private com.allegro.webapi.SellerPaymentInfoStruct sellerPaymentInfo;
 
+    private int sellerOtherShipmentIsActive;
+
+    private com.allegro.webapi.ArrayOfShipmentpaymentinfostruct generalDeliveryPaymentInfo;
+
     public SellerShipmentDataStruct() {
     }
 
     public SellerShipmentDataStruct(
            int sellerId,
-           com.allegro.webapi.SellerPaymentInfoStruct sellerPaymentInfo) {
+           com.allegro.webapi.SellerPaymentInfoStruct sellerPaymentInfo,
+           int sellerOtherShipmentIsActive,
+           com.allegro.webapi.ArrayOfShipmentpaymentinfostruct generalDeliveryPaymentInfo) {
            this.sellerId = sellerId;
            this.sellerPaymentInfo = sellerPaymentInfo;
+           this.sellerOtherShipmentIsActive = sellerOtherShipmentIsActive;
+           this.generalDeliveryPaymentInfo = generalDeliveryPaymentInfo;
     }
 
 
@@ -62,6 +70,46 @@ public class SellerShipmentDataStruct  implements java.io.Serializable {
         this.sellerPaymentInfo = sellerPaymentInfo;
     }
 
+
+    /**
+     * Gets the sellerOtherShipmentIsActive value for this SellerShipmentDataStruct.
+     * 
+     * @return sellerOtherShipmentIsActive
+     */
+    public int getSellerOtherShipmentIsActive() {
+        return sellerOtherShipmentIsActive;
+    }
+
+
+    /**
+     * Sets the sellerOtherShipmentIsActive value for this SellerShipmentDataStruct.
+     * 
+     * @param sellerOtherShipmentIsActive
+     */
+    public void setSellerOtherShipmentIsActive(int sellerOtherShipmentIsActive) {
+        this.sellerOtherShipmentIsActive = sellerOtherShipmentIsActive;
+    }
+
+
+    /**
+     * Gets the generalDeliveryPaymentInfo value for this SellerShipmentDataStruct.
+     * 
+     * @return generalDeliveryPaymentInfo
+     */
+    public com.allegro.webapi.ArrayOfShipmentpaymentinfostruct getGeneralDeliveryPaymentInfo() {
+        return generalDeliveryPaymentInfo;
+    }
+
+
+    /**
+     * Sets the generalDeliveryPaymentInfo value for this SellerShipmentDataStruct.
+     * 
+     * @param generalDeliveryPaymentInfo
+     */
+    public void setGeneralDeliveryPaymentInfo(com.allegro.webapi.ArrayOfShipmentpaymentinfostruct generalDeliveryPaymentInfo) {
+        this.generalDeliveryPaymentInfo = generalDeliveryPaymentInfo;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof SellerShipmentDataStruct)) return false;
@@ -77,7 +125,11 @@ public class SellerShipmentDataStruct  implements java.io.Serializable {
             this.sellerId == other.getSellerId() &&
             ((this.sellerPaymentInfo==null && other.getSellerPaymentInfo()==null) || 
              (this.sellerPaymentInfo!=null &&
-              this.sellerPaymentInfo.equals(other.getSellerPaymentInfo())));
+              this.sellerPaymentInfo.equals(other.getSellerPaymentInfo()))) &&
+            this.sellerOtherShipmentIsActive == other.getSellerOtherShipmentIsActive() &&
+            ((this.generalDeliveryPaymentInfo==null && other.getGeneralDeliveryPaymentInfo()==null) || 
+             (this.generalDeliveryPaymentInfo!=null &&
+              this.generalDeliveryPaymentInfo.equals(other.getGeneralDeliveryPaymentInfo())));
         __equalsCalc = null;
         return _equals;
     }
@@ -93,6 +145,10 @@ public class SellerShipmentDataStruct  implements java.io.Serializable {
         if (getSellerPaymentInfo() != null) {
             _hashCode += getSellerPaymentInfo().hashCode();
         }
+        _hashCode += getSellerOtherShipmentIsActive();
+        if (getGeneralDeliveryPaymentInfo() != null) {
+            _hashCode += getGeneralDeliveryPaymentInfo().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -102,17 +158,30 @@ public class SellerShipmentDataStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SellerShipmentDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellerShipmentDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellerShipmentDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerPaymentInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-payment-info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellerPaymentInfoStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerPaymentInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellerPaymentInfoStruct"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("sellerOtherShipmentIsActive");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerOtherShipmentIsActive"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("generalDeliveryPaymentInfo");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "generalDeliveryPaymentInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfShipmentpaymentinfostruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

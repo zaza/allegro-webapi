@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class BidListStruct2  implements java.io.Serializable {
-    private java.lang.String[] bidsArray;
+    private com.allegro.webapi.ArrayOfString bidsArray;
 
     public BidListStruct2() {
     }
 
     public BidListStruct2(
-           java.lang.String[] bidsArray) {
+           com.allegro.webapi.ArrayOfString bidsArray) {
            this.bidsArray = bidsArray;
     }
 
@@ -24,7 +24,7 @@ public class BidListStruct2  implements java.io.Serializable {
      * 
      * @return bidsArray
      */
-    public java.lang.String[] getBidsArray() {
+    public com.allegro.webapi.ArrayOfString getBidsArray() {
         return bidsArray;
     }
 
@@ -34,7 +34,7 @@ public class BidListStruct2  implements java.io.Serializable {
      * 
      * @param bidsArray
      */
-    public void setBidsArray(java.lang.String[] bidsArray) {
+    public void setBidsArray(com.allegro.webapi.ArrayOfString bidsArray) {
         this.bidsArray = bidsArray;
     }
 
@@ -52,7 +52,7 @@ public class BidListStruct2  implements java.io.Serializable {
         _equals = true && 
             ((this.bidsArray==null && other.getBidsArray()==null) || 
              (this.bidsArray!=null &&
-              java.util.Arrays.equals(this.bidsArray, other.getBidsArray())));
+              this.bidsArray.equals(other.getBidsArray())));
         __equalsCalc = null;
         return _equals;
     }
@@ -65,15 +65,7 @@ public class BidListStruct2  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getBidsArray() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getBidsArray());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getBidsArray(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getBidsArray().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -84,11 +76,12 @@ public class BidListStruct2  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(BidListStruct2.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "BidListStruct2"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "BidListStruct2"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("bidsArray");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "bids-array"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "bidsArray"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

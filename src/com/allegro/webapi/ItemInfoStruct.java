@@ -10,13 +10,13 @@ package com.allegro.webapi;
 public class ItemInfoStruct  implements java.io.Serializable {
     private com.allegro.webapi.ItemInfo itemInfo;
 
-    private com.allegro.webapi.ItemCatList[] itemCats;
+    private com.allegro.webapi.ArrayOfItemcatlist itemCats;
 
-    private com.allegro.webapi.ItemImageList[] itemImages;
+    private com.allegro.webapi.ArrayOfItemimagelist itemImages;
 
-    private com.allegro.webapi.AttribStruct[] itemAttribs;
+    private com.allegro.webapi.ArrayOfAttribstruct itemAttribs;
 
-    private com.allegro.webapi.PostageStruct[] itemPostageOptions;
+    private com.allegro.webapi.ArrayOfPostagestruct itemPostageOptions;
 
     private com.allegro.webapi.ItemPaymentOptions itemPaymentOptions;
 
@@ -29,10 +29,10 @@ public class ItemInfoStruct  implements java.io.Serializable {
 
     public ItemInfoStruct(
            com.allegro.webapi.ItemInfo itemInfo,
-           com.allegro.webapi.ItemCatList[] itemCats,
-           com.allegro.webapi.ItemImageList[] itemImages,
-           com.allegro.webapi.AttribStruct[] itemAttribs,
-           com.allegro.webapi.PostageStruct[] itemPostageOptions,
+           com.allegro.webapi.ArrayOfItemcatlist itemCats,
+           com.allegro.webapi.ArrayOfItemimagelist itemImages,
+           com.allegro.webapi.ArrayOfAttribstruct itemAttribs,
+           com.allegro.webapi.ArrayOfPostagestruct itemPostageOptions,
            com.allegro.webapi.ItemPaymentOptions itemPaymentOptions,
            com.allegro.webapi.CompanyInfoStruct itemCompanyInfo,
            com.allegro.webapi.ProductStruct itemProductInfo) {
@@ -72,7 +72,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @return itemCats
      */
-    public com.allegro.webapi.ItemCatList[] getItemCats() {
+    public com.allegro.webapi.ArrayOfItemcatlist getItemCats() {
         return itemCats;
     }
 
@@ -82,7 +82,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @param itemCats
      */
-    public void setItemCats(com.allegro.webapi.ItemCatList[] itemCats) {
+    public void setItemCats(com.allegro.webapi.ArrayOfItemcatlist itemCats) {
         this.itemCats = itemCats;
     }
 
@@ -92,7 +92,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @return itemImages
      */
-    public com.allegro.webapi.ItemImageList[] getItemImages() {
+    public com.allegro.webapi.ArrayOfItemimagelist getItemImages() {
         return itemImages;
     }
 
@@ -102,7 +102,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @param itemImages
      */
-    public void setItemImages(com.allegro.webapi.ItemImageList[] itemImages) {
+    public void setItemImages(com.allegro.webapi.ArrayOfItemimagelist itemImages) {
         this.itemImages = itemImages;
     }
 
@@ -112,7 +112,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @return itemAttribs
      */
-    public com.allegro.webapi.AttribStruct[] getItemAttribs() {
+    public com.allegro.webapi.ArrayOfAttribstruct getItemAttribs() {
         return itemAttribs;
     }
 
@@ -122,7 +122,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @param itemAttribs
      */
-    public void setItemAttribs(com.allegro.webapi.AttribStruct[] itemAttribs) {
+    public void setItemAttribs(com.allegro.webapi.ArrayOfAttribstruct itemAttribs) {
         this.itemAttribs = itemAttribs;
     }
 
@@ -132,7 +132,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @return itemPostageOptions
      */
-    public com.allegro.webapi.PostageStruct[] getItemPostageOptions() {
+    public com.allegro.webapi.ArrayOfPostagestruct getItemPostageOptions() {
         return itemPostageOptions;
     }
 
@@ -142,7 +142,7 @@ public class ItemInfoStruct  implements java.io.Serializable {
      * 
      * @param itemPostageOptions
      */
-    public void setItemPostageOptions(com.allegro.webapi.PostageStruct[] itemPostageOptions) {
+    public void setItemPostageOptions(com.allegro.webapi.ArrayOfPostagestruct itemPostageOptions) {
         this.itemPostageOptions = itemPostageOptions;
     }
 
@@ -223,16 +223,16 @@ public class ItemInfoStruct  implements java.io.Serializable {
               this.itemInfo.equals(other.getItemInfo()))) &&
             ((this.itemCats==null && other.getItemCats()==null) || 
              (this.itemCats!=null &&
-              java.util.Arrays.equals(this.itemCats, other.getItemCats()))) &&
+              this.itemCats.equals(other.getItemCats()))) &&
             ((this.itemImages==null && other.getItemImages()==null) || 
              (this.itemImages!=null &&
-              java.util.Arrays.equals(this.itemImages, other.getItemImages()))) &&
+              this.itemImages.equals(other.getItemImages()))) &&
             ((this.itemAttribs==null && other.getItemAttribs()==null) || 
              (this.itemAttribs!=null &&
-              java.util.Arrays.equals(this.itemAttribs, other.getItemAttribs()))) &&
+              this.itemAttribs.equals(other.getItemAttribs()))) &&
             ((this.itemPostageOptions==null && other.getItemPostageOptions()==null) || 
              (this.itemPostageOptions!=null &&
-              java.util.Arrays.equals(this.itemPostageOptions, other.getItemPostageOptions()))) &&
+              this.itemPostageOptions.equals(other.getItemPostageOptions()))) &&
             ((this.itemPaymentOptions==null && other.getItemPaymentOptions()==null) || 
              (this.itemPaymentOptions!=null &&
               this.itemPaymentOptions.equals(other.getItemPaymentOptions()))) &&
@@ -257,48 +257,16 @@ public class ItemInfoStruct  implements java.io.Serializable {
             _hashCode += getItemInfo().hashCode();
         }
         if (getItemCats() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemCats());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemCats(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemCats().hashCode();
         }
         if (getItemImages() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemImages());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemImages(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemImages().hashCode();
         }
         if (getItemAttribs() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemAttribs());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemAttribs(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemAttribs().hashCode();
         }
         if (getItemPostageOptions() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemPostageOptions());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemPostageOptions(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemPostageOptions().hashCode();
         }
         if (getItemPaymentOptions() != null) {
             _hashCode += getItemPaymentOptions().hashCode();
@@ -318,53 +286,57 @@ public class ItemInfoStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ItemInfoStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemInfoStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemInfoStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemInfo"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemInfo"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemCats");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-cats"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemCatList"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemCats"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemcatlist"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemImages");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-images"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemImageList"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemImages"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemimagelist"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemAttribs");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-attribs"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "AttribStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemAttribs"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfAttribstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemPostageOptions");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-postage-options"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostageStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemPostageOptions"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPostagestruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemPaymentOptions");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-payment-options"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemPaymentOptions"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemPaymentOptions"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemPaymentOptions"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemCompanyInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-company-info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "CompanyInfoStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemCompanyInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "CompanyInfoStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemProductInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-product-info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ProductStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemProductInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ProductStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

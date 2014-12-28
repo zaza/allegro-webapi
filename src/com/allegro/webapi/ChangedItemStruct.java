@@ -10,17 +10,17 @@ package com.allegro.webapi;
 public class ChangedItemStruct  implements java.io.Serializable {
     private long itemId;
 
-    private com.allegro.webapi.FieldsValue[] itemFields;
+    private com.allegro.webapi.ArrayOfFieldsvalue itemFields;
 
-    private com.allegro.webapi.ItemSurchargeStruct[] itemSurcharge;
+    private com.allegro.webapi.ArrayOfItemsurchargestruct itemSurcharge;
 
     public ChangedItemStruct() {
     }
 
     public ChangedItemStruct(
            long itemId,
-           com.allegro.webapi.FieldsValue[] itemFields,
-           com.allegro.webapi.ItemSurchargeStruct[] itemSurcharge) {
+           com.allegro.webapi.ArrayOfFieldsvalue itemFields,
+           com.allegro.webapi.ArrayOfItemsurchargestruct itemSurcharge) {
            this.itemId = itemId;
            this.itemFields = itemFields;
            this.itemSurcharge = itemSurcharge;
@@ -52,7 +52,7 @@ public class ChangedItemStruct  implements java.io.Serializable {
      * 
      * @return itemFields
      */
-    public com.allegro.webapi.FieldsValue[] getItemFields() {
+    public com.allegro.webapi.ArrayOfFieldsvalue getItemFields() {
         return itemFields;
     }
 
@@ -62,7 +62,7 @@ public class ChangedItemStruct  implements java.io.Serializable {
      * 
      * @param itemFields
      */
-    public void setItemFields(com.allegro.webapi.FieldsValue[] itemFields) {
+    public void setItemFields(com.allegro.webapi.ArrayOfFieldsvalue itemFields) {
         this.itemFields = itemFields;
     }
 
@@ -72,7 +72,7 @@ public class ChangedItemStruct  implements java.io.Serializable {
      * 
      * @return itemSurcharge
      */
-    public com.allegro.webapi.ItemSurchargeStruct[] getItemSurcharge() {
+    public com.allegro.webapi.ArrayOfItemsurchargestruct getItemSurcharge() {
         return itemSurcharge;
     }
 
@@ -82,7 +82,7 @@ public class ChangedItemStruct  implements java.io.Serializable {
      * 
      * @param itemSurcharge
      */
-    public void setItemSurcharge(com.allegro.webapi.ItemSurchargeStruct[] itemSurcharge) {
+    public void setItemSurcharge(com.allegro.webapi.ArrayOfItemsurchargestruct itemSurcharge) {
         this.itemSurcharge = itemSurcharge;
     }
 
@@ -101,10 +101,10 @@ public class ChangedItemStruct  implements java.io.Serializable {
             this.itemId == other.getItemId() &&
             ((this.itemFields==null && other.getItemFields()==null) || 
              (this.itemFields!=null &&
-              java.util.Arrays.equals(this.itemFields, other.getItemFields()))) &&
+              this.itemFields.equals(other.getItemFields()))) &&
             ((this.itemSurcharge==null && other.getItemSurcharge()==null) || 
              (this.itemSurcharge!=null &&
-              java.util.Arrays.equals(this.itemSurcharge, other.getItemSurcharge())));
+              this.itemSurcharge.equals(other.getItemSurcharge())));
         __equalsCalc = null;
         return _equals;
     }
@@ -118,26 +118,10 @@ public class ChangedItemStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getItemId()).hashCode();
         if (getItemFields() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemFields());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemFields(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemFields().hashCode();
         }
         if (getItemSurcharge() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemSurcharge());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemSurcharge(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemSurcharge().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -148,23 +132,25 @@ public class ChangedItemStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ChangedItemStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ChangedItemStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ChangedItemStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemFields");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-fields"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FieldsValue"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemFields"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfFieldsvalue"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemSurcharge");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-surcharge"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemSurchargeStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemSurcharge"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemsurchargestruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

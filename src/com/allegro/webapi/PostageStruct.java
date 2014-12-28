@@ -18,6 +18,8 @@ public class PostageStruct  implements java.io.Serializable {
 
     private int postageFreeShipping;
 
+    private java.lang.Integer postageFreeReturn;
+
     private com.allegro.webapi.FulfillmentTimeStruct postageFulfillmentTime;
 
     public PostageStruct() {
@@ -29,12 +31,14 @@ public class PostageStruct  implements java.io.Serializable {
            int postagePackSize,
            int postageId,
            int postageFreeShipping,
+           java.lang.Integer postageFreeReturn,
            com.allegro.webapi.FulfillmentTimeStruct postageFulfillmentTime) {
            this.postageAmount = postageAmount;
            this.postageAmountAdd = postageAmountAdd;
            this.postagePackSize = postagePackSize;
            this.postageId = postageId;
            this.postageFreeShipping = postageFreeShipping;
+           this.postageFreeReturn = postageFreeReturn;
            this.postageFulfillmentTime = postageFulfillmentTime;
     }
 
@@ -140,6 +144,26 @@ public class PostageStruct  implements java.io.Serializable {
 
 
     /**
+     * Gets the postageFreeReturn value for this PostageStruct.
+     * 
+     * @return postageFreeReturn
+     */
+    public java.lang.Integer getPostageFreeReturn() {
+        return postageFreeReturn;
+    }
+
+
+    /**
+     * Sets the postageFreeReturn value for this PostageStruct.
+     * 
+     * @param postageFreeReturn
+     */
+    public void setPostageFreeReturn(java.lang.Integer postageFreeReturn) {
+        this.postageFreeReturn = postageFreeReturn;
+    }
+
+
+    /**
      * Gets the postageFulfillmentTime value for this PostageStruct.
      * 
      * @return postageFulfillmentTime
@@ -175,6 +199,9 @@ public class PostageStruct  implements java.io.Serializable {
             this.postagePackSize == other.getPostagePackSize() &&
             this.postageId == other.getPostageId() &&
             this.postageFreeShipping == other.getPostageFreeShipping() &&
+            ((this.postageFreeReturn==null && other.getPostageFreeReturn()==null) || 
+             (this.postageFreeReturn!=null &&
+              this.postageFreeReturn.equals(other.getPostageFreeReturn()))) &&
             ((this.postageFulfillmentTime==null && other.getPostageFulfillmentTime()==null) || 
              (this.postageFulfillmentTime!=null &&
               this.postageFulfillmentTime.equals(other.getPostageFulfillmentTime())));
@@ -194,6 +221,9 @@ public class PostageStruct  implements java.io.Serializable {
         _hashCode += getPostagePackSize();
         _hashCode += getPostageId();
         _hashCode += getPostageFreeShipping();
+        if (getPostageFreeReturn() != null) {
+            _hashCode += getPostageFreeReturn().hashCode();
+        }
         if (getPostageFulfillmentTime() != null) {
             _hashCode += getPostageFulfillmentTime().hashCode();
         }
@@ -206,41 +236,48 @@ public class PostageStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PostageStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostageStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostageStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postageAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postageAmountAdd");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-amount-add"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageAmountAdd"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postagePackSize");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-pack-size"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postagePackSize"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postageId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postageFreeShipping");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-free-shipping"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageFreeShipping"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postageFreeReturn");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageFreeReturn"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postageFulfillmentTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "postage-fulfillment-time"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FulfillmentTimeStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postageFulfillmentTime"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FulfillmentTimeStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

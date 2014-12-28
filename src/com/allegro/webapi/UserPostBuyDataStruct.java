@@ -12,7 +12,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
 
     private com.allegro.webapi.UserSentToDataStruct userSentToData;
 
-    private java.lang.String[] userBankAccounts;
+    private com.allegro.webapi.ArrayOfString userBankAccounts;
 
     private com.allegro.webapi.CompanySecondAddressStruct companySecondAddress;
 
@@ -22,7 +22,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
     public UserPostBuyDataStruct(
            com.allegro.webapi.UserDataStruct userData,
            com.allegro.webapi.UserSentToDataStruct userSentToData,
-           java.lang.String[] userBankAccounts,
+           com.allegro.webapi.ArrayOfString userBankAccounts,
            com.allegro.webapi.CompanySecondAddressStruct companySecondAddress) {
            this.userData = userData;
            this.userSentToData = userSentToData;
@@ -76,7 +76,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
      * 
      * @return userBankAccounts
      */
-    public java.lang.String[] getUserBankAccounts() {
+    public com.allegro.webapi.ArrayOfString getUserBankAccounts() {
         return userBankAccounts;
     }
 
@@ -86,7 +86,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
      * 
      * @param userBankAccounts
      */
-    public void setUserBankAccounts(java.lang.String[] userBankAccounts) {
+    public void setUserBankAccounts(com.allegro.webapi.ArrayOfString userBankAccounts) {
         this.userBankAccounts = userBankAccounts;
     }
 
@@ -130,7 +130,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
               this.userSentToData.equals(other.getUserSentToData()))) &&
             ((this.userBankAccounts==null && other.getUserBankAccounts()==null) || 
              (this.userBankAccounts!=null &&
-              java.util.Arrays.equals(this.userBankAccounts, other.getUserBankAccounts()))) &&
+              this.userBankAccounts.equals(other.getUserBankAccounts()))) &&
             ((this.companySecondAddress==null && other.getCompanySecondAddress()==null) || 
              (this.companySecondAddress!=null &&
               this.companySecondAddress.equals(other.getCompanySecondAddress())));
@@ -152,15 +152,7 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
             _hashCode += getUserSentToData().hashCode();
         }
         if (getUserBankAccounts() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getUserBankAccounts());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getUserBankAccounts(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getUserBankAccounts().hashCode();
         }
         if (getCompanySecondAddress() != null) {
             _hashCode += getCompanySecondAddress().hashCode();
@@ -174,29 +166,30 @@ public class UserPostBuyDataStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(UserPostBuyDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "UserPostBuyDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "UserPostBuyDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "user-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "UserDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "userData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "UserDataStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userSentToData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "user-sent-to-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "UserSentToDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "userSentToData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "UserSentToDataStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("userBankAccounts");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "user-bank-accounts"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "userBankAccounts"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("companySecondAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "company-second-address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "CompanySecondAddressStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "companySecondAddress"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "CompanySecondAddressStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

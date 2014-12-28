@@ -10,7 +10,7 @@ package com.allegro.webapi;
 public class FinishItemsStruct  implements java.io.Serializable {
     private long finishItemId;
 
-    private int finishCancelAllBids;
+    private java.lang.Integer finishCancelAllBids;
 
     private java.lang.String finishCancelReason;
 
@@ -19,7 +19,7 @@ public class FinishItemsStruct  implements java.io.Serializable {
 
     public FinishItemsStruct(
            long finishItemId,
-           int finishCancelAllBids,
+           java.lang.Integer finishCancelAllBids,
            java.lang.String finishCancelReason) {
            this.finishItemId = finishItemId;
            this.finishCancelAllBids = finishCancelAllBids;
@@ -52,7 +52,7 @@ public class FinishItemsStruct  implements java.io.Serializable {
      * 
      * @return finishCancelAllBids
      */
-    public int getFinishCancelAllBids() {
+    public java.lang.Integer getFinishCancelAllBids() {
         return finishCancelAllBids;
     }
 
@@ -62,7 +62,7 @@ public class FinishItemsStruct  implements java.io.Serializable {
      * 
      * @param finishCancelAllBids
      */
-    public void setFinishCancelAllBids(int finishCancelAllBids) {
+    public void setFinishCancelAllBids(java.lang.Integer finishCancelAllBids) {
         this.finishCancelAllBids = finishCancelAllBids;
     }
 
@@ -99,7 +99,9 @@ public class FinishItemsStruct  implements java.io.Serializable {
         boolean _equals;
         _equals = true && 
             this.finishItemId == other.getFinishItemId() &&
-            this.finishCancelAllBids == other.getFinishCancelAllBids() &&
+            ((this.finishCancelAllBids==null && other.getFinishCancelAllBids()==null) || 
+             (this.finishCancelAllBids!=null &&
+              this.finishCancelAllBids.equals(other.getFinishCancelAllBids()))) &&
             ((this.finishCancelReason==null && other.getFinishCancelReason()==null) || 
              (this.finishCancelReason!=null &&
               this.finishCancelReason.equals(other.getFinishCancelReason())));
@@ -115,7 +117,9 @@ public class FinishItemsStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         _hashCode += new Long(getFinishItemId()).hashCode();
-        _hashCode += getFinishCancelAllBids();
+        if (getFinishCancelAllBids() != null) {
+            _hashCode += getFinishCancelAllBids().hashCode();
+        }
         if (getFinishCancelReason() != null) {
             _hashCode += getFinishCancelReason().hashCode();
         }
@@ -128,23 +132,25 @@ public class FinishItemsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FinishItemsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FinishItemsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FinishItemsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("finishItemId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "finish-item-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "finishItemId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("finishCancelAllBids");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "finish-cancel-all-bids"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "finishCancelAllBids"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("finishCancelReason");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "finish-cancel-reason"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "finishCancelReason"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

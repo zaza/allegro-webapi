@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class FilledPostBuyFormsStruct  implements java.io.Serializable {
-    private long[] transactionIds;
+    private com.allegro.webapi.ArrayOfLong transactionIds;
 
     public FilledPostBuyFormsStruct() {
     }
 
     public FilledPostBuyFormsStruct(
-           long[] transactionIds) {
+           com.allegro.webapi.ArrayOfLong transactionIds) {
            this.transactionIds = transactionIds;
     }
 
@@ -24,7 +24,7 @@ public class FilledPostBuyFormsStruct  implements java.io.Serializable {
      * 
      * @return transactionIds
      */
-    public long[] getTransactionIds() {
+    public com.allegro.webapi.ArrayOfLong getTransactionIds() {
         return transactionIds;
     }
 
@@ -34,7 +34,7 @@ public class FilledPostBuyFormsStruct  implements java.io.Serializable {
      * 
      * @param transactionIds
      */
-    public void setTransactionIds(long[] transactionIds) {
+    public void setTransactionIds(com.allegro.webapi.ArrayOfLong transactionIds) {
         this.transactionIds = transactionIds;
     }
 
@@ -52,7 +52,7 @@ public class FilledPostBuyFormsStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.transactionIds==null && other.getTransactionIds()==null) || 
              (this.transactionIds!=null &&
-              java.util.Arrays.equals(this.transactionIds, other.getTransactionIds())));
+              this.transactionIds.equals(other.getTransactionIds())));
         __equalsCalc = null;
         return _equals;
     }
@@ -65,15 +65,7 @@ public class FilledPostBuyFormsStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getTransactionIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTransactionIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTransactionIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getTransactionIds().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -84,11 +76,12 @@ public class FilledPostBuyFormsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FilledPostBuyFormsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FilledPostBuyFormsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FilledPostBuyFormsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transactionIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "transaction-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "transactionIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

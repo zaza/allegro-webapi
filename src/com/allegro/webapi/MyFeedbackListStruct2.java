@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class MyFeedbackListStruct2  implements java.io.Serializable {
-    private java.lang.String[] feedbackArray;
+    private com.allegro.webapi.ArrayOfString feedbackArray;
 
     public MyFeedbackListStruct2() {
     }
 
     public MyFeedbackListStruct2(
-           java.lang.String[] feedbackArray) {
+           com.allegro.webapi.ArrayOfString feedbackArray) {
            this.feedbackArray = feedbackArray;
     }
 
@@ -24,7 +24,7 @@ public class MyFeedbackListStruct2  implements java.io.Serializable {
      * 
      * @return feedbackArray
      */
-    public java.lang.String[] getFeedbackArray() {
+    public com.allegro.webapi.ArrayOfString getFeedbackArray() {
         return feedbackArray;
     }
 
@@ -34,7 +34,7 @@ public class MyFeedbackListStruct2  implements java.io.Serializable {
      * 
      * @param feedbackArray
      */
-    public void setFeedbackArray(java.lang.String[] feedbackArray) {
+    public void setFeedbackArray(com.allegro.webapi.ArrayOfString feedbackArray) {
         this.feedbackArray = feedbackArray;
     }
 
@@ -52,7 +52,7 @@ public class MyFeedbackListStruct2  implements java.io.Serializable {
         _equals = true && 
             ((this.feedbackArray==null && other.getFeedbackArray()==null) || 
              (this.feedbackArray!=null &&
-              java.util.Arrays.equals(this.feedbackArray, other.getFeedbackArray())));
+              this.feedbackArray.equals(other.getFeedbackArray())));
         __equalsCalc = null;
         return _equals;
     }
@@ -65,15 +65,7 @@ public class MyFeedbackListStruct2  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getFeedbackArray() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getFeedbackArray());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getFeedbackArray(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getFeedbackArray().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -84,11 +76,12 @@ public class MyFeedbackListStruct2  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(MyFeedbackListStruct2.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "MyFeedbackListStruct2"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "MyFeedbackListStruct2"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("feedbackArray");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "feedback-array"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "feedbackArray"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

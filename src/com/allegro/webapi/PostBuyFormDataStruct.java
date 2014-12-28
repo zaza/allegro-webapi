@@ -10,7 +10,7 @@ package com.allegro.webapi;
 public class PostBuyFormDataStruct  implements java.io.Serializable {
     private long postBuyFormId;
 
-    private com.allegro.webapi.PostBuyFormItemStruct[] postBuyFormItems;
+    private com.allegro.webapi.ArrayOfPostbuyformitemstruct postBuyFormItems;
 
     private long postBuyFormBuyerId;
 
@@ -42,9 +42,9 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
 
     private com.allegro.webapi.PostBuyFormAddressStruct postBuyFormGdAddress;
 
-    private com.allegro.webapi.PostBuyFormShipmentTrackingStruct[] postBuyFormShipmentTracking;
+    private com.allegro.webapi.ArrayOfPostbuyformshipmenttrackingstruct postBuyFormShipmentTracking;
 
-    private long[] postBuyFormSurchargesList;
+    private com.allegro.webapi.ArrayOfLong postBuyFormSurchargesList;
 
     private java.lang.String postBuyFormGdAdditionalInfo;
 
@@ -52,12 +52,16 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
 
     private int postBuyFormSentBySeller;
 
+    private java.lang.String postBuyFormBuyerLogin;
+
+    private java.lang.String postBuyFormBuyerEmail;
+
     public PostBuyFormDataStruct() {
     }
 
     public PostBuyFormDataStruct(
            long postBuyFormId,
-           com.allegro.webapi.PostBuyFormItemStruct[] postBuyFormItems,
+           com.allegro.webapi.ArrayOfPostbuyformitemstruct postBuyFormItems,
            long postBuyFormBuyerId,
            float postBuyFormAmount,
            float postBuyFormPostageAmount,
@@ -73,11 +77,13 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
            java.lang.String postBuyFormDateCancel,
            int postBuyFormShipmentId,
            com.allegro.webapi.PostBuyFormAddressStruct postBuyFormGdAddress,
-           com.allegro.webapi.PostBuyFormShipmentTrackingStruct[] postBuyFormShipmentTracking,
-           long[] postBuyFormSurchargesList,
+           com.allegro.webapi.ArrayOfPostbuyformshipmenttrackingstruct postBuyFormShipmentTracking,
+           com.allegro.webapi.ArrayOfLong postBuyFormSurchargesList,
            java.lang.String postBuyFormGdAdditionalInfo,
            float postBuyFormPaymentAmount,
-           int postBuyFormSentBySeller) {
+           int postBuyFormSentBySeller,
+           java.lang.String postBuyFormBuyerLogin,
+           java.lang.String postBuyFormBuyerEmail) {
            this.postBuyFormId = postBuyFormId;
            this.postBuyFormItems = postBuyFormItems;
            this.postBuyFormBuyerId = postBuyFormBuyerId;
@@ -100,6 +106,8 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
            this.postBuyFormGdAdditionalInfo = postBuyFormGdAdditionalInfo;
            this.postBuyFormPaymentAmount = postBuyFormPaymentAmount;
            this.postBuyFormSentBySeller = postBuyFormSentBySeller;
+           this.postBuyFormBuyerLogin = postBuyFormBuyerLogin;
+           this.postBuyFormBuyerEmail = postBuyFormBuyerEmail;
     }
 
 
@@ -128,7 +136,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @return postBuyFormItems
      */
-    public com.allegro.webapi.PostBuyFormItemStruct[] getPostBuyFormItems() {
+    public com.allegro.webapi.ArrayOfPostbuyformitemstruct getPostBuyFormItems() {
         return postBuyFormItems;
     }
 
@@ -138,7 +146,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @param postBuyFormItems
      */
-    public void setPostBuyFormItems(com.allegro.webapi.PostBuyFormItemStruct[] postBuyFormItems) {
+    public void setPostBuyFormItems(com.allegro.webapi.ArrayOfPostbuyformitemstruct postBuyFormItems) {
         this.postBuyFormItems = postBuyFormItems;
     }
 
@@ -448,7 +456,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @return postBuyFormShipmentTracking
      */
-    public com.allegro.webapi.PostBuyFormShipmentTrackingStruct[] getPostBuyFormShipmentTracking() {
+    public com.allegro.webapi.ArrayOfPostbuyformshipmenttrackingstruct getPostBuyFormShipmentTracking() {
         return postBuyFormShipmentTracking;
     }
 
@@ -458,7 +466,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @param postBuyFormShipmentTracking
      */
-    public void setPostBuyFormShipmentTracking(com.allegro.webapi.PostBuyFormShipmentTrackingStruct[] postBuyFormShipmentTracking) {
+    public void setPostBuyFormShipmentTracking(com.allegro.webapi.ArrayOfPostbuyformshipmenttrackingstruct postBuyFormShipmentTracking) {
         this.postBuyFormShipmentTracking = postBuyFormShipmentTracking;
     }
 
@@ -468,7 +476,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @return postBuyFormSurchargesList
      */
-    public long[] getPostBuyFormSurchargesList() {
+    public com.allegro.webapi.ArrayOfLong getPostBuyFormSurchargesList() {
         return postBuyFormSurchargesList;
     }
 
@@ -478,7 +486,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
      * 
      * @param postBuyFormSurchargesList
      */
-    public void setPostBuyFormSurchargesList(long[] postBuyFormSurchargesList) {
+    public void setPostBuyFormSurchargesList(com.allegro.webapi.ArrayOfLong postBuyFormSurchargesList) {
         this.postBuyFormSurchargesList = postBuyFormSurchargesList;
     }
 
@@ -542,6 +550,46 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
         this.postBuyFormSentBySeller = postBuyFormSentBySeller;
     }
 
+
+    /**
+     * Gets the postBuyFormBuyerLogin value for this PostBuyFormDataStruct.
+     * 
+     * @return postBuyFormBuyerLogin
+     */
+    public java.lang.String getPostBuyFormBuyerLogin() {
+        return postBuyFormBuyerLogin;
+    }
+
+
+    /**
+     * Sets the postBuyFormBuyerLogin value for this PostBuyFormDataStruct.
+     * 
+     * @param postBuyFormBuyerLogin
+     */
+    public void setPostBuyFormBuyerLogin(java.lang.String postBuyFormBuyerLogin) {
+        this.postBuyFormBuyerLogin = postBuyFormBuyerLogin;
+    }
+
+
+    /**
+     * Gets the postBuyFormBuyerEmail value for this PostBuyFormDataStruct.
+     * 
+     * @return postBuyFormBuyerEmail
+     */
+    public java.lang.String getPostBuyFormBuyerEmail() {
+        return postBuyFormBuyerEmail;
+    }
+
+
+    /**
+     * Sets the postBuyFormBuyerEmail value for this PostBuyFormDataStruct.
+     * 
+     * @param postBuyFormBuyerEmail
+     */
+    public void setPostBuyFormBuyerEmail(java.lang.String postBuyFormBuyerEmail) {
+        this.postBuyFormBuyerEmail = postBuyFormBuyerEmail;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof PostBuyFormDataStruct)) return false;
@@ -557,7 +605,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
             this.postBuyFormId == other.getPostBuyFormId() &&
             ((this.postBuyFormItems==null && other.getPostBuyFormItems()==null) || 
              (this.postBuyFormItems!=null &&
-              java.util.Arrays.equals(this.postBuyFormItems, other.getPostBuyFormItems()))) &&
+              this.postBuyFormItems.equals(other.getPostBuyFormItems()))) &&
             this.postBuyFormBuyerId == other.getPostBuyFormBuyerId() &&
             this.postBuyFormAmount == other.getPostBuyFormAmount() &&
             this.postBuyFormPostageAmount == other.getPostBuyFormPostageAmount() &&
@@ -593,15 +641,21 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
               this.postBuyFormGdAddress.equals(other.getPostBuyFormGdAddress()))) &&
             ((this.postBuyFormShipmentTracking==null && other.getPostBuyFormShipmentTracking()==null) || 
              (this.postBuyFormShipmentTracking!=null &&
-              java.util.Arrays.equals(this.postBuyFormShipmentTracking, other.getPostBuyFormShipmentTracking()))) &&
+              this.postBuyFormShipmentTracking.equals(other.getPostBuyFormShipmentTracking()))) &&
             ((this.postBuyFormSurchargesList==null && other.getPostBuyFormSurchargesList()==null) || 
              (this.postBuyFormSurchargesList!=null &&
-              java.util.Arrays.equals(this.postBuyFormSurchargesList, other.getPostBuyFormSurchargesList()))) &&
+              this.postBuyFormSurchargesList.equals(other.getPostBuyFormSurchargesList()))) &&
             ((this.postBuyFormGdAdditionalInfo==null && other.getPostBuyFormGdAdditionalInfo()==null) || 
              (this.postBuyFormGdAdditionalInfo!=null &&
               this.postBuyFormGdAdditionalInfo.equals(other.getPostBuyFormGdAdditionalInfo()))) &&
             this.postBuyFormPaymentAmount == other.getPostBuyFormPaymentAmount() &&
-            this.postBuyFormSentBySeller == other.getPostBuyFormSentBySeller();
+            this.postBuyFormSentBySeller == other.getPostBuyFormSentBySeller() &&
+            ((this.postBuyFormBuyerLogin==null && other.getPostBuyFormBuyerLogin()==null) || 
+             (this.postBuyFormBuyerLogin!=null &&
+              this.postBuyFormBuyerLogin.equals(other.getPostBuyFormBuyerLogin()))) &&
+            ((this.postBuyFormBuyerEmail==null && other.getPostBuyFormBuyerEmail()==null) || 
+             (this.postBuyFormBuyerEmail!=null &&
+              this.postBuyFormBuyerEmail.equals(other.getPostBuyFormBuyerEmail())));
         __equalsCalc = null;
         return _equals;
     }
@@ -615,15 +669,7 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getPostBuyFormId()).hashCode();
         if (getPostBuyFormItems() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPostBuyFormItems());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPostBuyFormItems(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPostBuyFormItems().hashCode();
         }
         _hashCode += new Long(getPostBuyFormBuyerId()).hashCode();
         _hashCode += new Float(getPostBuyFormAmount()).hashCode();
@@ -659,32 +705,22 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
             _hashCode += getPostBuyFormGdAddress().hashCode();
         }
         if (getPostBuyFormShipmentTracking() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPostBuyFormShipmentTracking());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPostBuyFormShipmentTracking(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPostBuyFormShipmentTracking().hashCode();
         }
         if (getPostBuyFormSurchargesList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPostBuyFormSurchargesList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPostBuyFormSurchargesList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPostBuyFormSurchargesList().hashCode();
         }
         if (getPostBuyFormGdAdditionalInfo() != null) {
             _hashCode += getPostBuyFormGdAdditionalInfo().hashCode();
         }
         _hashCode += new Float(getPostBuyFormPaymentAmount()).hashCode();
         _hashCode += getPostBuyFormSentBySeller();
+        if (getPostBuyFormBuyerLogin() != null) {
+            _hashCode += getPostBuyFormBuyerLogin().hashCode();
+        }
+        if (getPostBuyFormBuyerEmail() != null) {
+            _hashCode += getPostBuyFormBuyerEmail().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -694,137 +730,152 @@ public class PostBuyFormDataStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PostBuyFormDataStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormDataStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormDataStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItems");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-items"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormItemStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItems"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPostbuyformitemstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormBuyerId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-buyer-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormBuyerId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormPostageAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-postage-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormPostageAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormInvoiceOption");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-invoice-option"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormInvoiceOption"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormMsgToSeller");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-msg-to-seller"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormMsgToSeller"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormInvoiceData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-invoice-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormAddressStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormInvoiceData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormAddressStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormShipmentAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-shipment-address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormAddressStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormShipmentAddress"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormAddressStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormPayType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-pay-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormPayType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormPayId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-pay-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormPayId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormPayStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-pay-status"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormPayStatus"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormDateInit");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-date-init"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormDateInit"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormDateRecv");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-date-recv"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormDateRecv"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormDateCancel");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-date-cancel"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormDateCancel"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormShipmentId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-shipment-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormShipmentId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormGdAddress");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-gd-address"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormAddressStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormGdAddress"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormAddressStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormShipmentTracking");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-shipment-tracking"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormShipmentTrackingStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormShipmentTracking"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPostbuyformshipmenttrackingstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormSurchargesList");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-surcharges-list"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormSurchargesList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormGdAdditionalInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-gd-additional-info"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormGdAdditionalInfo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormPaymentAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-payment-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormPaymentAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormSentBySeller");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-sent-by-seller"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormSentBySeller"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postBuyFormBuyerLogin");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormBuyerLogin"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postBuyFormBuyerEmail");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormBuyerEmail"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

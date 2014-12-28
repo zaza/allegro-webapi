@@ -106,17 +106,17 @@ public class ItemSurchargeStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ItemSurchargeStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemSurchargeStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemSurchargeStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("surchargeDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "surcharge-description"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "surchargeDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("surchargeAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "surcharge-amount"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "AmountStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "surchargeAmount"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AmountStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

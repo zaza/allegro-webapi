@@ -8,7 +8,7 @@
 package com.allegro.webapi;
 
 public class RelatedItemsStruct  implements java.io.Serializable {
-    private com.allegro.webapi.RelatedItemStruct[] relatedItemsInfo;
+    private com.allegro.webapi.ArrayOfRelateditemstruct relatedItemsInfo;
 
     private float relatedItemsAmount;
 
@@ -16,7 +16,7 @@ public class RelatedItemsStruct  implements java.io.Serializable {
     }
 
     public RelatedItemsStruct(
-           com.allegro.webapi.RelatedItemStruct[] relatedItemsInfo,
+           com.allegro.webapi.ArrayOfRelateditemstruct relatedItemsInfo,
            float relatedItemsAmount) {
            this.relatedItemsInfo = relatedItemsInfo;
            this.relatedItemsAmount = relatedItemsAmount;
@@ -28,7 +28,7 @@ public class RelatedItemsStruct  implements java.io.Serializable {
      * 
      * @return relatedItemsInfo
      */
-    public com.allegro.webapi.RelatedItemStruct[] getRelatedItemsInfo() {
+    public com.allegro.webapi.ArrayOfRelateditemstruct getRelatedItemsInfo() {
         return relatedItemsInfo;
     }
 
@@ -38,7 +38,7 @@ public class RelatedItemsStruct  implements java.io.Serializable {
      * 
      * @param relatedItemsInfo
      */
-    public void setRelatedItemsInfo(com.allegro.webapi.RelatedItemStruct[] relatedItemsInfo) {
+    public void setRelatedItemsInfo(com.allegro.webapi.ArrayOfRelateditemstruct relatedItemsInfo) {
         this.relatedItemsInfo = relatedItemsInfo;
     }
 
@@ -76,7 +76,7 @@ public class RelatedItemsStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.relatedItemsInfo==null && other.getRelatedItemsInfo()==null) || 
              (this.relatedItemsInfo!=null &&
-              java.util.Arrays.equals(this.relatedItemsInfo, other.getRelatedItemsInfo()))) &&
+              this.relatedItemsInfo.equals(other.getRelatedItemsInfo()))) &&
             this.relatedItemsAmount == other.getRelatedItemsAmount();
         __equalsCalc = null;
         return _equals;
@@ -90,15 +90,7 @@ public class RelatedItemsStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getRelatedItemsInfo() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getRelatedItemsInfo());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getRelatedItemsInfo(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getRelatedItemsInfo().hashCode();
         }
         _hashCode += new Float(getRelatedItemsAmount()).hashCode();
         __hashCodeCalc = false;
@@ -110,16 +102,17 @@ public class RelatedItemsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RelatedItemsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RelatedItemsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RelatedItemsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("relatedItemsInfo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "related-items-info"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RelatedItemStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "relatedItemsInfo"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfRelateditemstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("relatedItemsAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "related-items-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "relatedItemsAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

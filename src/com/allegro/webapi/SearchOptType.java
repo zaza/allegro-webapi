@@ -10,50 +10,50 @@ package com.allegro.webapi;
 public class SearchOptType  implements java.io.Serializable {
     private java.lang.String searchString;
 
-    private int searchOptions;
+    private java.lang.Integer searchOptions;
 
-    private int searchOrder;
+    private java.lang.Integer searchOrder;
 
-    private int searchOrderType;
+    private java.lang.Integer searchOrderType;
 
-    private int searchCountry;
+    private java.lang.Integer searchCountry;
 
-    private int searchCategory;
+    private java.lang.Integer searchCategory;
 
-    private int searchOffset;
+    private java.lang.Integer searchOffset;
 
     private java.lang.String searchCity;
 
-    private int searchState;
+    private java.lang.Integer searchState;
 
-    private float searchPriceFrom;
+    private java.lang.Float searchPriceFrom;
 
-    private float searchPriceTo;
+    private java.lang.Float searchPriceTo;
 
-    private int searchLimit;
+    private java.lang.Integer searchLimit;
 
-    private int searchOrderFulfillmentTime;
+    private java.lang.Integer searchOrderFulfillmentTime;
 
-    private int searchUser;
+    private java.lang.Integer searchUser;
 
     public SearchOptType() {
     }
 
     public SearchOptType(
            java.lang.String searchString,
-           int searchOptions,
-           int searchOrder,
-           int searchOrderType,
-           int searchCountry,
-           int searchCategory,
-           int searchOffset,
+           java.lang.Integer searchOptions,
+           java.lang.Integer searchOrder,
+           java.lang.Integer searchOrderType,
+           java.lang.Integer searchCountry,
+           java.lang.Integer searchCategory,
+           java.lang.Integer searchOffset,
            java.lang.String searchCity,
-           int searchState,
-           float searchPriceFrom,
-           float searchPriceTo,
-           int searchLimit,
-           int searchOrderFulfillmentTime,
-           int searchUser) {
+           java.lang.Integer searchState,
+           java.lang.Float searchPriceFrom,
+           java.lang.Float searchPriceTo,
+           java.lang.Integer searchLimit,
+           java.lang.Integer searchOrderFulfillmentTime,
+           java.lang.Integer searchUser) {
            this.searchString = searchString;
            this.searchOptions = searchOptions;
            this.searchOrder = searchOrder;
@@ -96,7 +96,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchOptions
      */
-    public int getSearchOptions() {
+    public java.lang.Integer getSearchOptions() {
         return searchOptions;
     }
 
@@ -106,7 +106,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchOptions
      */
-    public void setSearchOptions(int searchOptions) {
+    public void setSearchOptions(java.lang.Integer searchOptions) {
         this.searchOptions = searchOptions;
     }
 
@@ -116,7 +116,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchOrder
      */
-    public int getSearchOrder() {
+    public java.lang.Integer getSearchOrder() {
         return searchOrder;
     }
 
@@ -126,7 +126,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchOrder
      */
-    public void setSearchOrder(int searchOrder) {
+    public void setSearchOrder(java.lang.Integer searchOrder) {
         this.searchOrder = searchOrder;
     }
 
@@ -136,7 +136,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchOrderType
      */
-    public int getSearchOrderType() {
+    public java.lang.Integer getSearchOrderType() {
         return searchOrderType;
     }
 
@@ -146,7 +146,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchOrderType
      */
-    public void setSearchOrderType(int searchOrderType) {
+    public void setSearchOrderType(java.lang.Integer searchOrderType) {
         this.searchOrderType = searchOrderType;
     }
 
@@ -156,7 +156,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchCountry
      */
-    public int getSearchCountry() {
+    public java.lang.Integer getSearchCountry() {
         return searchCountry;
     }
 
@@ -166,7 +166,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchCountry
      */
-    public void setSearchCountry(int searchCountry) {
+    public void setSearchCountry(java.lang.Integer searchCountry) {
         this.searchCountry = searchCountry;
     }
 
@@ -176,7 +176,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchCategory
      */
-    public int getSearchCategory() {
+    public java.lang.Integer getSearchCategory() {
         return searchCategory;
     }
 
@@ -186,7 +186,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchCategory
      */
-    public void setSearchCategory(int searchCategory) {
+    public void setSearchCategory(java.lang.Integer searchCategory) {
         this.searchCategory = searchCategory;
     }
 
@@ -196,7 +196,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchOffset
      */
-    public int getSearchOffset() {
+    public java.lang.Integer getSearchOffset() {
         return searchOffset;
     }
 
@@ -206,7 +206,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchOffset
      */
-    public void setSearchOffset(int searchOffset) {
+    public void setSearchOffset(java.lang.Integer searchOffset) {
         this.searchOffset = searchOffset;
     }
 
@@ -236,7 +236,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchState
      */
-    public int getSearchState() {
+    public java.lang.Integer getSearchState() {
         return searchState;
     }
 
@@ -246,7 +246,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchState
      */
-    public void setSearchState(int searchState) {
+    public void setSearchState(java.lang.Integer searchState) {
         this.searchState = searchState;
     }
 
@@ -256,7 +256,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchPriceFrom
      */
-    public float getSearchPriceFrom() {
+    public java.lang.Float getSearchPriceFrom() {
         return searchPriceFrom;
     }
 
@@ -266,7 +266,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchPriceFrom
      */
-    public void setSearchPriceFrom(float searchPriceFrom) {
+    public void setSearchPriceFrom(java.lang.Float searchPriceFrom) {
         this.searchPriceFrom = searchPriceFrom;
     }
 
@@ -276,7 +276,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchPriceTo
      */
-    public float getSearchPriceTo() {
+    public java.lang.Float getSearchPriceTo() {
         return searchPriceTo;
     }
 
@@ -286,7 +286,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchPriceTo
      */
-    public void setSearchPriceTo(float searchPriceTo) {
+    public void setSearchPriceTo(java.lang.Float searchPriceTo) {
         this.searchPriceTo = searchPriceTo;
     }
 
@@ -296,7 +296,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchLimit
      */
-    public int getSearchLimit() {
+    public java.lang.Integer getSearchLimit() {
         return searchLimit;
     }
 
@@ -306,7 +306,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchLimit
      */
-    public void setSearchLimit(int searchLimit) {
+    public void setSearchLimit(java.lang.Integer searchLimit) {
         this.searchLimit = searchLimit;
     }
 
@@ -316,7 +316,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchOrderFulfillmentTime
      */
-    public int getSearchOrderFulfillmentTime() {
+    public java.lang.Integer getSearchOrderFulfillmentTime() {
         return searchOrderFulfillmentTime;
     }
 
@@ -326,7 +326,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchOrderFulfillmentTime
      */
-    public void setSearchOrderFulfillmentTime(int searchOrderFulfillmentTime) {
+    public void setSearchOrderFulfillmentTime(java.lang.Integer searchOrderFulfillmentTime) {
         this.searchOrderFulfillmentTime = searchOrderFulfillmentTime;
     }
 
@@ -336,7 +336,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @return searchUser
      */
-    public int getSearchUser() {
+    public java.lang.Integer getSearchUser() {
         return searchUser;
     }
 
@@ -346,7 +346,7 @@ public class SearchOptType  implements java.io.Serializable {
      * 
      * @param searchUser
      */
-    public void setSearchUser(int searchUser) {
+    public void setSearchUser(java.lang.Integer searchUser) {
         this.searchUser = searchUser;
     }
 
@@ -365,21 +365,45 @@ public class SearchOptType  implements java.io.Serializable {
             ((this.searchString==null && other.getSearchString()==null) || 
              (this.searchString!=null &&
               this.searchString.equals(other.getSearchString()))) &&
-            this.searchOptions == other.getSearchOptions() &&
-            this.searchOrder == other.getSearchOrder() &&
-            this.searchOrderType == other.getSearchOrderType() &&
-            this.searchCountry == other.getSearchCountry() &&
-            this.searchCategory == other.getSearchCategory() &&
-            this.searchOffset == other.getSearchOffset() &&
+            ((this.searchOptions==null && other.getSearchOptions()==null) || 
+             (this.searchOptions!=null &&
+              this.searchOptions.equals(other.getSearchOptions()))) &&
+            ((this.searchOrder==null && other.getSearchOrder()==null) || 
+             (this.searchOrder!=null &&
+              this.searchOrder.equals(other.getSearchOrder()))) &&
+            ((this.searchOrderType==null && other.getSearchOrderType()==null) || 
+             (this.searchOrderType!=null &&
+              this.searchOrderType.equals(other.getSearchOrderType()))) &&
+            ((this.searchCountry==null && other.getSearchCountry()==null) || 
+             (this.searchCountry!=null &&
+              this.searchCountry.equals(other.getSearchCountry()))) &&
+            ((this.searchCategory==null && other.getSearchCategory()==null) || 
+             (this.searchCategory!=null &&
+              this.searchCategory.equals(other.getSearchCategory()))) &&
+            ((this.searchOffset==null && other.getSearchOffset()==null) || 
+             (this.searchOffset!=null &&
+              this.searchOffset.equals(other.getSearchOffset()))) &&
             ((this.searchCity==null && other.getSearchCity()==null) || 
              (this.searchCity!=null &&
               this.searchCity.equals(other.getSearchCity()))) &&
-            this.searchState == other.getSearchState() &&
-            this.searchPriceFrom == other.getSearchPriceFrom() &&
-            this.searchPriceTo == other.getSearchPriceTo() &&
-            this.searchLimit == other.getSearchLimit() &&
-            this.searchOrderFulfillmentTime == other.getSearchOrderFulfillmentTime() &&
-            this.searchUser == other.getSearchUser();
+            ((this.searchState==null && other.getSearchState()==null) || 
+             (this.searchState!=null &&
+              this.searchState.equals(other.getSearchState()))) &&
+            ((this.searchPriceFrom==null && other.getSearchPriceFrom()==null) || 
+             (this.searchPriceFrom!=null &&
+              this.searchPriceFrom.equals(other.getSearchPriceFrom()))) &&
+            ((this.searchPriceTo==null && other.getSearchPriceTo()==null) || 
+             (this.searchPriceTo!=null &&
+              this.searchPriceTo.equals(other.getSearchPriceTo()))) &&
+            ((this.searchLimit==null && other.getSearchLimit()==null) || 
+             (this.searchLimit!=null &&
+              this.searchLimit.equals(other.getSearchLimit()))) &&
+            ((this.searchOrderFulfillmentTime==null && other.getSearchOrderFulfillmentTime()==null) || 
+             (this.searchOrderFulfillmentTime!=null &&
+              this.searchOrderFulfillmentTime.equals(other.getSearchOrderFulfillmentTime()))) &&
+            ((this.searchUser==null && other.getSearchUser()==null) || 
+             (this.searchUser!=null &&
+              this.searchUser.equals(other.getSearchUser())));
         __equalsCalc = null;
         return _equals;
     }
@@ -394,21 +418,45 @@ public class SearchOptType  implements java.io.Serializable {
         if (getSearchString() != null) {
             _hashCode += getSearchString().hashCode();
         }
-        _hashCode += getSearchOptions();
-        _hashCode += getSearchOrder();
-        _hashCode += getSearchOrderType();
-        _hashCode += getSearchCountry();
-        _hashCode += getSearchCategory();
-        _hashCode += getSearchOffset();
+        if (getSearchOptions() != null) {
+            _hashCode += getSearchOptions().hashCode();
+        }
+        if (getSearchOrder() != null) {
+            _hashCode += getSearchOrder().hashCode();
+        }
+        if (getSearchOrderType() != null) {
+            _hashCode += getSearchOrderType().hashCode();
+        }
+        if (getSearchCountry() != null) {
+            _hashCode += getSearchCountry().hashCode();
+        }
+        if (getSearchCategory() != null) {
+            _hashCode += getSearchCategory().hashCode();
+        }
+        if (getSearchOffset() != null) {
+            _hashCode += getSearchOffset().hashCode();
+        }
         if (getSearchCity() != null) {
             _hashCode += getSearchCity().hashCode();
         }
-        _hashCode += getSearchState();
-        _hashCode += new Float(getSearchPriceFrom()).hashCode();
-        _hashCode += new Float(getSearchPriceTo()).hashCode();
-        _hashCode += getSearchLimit();
-        _hashCode += getSearchOrderFulfillmentTime();
-        _hashCode += getSearchUser();
+        if (getSearchState() != null) {
+            _hashCode += getSearchState().hashCode();
+        }
+        if (getSearchPriceFrom() != null) {
+            _hashCode += getSearchPriceFrom().hashCode();
+        }
+        if (getSearchPriceTo() != null) {
+            _hashCode += getSearchPriceTo().hashCode();
+        }
+        if (getSearchLimit() != null) {
+            _hashCode += getSearchLimit().hashCode();
+        }
+        if (getSearchOrderFulfillmentTime() != null) {
+            _hashCode += getSearchOrderFulfillmentTime().hashCode();
+        }
+        if (getSearchUser() != null) {
+            _hashCode += getSearchUser().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -418,89 +466,102 @@ public class SearchOptType  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SearchOptType.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SearchOptType"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SearchOptType"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchString");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchString"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchOptions");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-options"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchOptions"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-order"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchOrder"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchOrderType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-order-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchOrderType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchCountry");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-country"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchCountry"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchCategory");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-category"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchCategory"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchOffset");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-offset"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchOffset"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchCity");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-city"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchCity"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchState");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-state"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchState"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchPriceFrom");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-price-from"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchPriceFrom"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchPriceTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-price-to"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchPriceTo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchLimit");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-limit"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchLimit"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchOrderFulfillmentTime");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-order-fulfillment-time"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchOrderFulfillmentTime"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("searchUser");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "search-user"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "searchUser"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

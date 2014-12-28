@@ -8,19 +8,19 @@
 package com.allegro.webapi;
 
 public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
-    private java.lang.String[] packageIdsAdded;
+    private com.allegro.webapi.ArrayOfString packageIdsAdded;
 
-    private java.lang.String[] packageIdsNotAddedIncorrectOperatorId;
+    private com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectOperatorId;
 
-    private java.lang.String[] packageIdsNotAddedIncorrectPackageId;
+    private com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectPackageId;
 
     public PostBuyFormPackageInfoStruct() {
     }
 
     public PostBuyFormPackageInfoStruct(
-           java.lang.String[] packageIdsAdded,
-           java.lang.String[] packageIdsNotAddedIncorrectOperatorId,
-           java.lang.String[] packageIdsNotAddedIncorrectPackageId) {
+           com.allegro.webapi.ArrayOfString packageIdsAdded,
+           com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectOperatorId,
+           com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectPackageId) {
            this.packageIdsAdded = packageIdsAdded;
            this.packageIdsNotAddedIncorrectOperatorId = packageIdsNotAddedIncorrectOperatorId;
            this.packageIdsNotAddedIncorrectPackageId = packageIdsNotAddedIncorrectPackageId;
@@ -32,7 +32,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @return packageIdsAdded
      */
-    public java.lang.String[] getPackageIdsAdded() {
+    public com.allegro.webapi.ArrayOfString getPackageIdsAdded() {
         return packageIdsAdded;
     }
 
@@ -42,7 +42,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @param packageIdsAdded
      */
-    public void setPackageIdsAdded(java.lang.String[] packageIdsAdded) {
+    public void setPackageIdsAdded(com.allegro.webapi.ArrayOfString packageIdsAdded) {
         this.packageIdsAdded = packageIdsAdded;
     }
 
@@ -52,7 +52,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @return packageIdsNotAddedIncorrectOperatorId
      */
-    public java.lang.String[] getPackageIdsNotAddedIncorrectOperatorId() {
+    public com.allegro.webapi.ArrayOfString getPackageIdsNotAddedIncorrectOperatorId() {
         return packageIdsNotAddedIncorrectOperatorId;
     }
 
@@ -62,7 +62,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @param packageIdsNotAddedIncorrectOperatorId
      */
-    public void setPackageIdsNotAddedIncorrectOperatorId(java.lang.String[] packageIdsNotAddedIncorrectOperatorId) {
+    public void setPackageIdsNotAddedIncorrectOperatorId(com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectOperatorId) {
         this.packageIdsNotAddedIncorrectOperatorId = packageIdsNotAddedIncorrectOperatorId;
     }
 
@@ -72,7 +72,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @return packageIdsNotAddedIncorrectPackageId
      */
-    public java.lang.String[] getPackageIdsNotAddedIncorrectPackageId() {
+    public com.allegro.webapi.ArrayOfString getPackageIdsNotAddedIncorrectPackageId() {
         return packageIdsNotAddedIncorrectPackageId;
     }
 
@@ -82,7 +82,7 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
      * 
      * @param packageIdsNotAddedIncorrectPackageId
      */
-    public void setPackageIdsNotAddedIncorrectPackageId(java.lang.String[] packageIdsNotAddedIncorrectPackageId) {
+    public void setPackageIdsNotAddedIncorrectPackageId(com.allegro.webapi.ArrayOfString packageIdsNotAddedIncorrectPackageId) {
         this.packageIdsNotAddedIncorrectPackageId = packageIdsNotAddedIncorrectPackageId;
     }
 
@@ -100,13 +100,13 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.packageIdsAdded==null && other.getPackageIdsAdded()==null) || 
              (this.packageIdsAdded!=null &&
-              java.util.Arrays.equals(this.packageIdsAdded, other.getPackageIdsAdded()))) &&
+              this.packageIdsAdded.equals(other.getPackageIdsAdded()))) &&
             ((this.packageIdsNotAddedIncorrectOperatorId==null && other.getPackageIdsNotAddedIncorrectOperatorId()==null) || 
              (this.packageIdsNotAddedIncorrectOperatorId!=null &&
-              java.util.Arrays.equals(this.packageIdsNotAddedIncorrectOperatorId, other.getPackageIdsNotAddedIncorrectOperatorId()))) &&
+              this.packageIdsNotAddedIncorrectOperatorId.equals(other.getPackageIdsNotAddedIncorrectOperatorId()))) &&
             ((this.packageIdsNotAddedIncorrectPackageId==null && other.getPackageIdsNotAddedIncorrectPackageId()==null) || 
              (this.packageIdsNotAddedIncorrectPackageId!=null &&
-              java.util.Arrays.equals(this.packageIdsNotAddedIncorrectPackageId, other.getPackageIdsNotAddedIncorrectPackageId())));
+              this.packageIdsNotAddedIncorrectPackageId.equals(other.getPackageIdsNotAddedIncorrectPackageId())));
         __equalsCalc = null;
         return _equals;
     }
@@ -119,37 +119,13 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getPackageIdsAdded() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPackageIdsAdded());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPackageIdsAdded(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPackageIdsAdded().hashCode();
         }
         if (getPackageIdsNotAddedIncorrectOperatorId() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPackageIdsNotAddedIncorrectOperatorId());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPackageIdsNotAddedIncorrectOperatorId(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPackageIdsNotAddedIncorrectOperatorId().hashCode();
         }
         if (getPackageIdsNotAddedIncorrectPackageId() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPackageIdsNotAddedIncorrectPackageId());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPackageIdsNotAddedIncorrectPackageId(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPackageIdsNotAddedIncorrectPackageId().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -160,23 +136,26 @@ public class PostBuyFormPackageInfoStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PostBuyFormPackageInfoStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormPackageInfoStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormPackageInfoStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("packageIdsAdded");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "package-ids-added"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "packageIdsAdded"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("packageIdsNotAddedIncorrectOperatorId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "package-ids-not-added-incorrect-operator-id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "packageIdsNotAddedIncorrectOperatorId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("packageIdsNotAddedIncorrectPackageId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "package-ids-not-added-incorrect-package-id"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "packageIdsNotAddedIncorrectPackageId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

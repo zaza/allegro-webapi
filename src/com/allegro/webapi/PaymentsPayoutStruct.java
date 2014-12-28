@@ -102,17 +102,17 @@ public class PaymentsPayoutStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PaymentsPayoutStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PaymentsPayoutStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PaymentsPayoutStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payoutType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "payout-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payoutType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payoutAutoSettings");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "payout-auto-settings"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PayoutAutoSettingsStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payoutAutoSettings"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PayoutAutoSettingsStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

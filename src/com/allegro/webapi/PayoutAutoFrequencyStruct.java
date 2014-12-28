@@ -124,22 +124,22 @@ public class PayoutAutoFrequencyStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PayoutAutoFrequencyStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PayoutAutoFrequencyStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PayoutAutoFrequencyStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("frequencyType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "frequency-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "frequencyType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "short"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("frequencyWeekValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "frequency-week-value"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "frequencyWeekValue"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "short"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("frequencyMonthValue");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "frequency-month-value"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "frequencyMonthValue"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "short"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

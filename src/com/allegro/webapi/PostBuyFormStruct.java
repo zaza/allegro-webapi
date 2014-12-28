@@ -10,7 +10,7 @@ package com.allegro.webapi;
 public class PostBuyFormStruct  implements java.io.Serializable {
     private long transactionId;
 
-    private long[] transactionPackageIds;
+    private com.allegro.webapi.ArrayOfLong transactionPackageIds;
 
     private com.allegro.webapi.TransactionPayByLinkStruct transactionPayByLink;
 
@@ -19,7 +19,7 @@ public class PostBuyFormStruct  implements java.io.Serializable {
 
     public PostBuyFormStruct(
            long transactionId,
-           long[] transactionPackageIds,
+           com.allegro.webapi.ArrayOfLong transactionPackageIds,
            com.allegro.webapi.TransactionPayByLinkStruct transactionPayByLink) {
            this.transactionId = transactionId;
            this.transactionPackageIds = transactionPackageIds;
@@ -52,7 +52,7 @@ public class PostBuyFormStruct  implements java.io.Serializable {
      * 
      * @return transactionPackageIds
      */
-    public long[] getTransactionPackageIds() {
+    public com.allegro.webapi.ArrayOfLong getTransactionPackageIds() {
         return transactionPackageIds;
     }
 
@@ -62,7 +62,7 @@ public class PostBuyFormStruct  implements java.io.Serializable {
      * 
      * @param transactionPackageIds
      */
-    public void setTransactionPackageIds(long[] transactionPackageIds) {
+    public void setTransactionPackageIds(com.allegro.webapi.ArrayOfLong transactionPackageIds) {
         this.transactionPackageIds = transactionPackageIds;
     }
 
@@ -101,7 +101,7 @@ public class PostBuyFormStruct  implements java.io.Serializable {
             this.transactionId == other.getTransactionId() &&
             ((this.transactionPackageIds==null && other.getTransactionPackageIds()==null) || 
              (this.transactionPackageIds!=null &&
-              java.util.Arrays.equals(this.transactionPackageIds, other.getTransactionPackageIds()))) &&
+              this.transactionPackageIds.equals(other.getTransactionPackageIds()))) &&
             ((this.transactionPayByLink==null && other.getTransactionPayByLink()==null) || 
              (this.transactionPayByLink!=null &&
               this.transactionPayByLink.equals(other.getTransactionPayByLink())));
@@ -118,15 +118,7 @@ public class PostBuyFormStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getTransactionId()).hashCode();
         if (getTransactionPackageIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getTransactionPackageIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getTransactionPackageIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getTransactionPackageIds().hashCode();
         }
         if (getTransactionPayByLink() != null) {
             _hashCode += getTransactionPayByLink().hashCode();
@@ -140,23 +132,24 @@ public class PostBuyFormStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PostBuyFormStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transactionId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "transaction-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "transactionId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transactionPackageIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "transaction-package-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "transactionPackageIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transactionPayByLink");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "transaction-pay-by-link"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "TransactionPayByLinkStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "transactionPayByLink"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "TransactionPayByLinkStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

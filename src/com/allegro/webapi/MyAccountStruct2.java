@@ -8,13 +8,13 @@
 package com.allegro.webapi;
 
 public class MyAccountStruct2  implements java.io.Serializable {
-    private java.lang.String[] myAccountArray;
+    private com.allegro.webapi.ArrayOfString myAccountArray;
 
     public MyAccountStruct2() {
     }
 
     public MyAccountStruct2(
-           java.lang.String[] myAccountArray) {
+           com.allegro.webapi.ArrayOfString myAccountArray) {
            this.myAccountArray = myAccountArray;
     }
 
@@ -24,7 +24,7 @@ public class MyAccountStruct2  implements java.io.Serializable {
      * 
      * @return myAccountArray
      */
-    public java.lang.String[] getMyAccountArray() {
+    public com.allegro.webapi.ArrayOfString getMyAccountArray() {
         return myAccountArray;
     }
 
@@ -34,7 +34,7 @@ public class MyAccountStruct2  implements java.io.Serializable {
      * 
      * @param myAccountArray
      */
-    public void setMyAccountArray(java.lang.String[] myAccountArray) {
+    public void setMyAccountArray(com.allegro.webapi.ArrayOfString myAccountArray) {
         this.myAccountArray = myAccountArray;
     }
 
@@ -52,7 +52,7 @@ public class MyAccountStruct2  implements java.io.Serializable {
         _equals = true && 
             ((this.myAccountArray==null && other.getMyAccountArray()==null) || 
              (this.myAccountArray!=null &&
-              java.util.Arrays.equals(this.myAccountArray, other.getMyAccountArray())));
+              this.myAccountArray.equals(other.getMyAccountArray())));
         __equalsCalc = null;
         return _equals;
     }
@@ -65,15 +65,7 @@ public class MyAccountStruct2  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getMyAccountArray() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getMyAccountArray());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getMyAccountArray(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getMyAccountArray().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -84,11 +76,12 @@ public class MyAccountStruct2  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(MyAccountStruct2.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "MyAccountStruct2"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "MyAccountStruct2"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("myAccountArray");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "my-account-array"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "myAccountArray"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

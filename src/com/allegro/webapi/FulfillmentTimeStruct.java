@@ -98,16 +98,16 @@ public class FulfillmentTimeStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(FulfillmentTimeStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FulfillmentTimeStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FulfillmentTimeStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fulfillmentTimeFrom");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fulfillment-time-from"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fulfillmentTimeFrom"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fulfillmentTimeTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fulfillment-time-to"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fulfillmentTimeTo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -8,26 +8,30 @@
 package com.allegro.webapi;
 
 public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
-    private int filterFormat;
+    private java.lang.Integer filterFormat;
 
-    private int filterFromEnd;
+    private java.lang.Integer filterFromEnd;
 
-    private int filterAutoListing;
+    private java.lang.Integer filterAutoListing;
 
     private com.allegro.webapi.FilterPriceStruct filterPrice;
+
+    private java.lang.Integer filterDurationType;
 
     public NotSoldFilterOptionsStruct() {
     }
 
     public NotSoldFilterOptionsStruct(
-           int filterFormat,
-           int filterFromEnd,
-           int filterAutoListing,
-           com.allegro.webapi.FilterPriceStruct filterPrice) {
+           java.lang.Integer filterFormat,
+           java.lang.Integer filterFromEnd,
+           java.lang.Integer filterAutoListing,
+           com.allegro.webapi.FilterPriceStruct filterPrice,
+           java.lang.Integer filterDurationType) {
            this.filterFormat = filterFormat;
            this.filterFromEnd = filterFromEnd;
            this.filterAutoListing = filterAutoListing;
            this.filterPrice = filterPrice;
+           this.filterDurationType = filterDurationType;
     }
 
 
@@ -36,7 +40,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @return filterFormat
      */
-    public int getFilterFormat() {
+    public java.lang.Integer getFilterFormat() {
         return filterFormat;
     }
 
@@ -46,7 +50,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @param filterFormat
      */
-    public void setFilterFormat(int filterFormat) {
+    public void setFilterFormat(java.lang.Integer filterFormat) {
         this.filterFormat = filterFormat;
     }
 
@@ -56,7 +60,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @return filterFromEnd
      */
-    public int getFilterFromEnd() {
+    public java.lang.Integer getFilterFromEnd() {
         return filterFromEnd;
     }
 
@@ -66,7 +70,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @param filterFromEnd
      */
-    public void setFilterFromEnd(int filterFromEnd) {
+    public void setFilterFromEnd(java.lang.Integer filterFromEnd) {
         this.filterFromEnd = filterFromEnd;
     }
 
@@ -76,7 +80,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @return filterAutoListing
      */
-    public int getFilterAutoListing() {
+    public java.lang.Integer getFilterAutoListing() {
         return filterAutoListing;
     }
 
@@ -86,7 +90,7 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
      * 
      * @param filterAutoListing
      */
-    public void setFilterAutoListing(int filterAutoListing) {
+    public void setFilterAutoListing(java.lang.Integer filterAutoListing) {
         this.filterAutoListing = filterAutoListing;
     }
 
@@ -110,6 +114,26 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
         this.filterPrice = filterPrice;
     }
 
+
+    /**
+     * Gets the filterDurationType value for this NotSoldFilterOptionsStruct.
+     * 
+     * @return filterDurationType
+     */
+    public java.lang.Integer getFilterDurationType() {
+        return filterDurationType;
+    }
+
+
+    /**
+     * Sets the filterDurationType value for this NotSoldFilterOptionsStruct.
+     * 
+     * @param filterDurationType
+     */
+    public void setFilterDurationType(java.lang.Integer filterDurationType) {
+        this.filterDurationType = filterDurationType;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof NotSoldFilterOptionsStruct)) return false;
@@ -122,12 +146,21 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.filterFormat == other.getFilterFormat() &&
-            this.filterFromEnd == other.getFilterFromEnd() &&
-            this.filterAutoListing == other.getFilterAutoListing() &&
+            ((this.filterFormat==null && other.getFilterFormat()==null) || 
+             (this.filterFormat!=null &&
+              this.filterFormat.equals(other.getFilterFormat()))) &&
+            ((this.filterFromEnd==null && other.getFilterFromEnd()==null) || 
+             (this.filterFromEnd!=null &&
+              this.filterFromEnd.equals(other.getFilterFromEnd()))) &&
+            ((this.filterAutoListing==null && other.getFilterAutoListing()==null) || 
+             (this.filterAutoListing!=null &&
+              this.filterAutoListing.equals(other.getFilterAutoListing()))) &&
             ((this.filterPrice==null && other.getFilterPrice()==null) || 
              (this.filterPrice!=null &&
-              this.filterPrice.equals(other.getFilterPrice())));
+              this.filterPrice.equals(other.getFilterPrice()))) &&
+            ((this.filterDurationType==null && other.getFilterDurationType()==null) || 
+             (this.filterDurationType!=null &&
+              this.filterDurationType.equals(other.getFilterDurationType())));
         __equalsCalc = null;
         return _equals;
     }
@@ -139,11 +172,20 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += getFilterFormat();
-        _hashCode += getFilterFromEnd();
-        _hashCode += getFilterAutoListing();
+        if (getFilterFormat() != null) {
+            _hashCode += getFilterFormat().hashCode();
+        }
+        if (getFilterFromEnd() != null) {
+            _hashCode += getFilterFromEnd().hashCode();
+        }
+        if (getFilterAutoListing() != null) {
+            _hashCode += getFilterAutoListing().hashCode();
+        }
         if (getFilterPrice() != null) {
             _hashCode += getFilterPrice().hashCode();
+        }
+        if (getFilterDurationType() != null) {
+            _hashCode += getFilterDurationType().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -154,29 +196,40 @@ public class NotSoldFilterOptionsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(NotSoldFilterOptionsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "NotSoldFilterOptionsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "NotSoldFilterOptionsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterFormat");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-format"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterFormat"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterFromEnd");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-from-end"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterFromEnd"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterAutoListing");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-auto-listing"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterAutoListing"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("filterPrice");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "filter-price"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "FilterPriceStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterPrice"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FilterPriceStruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("filterDurationType");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "filterDurationType"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

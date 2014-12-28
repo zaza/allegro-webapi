@@ -10,14 +10,14 @@ package com.allegro.webapi;
 public class SellRatingDetailStruct  implements java.io.Serializable {
     private java.lang.String sellRatingGroupTitle;
 
-    private com.allegro.webapi.SellRatingReasonSumStruct[] sellRatingReasonsSummary;
+    private com.allegro.webapi.ArrayOfSellratingreasonsumstruct sellRatingReasonsSummary;
 
     public SellRatingDetailStruct() {
     }
 
     public SellRatingDetailStruct(
            java.lang.String sellRatingGroupTitle,
-           com.allegro.webapi.SellRatingReasonSumStruct[] sellRatingReasonsSummary) {
+           com.allegro.webapi.ArrayOfSellratingreasonsumstruct sellRatingReasonsSummary) {
            this.sellRatingGroupTitle = sellRatingGroupTitle;
            this.sellRatingReasonsSummary = sellRatingReasonsSummary;
     }
@@ -48,7 +48,7 @@ public class SellRatingDetailStruct  implements java.io.Serializable {
      * 
      * @return sellRatingReasonsSummary
      */
-    public com.allegro.webapi.SellRatingReasonSumStruct[] getSellRatingReasonsSummary() {
+    public com.allegro.webapi.ArrayOfSellratingreasonsumstruct getSellRatingReasonsSummary() {
         return sellRatingReasonsSummary;
     }
 
@@ -58,7 +58,7 @@ public class SellRatingDetailStruct  implements java.io.Serializable {
      * 
      * @param sellRatingReasonsSummary
      */
-    public void setSellRatingReasonsSummary(com.allegro.webapi.SellRatingReasonSumStruct[] sellRatingReasonsSummary) {
+    public void setSellRatingReasonsSummary(com.allegro.webapi.ArrayOfSellratingreasonsumstruct sellRatingReasonsSummary) {
         this.sellRatingReasonsSummary = sellRatingReasonsSummary;
     }
 
@@ -79,7 +79,7 @@ public class SellRatingDetailStruct  implements java.io.Serializable {
               this.sellRatingGroupTitle.equals(other.getSellRatingGroupTitle()))) &&
             ((this.sellRatingReasonsSummary==null && other.getSellRatingReasonsSummary()==null) || 
              (this.sellRatingReasonsSummary!=null &&
-              java.util.Arrays.equals(this.sellRatingReasonsSummary, other.getSellRatingReasonsSummary())));
+              this.sellRatingReasonsSummary.equals(other.getSellRatingReasonsSummary())));
         __equalsCalc = null;
         return _equals;
     }
@@ -95,15 +95,7 @@ public class SellRatingDetailStruct  implements java.io.Serializable {
             _hashCode += getSellRatingGroupTitle().hashCode();
         }
         if (getSellRatingReasonsSummary() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSellRatingReasonsSummary());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSellRatingReasonsSummary(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getSellRatingReasonsSummary().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -114,17 +106,18 @@ public class SellRatingDetailStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SellRatingDetailStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingDetailStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellRatingDetailStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingGroupTitle");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-group-title"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingGroupTitle"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellRatingReasonsSummary");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sell-rating-reasons-summary"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellRatingReasonSumStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellRatingReasonsSummary"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfSellratingreasonsumstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

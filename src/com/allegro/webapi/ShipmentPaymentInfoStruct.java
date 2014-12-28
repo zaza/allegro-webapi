@@ -16,7 +16,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
 
     private int shipmentPaymentType;
 
-    private long[] shipmentItemIds;
+    private com.allegro.webapi.ArrayOfLong shipmentItemIds;
 
     public ShipmentPaymentInfoStruct() {
     }
@@ -26,7 +26,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
            java.lang.String shipmentName,
            float shipmentAmount,
            int shipmentPaymentType,
-           long[] shipmentItemIds) {
+           com.allegro.webapi.ArrayOfLong shipmentItemIds) {
            this.shipmentId = shipmentId;
            this.shipmentName = shipmentName;
            this.shipmentAmount = shipmentAmount;
@@ -120,7 +120,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @return shipmentItemIds
      */
-    public long[] getShipmentItemIds() {
+    public com.allegro.webapi.ArrayOfLong getShipmentItemIds() {
         return shipmentItemIds;
     }
 
@@ -130,7 +130,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @param shipmentItemIds
      */
-    public void setShipmentItemIds(long[] shipmentItemIds) {
+    public void setShipmentItemIds(com.allegro.webapi.ArrayOfLong shipmentItemIds) {
         this.shipmentItemIds = shipmentItemIds;
     }
 
@@ -154,7 +154,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
             this.shipmentPaymentType == other.getShipmentPaymentType() &&
             ((this.shipmentItemIds==null && other.getShipmentItemIds()==null) || 
              (this.shipmentItemIds!=null &&
-              java.util.Arrays.equals(this.shipmentItemIds, other.getShipmentItemIds())));
+              this.shipmentItemIds.equals(other.getShipmentItemIds())));
         __equalsCalc = null;
         return _equals;
     }
@@ -173,15 +173,7 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
         _hashCode += new Float(getShipmentAmount()).hashCode();
         _hashCode += getShipmentPaymentType();
         if (getShipmentItemIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getShipmentItemIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getShipmentItemIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getShipmentItemIds().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -192,35 +184,36 @@ public class ShipmentPaymentInfoStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ShipmentPaymentInfoStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ShipmentPaymentInfoStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ShipmentPaymentInfoStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-name"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentPaymentType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-payment-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentPaymentType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentItemIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-item-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentItemIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class ItemTemplatesStruct  implements java.io.Serializable {
-    private com.allegro.webapi.ItemTemplateListStruct[] itemTemplateList;
+    private com.allegro.webapi.ArrayOfItemtemplateliststruct itemTemplateList;
 
-    private int[] itemTemplateIncorrectIds;
+    private com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds;
 
     public ItemTemplatesStruct() {
     }
 
     public ItemTemplatesStruct(
-           com.allegro.webapi.ItemTemplateListStruct[] itemTemplateList,
-           int[] itemTemplateIncorrectIds) {
+           com.allegro.webapi.ArrayOfItemtemplateliststruct itemTemplateList,
+           com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds) {
            this.itemTemplateList = itemTemplateList;
            this.itemTemplateIncorrectIds = itemTemplateIncorrectIds;
     }
@@ -28,7 +28,7 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @return itemTemplateList
      */
-    public com.allegro.webapi.ItemTemplateListStruct[] getItemTemplateList() {
+    public com.allegro.webapi.ArrayOfItemtemplateliststruct getItemTemplateList() {
         return itemTemplateList;
     }
 
@@ -38,7 +38,7 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @param itemTemplateList
      */
-    public void setItemTemplateList(com.allegro.webapi.ItemTemplateListStruct[] itemTemplateList) {
+    public void setItemTemplateList(com.allegro.webapi.ArrayOfItemtemplateliststruct itemTemplateList) {
         this.itemTemplateList = itemTemplateList;
     }
 
@@ -48,7 +48,7 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @return itemTemplateIncorrectIds
      */
-    public int[] getItemTemplateIncorrectIds() {
+    public com.allegro.webapi.ArrayOfInt getItemTemplateIncorrectIds() {
         return itemTemplateIncorrectIds;
     }
 
@@ -58,7 +58,7 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
      * 
      * @param itemTemplateIncorrectIds
      */
-    public void setItemTemplateIncorrectIds(int[] itemTemplateIncorrectIds) {
+    public void setItemTemplateIncorrectIds(com.allegro.webapi.ArrayOfInt itemTemplateIncorrectIds) {
         this.itemTemplateIncorrectIds = itemTemplateIncorrectIds;
     }
 
@@ -76,10 +76,10 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.itemTemplateList==null && other.getItemTemplateList()==null) || 
              (this.itemTemplateList!=null &&
-              java.util.Arrays.equals(this.itemTemplateList, other.getItemTemplateList()))) &&
+              this.itemTemplateList.equals(other.getItemTemplateList()))) &&
             ((this.itemTemplateIncorrectIds==null && other.getItemTemplateIncorrectIds()==null) || 
              (this.itemTemplateIncorrectIds!=null &&
-              java.util.Arrays.equals(this.itemTemplateIncorrectIds, other.getItemTemplateIncorrectIds())));
+              this.itemTemplateIncorrectIds.equals(other.getItemTemplateIncorrectIds())));
         __equalsCalc = null;
         return _equals;
     }
@@ -92,26 +92,10 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getItemTemplateList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemTemplateList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemTemplateList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemTemplateList().hashCode();
         }
         if (getItemTemplateIncorrectIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getItemTemplateIncorrectIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getItemTemplateIncorrectIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getItemTemplateIncorrectIds().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -122,17 +106,19 @@ public class ItemTemplatesStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ItemTemplatesStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemTemplatesStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemTemplatesStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemTemplateList");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-template-list"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ItemTemplateListStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemTemplateList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemtemplateliststruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemTemplateIncorrectIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "item-template-incorrect-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemTemplateIncorrectIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfInt"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

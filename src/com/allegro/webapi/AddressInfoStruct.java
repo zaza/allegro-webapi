@@ -102,17 +102,17 @@ public class AddressInfoStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(AddressInfoStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "AddressInfoStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AddressInfoStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("addressType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "address-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "addressType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("addressUserData");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "address-user-data"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "AddressUserDataStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "addressUserData"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AddressUserDataStruct"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

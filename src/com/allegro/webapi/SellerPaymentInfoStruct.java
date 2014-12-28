@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class SellerPaymentInfoStruct  implements java.io.Serializable {
-    private com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoPza;
+    private com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoPza;
 
-    private com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoNonPza;
+    private com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoNonPza;
 
     public SellerPaymentInfoStruct() {
     }
 
     public SellerPaymentInfoStruct(
-           com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoPza,
-           com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoNonPza) {
+           com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoPza,
+           com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoNonPza) {
            this.shipmentPaymentInfoPza = shipmentPaymentInfoPza;
            this.shipmentPaymentInfoNonPza = shipmentPaymentInfoNonPza;
     }
@@ -28,7 +28,7 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @return shipmentPaymentInfoPza
      */
-    public com.allegro.webapi.ShipmentPaymentInfoStruct[] getShipmentPaymentInfoPza() {
+    public com.allegro.webapi.ArrayOfShipmentpaymentinfostruct getShipmentPaymentInfoPza() {
         return shipmentPaymentInfoPza;
     }
 
@@ -38,7 +38,7 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @param shipmentPaymentInfoPza
      */
-    public void setShipmentPaymentInfoPza(com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoPza) {
+    public void setShipmentPaymentInfoPza(com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoPza) {
         this.shipmentPaymentInfoPza = shipmentPaymentInfoPza;
     }
 
@@ -48,7 +48,7 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @return shipmentPaymentInfoNonPza
      */
-    public com.allegro.webapi.ShipmentPaymentInfoStruct[] getShipmentPaymentInfoNonPza() {
+    public com.allegro.webapi.ArrayOfShipmentpaymentinfostruct getShipmentPaymentInfoNonPza() {
         return shipmentPaymentInfoNonPza;
     }
 
@@ -58,7 +58,7 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
      * 
      * @param shipmentPaymentInfoNonPza
      */
-    public void setShipmentPaymentInfoNonPza(com.allegro.webapi.ShipmentPaymentInfoStruct[] shipmentPaymentInfoNonPza) {
+    public void setShipmentPaymentInfoNonPza(com.allegro.webapi.ArrayOfShipmentpaymentinfostruct shipmentPaymentInfoNonPza) {
         this.shipmentPaymentInfoNonPza = shipmentPaymentInfoNonPza;
     }
 
@@ -76,10 +76,10 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
         _equals = true && 
             ((this.shipmentPaymentInfoPza==null && other.getShipmentPaymentInfoPza()==null) || 
              (this.shipmentPaymentInfoPza!=null &&
-              java.util.Arrays.equals(this.shipmentPaymentInfoPza, other.getShipmentPaymentInfoPza()))) &&
+              this.shipmentPaymentInfoPza.equals(other.getShipmentPaymentInfoPza()))) &&
             ((this.shipmentPaymentInfoNonPza==null && other.getShipmentPaymentInfoNonPza()==null) || 
              (this.shipmentPaymentInfoNonPza!=null &&
-              java.util.Arrays.equals(this.shipmentPaymentInfoNonPza, other.getShipmentPaymentInfoNonPza())));
+              this.shipmentPaymentInfoNonPza.equals(other.getShipmentPaymentInfoNonPza())));
         __equalsCalc = null;
         return _equals;
     }
@@ -92,26 +92,10 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
         __hashCodeCalc = true;
         int _hashCode = 1;
         if (getShipmentPaymentInfoPza() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getShipmentPaymentInfoPza());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getShipmentPaymentInfoPza(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getShipmentPaymentInfoPza().hashCode();
         }
         if (getShipmentPaymentInfoNonPza() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getShipmentPaymentInfoNonPza());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getShipmentPaymentInfoNonPza(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getShipmentPaymentInfoNonPza().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -122,17 +106,19 @@ public class SellerPaymentInfoStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SellerPaymentInfoStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SellerPaymentInfoStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SellerPaymentInfoStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentPaymentInfoPza");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-payment-info-pza"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ShipmentPaymentInfoStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentPaymentInfoPza"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfShipmentpaymentinfostruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("shipmentPaymentInfoNonPza");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "shipment-payment-info-non-pza"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ShipmentPaymentInfoStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "shipmentPaymentInfoNonPza"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfShipmentpaymentinfostruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class SortOptionsStruct  implements java.io.Serializable {
-    private int sortType;
+    private java.lang.Integer sortType;
 
-    private int sortOrder;
+    private java.lang.Integer sortOrder;
 
     public SortOptionsStruct() {
     }
 
     public SortOptionsStruct(
-           int sortType,
-           int sortOrder) {
+           java.lang.Integer sortType,
+           java.lang.Integer sortOrder) {
            this.sortType = sortType;
            this.sortOrder = sortOrder;
     }
@@ -28,7 +28,7 @@ public class SortOptionsStruct  implements java.io.Serializable {
      * 
      * @return sortType
      */
-    public int getSortType() {
+    public java.lang.Integer getSortType() {
         return sortType;
     }
 
@@ -38,7 +38,7 @@ public class SortOptionsStruct  implements java.io.Serializable {
      * 
      * @param sortType
      */
-    public void setSortType(int sortType) {
+    public void setSortType(java.lang.Integer sortType) {
         this.sortType = sortType;
     }
 
@@ -48,7 +48,7 @@ public class SortOptionsStruct  implements java.io.Serializable {
      * 
      * @return sortOrder
      */
-    public int getSortOrder() {
+    public java.lang.Integer getSortOrder() {
         return sortOrder;
     }
 
@@ -58,7 +58,7 @@ public class SortOptionsStruct  implements java.io.Serializable {
      * 
      * @param sortOrder
      */
-    public void setSortOrder(int sortOrder) {
+    public void setSortOrder(java.lang.Integer sortOrder) {
         this.sortOrder = sortOrder;
     }
 
@@ -74,8 +74,12 @@ public class SortOptionsStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.sortType == other.getSortType() &&
-            this.sortOrder == other.getSortOrder();
+            ((this.sortType==null && other.getSortType()==null) || 
+             (this.sortType!=null &&
+              this.sortType.equals(other.getSortType()))) &&
+            ((this.sortOrder==null && other.getSortOrder()==null) || 
+             (this.sortOrder!=null &&
+              this.sortOrder.equals(other.getSortOrder())));
         __equalsCalc = null;
         return _equals;
     }
@@ -87,8 +91,12 @@ public class SortOptionsStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += getSortType();
-        _hashCode += getSortOrder();
+        if (getSortType() != null) {
+            _hashCode += getSortType().hashCode();
+        }
+        if (getSortOrder() != null) {
+            _hashCode += getSortOrder().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -98,17 +106,19 @@ public class SortOptionsStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(SortOptionsStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "SortOptionsStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "SortOptionsStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sortType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sort-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sortType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sortOrder");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "sort-order"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sortOrder"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

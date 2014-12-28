@@ -8,16 +8,16 @@
 package com.allegro.webapi;
 
 public class RangeFloatValueStruct  implements java.io.Serializable {
-    private float fvalueRangeFloatMin;
+    private java.lang.Float fvalueRangeFloatMin;
 
-    private float fvalueRangeFloatMax;
+    private java.lang.Float fvalueRangeFloatMax;
 
     public RangeFloatValueStruct() {
     }
 
     public RangeFloatValueStruct(
-           float fvalueRangeFloatMin,
-           float fvalueRangeFloatMax) {
+           java.lang.Float fvalueRangeFloatMin,
+           java.lang.Float fvalueRangeFloatMax) {
            this.fvalueRangeFloatMin = fvalueRangeFloatMin;
            this.fvalueRangeFloatMax = fvalueRangeFloatMax;
     }
@@ -28,7 +28,7 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
      * 
      * @return fvalueRangeFloatMin
      */
-    public float getFvalueRangeFloatMin() {
+    public java.lang.Float getFvalueRangeFloatMin() {
         return fvalueRangeFloatMin;
     }
 
@@ -38,7 +38,7 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
      * 
      * @param fvalueRangeFloatMin
      */
-    public void setFvalueRangeFloatMin(float fvalueRangeFloatMin) {
+    public void setFvalueRangeFloatMin(java.lang.Float fvalueRangeFloatMin) {
         this.fvalueRangeFloatMin = fvalueRangeFloatMin;
     }
 
@@ -48,7 +48,7 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
      * 
      * @return fvalueRangeFloatMax
      */
-    public float getFvalueRangeFloatMax() {
+    public java.lang.Float getFvalueRangeFloatMax() {
         return fvalueRangeFloatMax;
     }
 
@@ -58,7 +58,7 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
      * 
      * @param fvalueRangeFloatMax
      */
-    public void setFvalueRangeFloatMax(float fvalueRangeFloatMax) {
+    public void setFvalueRangeFloatMax(java.lang.Float fvalueRangeFloatMax) {
         this.fvalueRangeFloatMax = fvalueRangeFloatMax;
     }
 
@@ -74,8 +74,12 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            this.fvalueRangeFloatMin == other.getFvalueRangeFloatMin() &&
-            this.fvalueRangeFloatMax == other.getFvalueRangeFloatMax();
+            ((this.fvalueRangeFloatMin==null && other.getFvalueRangeFloatMin()==null) || 
+             (this.fvalueRangeFloatMin!=null &&
+              this.fvalueRangeFloatMin.equals(other.getFvalueRangeFloatMin()))) &&
+            ((this.fvalueRangeFloatMax==null && other.getFvalueRangeFloatMax()==null) || 
+             (this.fvalueRangeFloatMax!=null &&
+              this.fvalueRangeFloatMax.equals(other.getFvalueRangeFloatMax())));
         __equalsCalc = null;
         return _equals;
     }
@@ -87,8 +91,12 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        _hashCode += new Float(getFvalueRangeFloatMin()).hashCode();
-        _hashCode += new Float(getFvalueRangeFloatMax()).hashCode();
+        if (getFvalueRangeFloatMin() != null) {
+            _hashCode += getFvalueRangeFloatMin().hashCode();
+        }
+        if (getFvalueRangeFloatMax() != null) {
+            _hashCode += getFvalueRangeFloatMax().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -98,17 +106,19 @@ public class RangeFloatValueStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(RangeFloatValueStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "RangeFloatValueStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "RangeFloatValueStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueRangeFloatMin");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-range-float-min"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueRangeFloatMin"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueRangeFloatMax");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "fvalue-range-float-max"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueRangeFloatMax"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

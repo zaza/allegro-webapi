@@ -10,7 +10,7 @@ package com.allegro.webapi;
 public class UserPaymentStruct  implements java.io.Serializable {
     private long payTransId;
 
-    private com.allegro.webapi.PaymentSellersStruct[] payTransSellers;
+    private com.allegro.webapi.ArrayOfPaymentsellersstruct payTransSellers;
 
     private java.lang.String payTransType;
 
@@ -31,7 +31,7 @@ public class UserPaymentStruct  implements java.io.Serializable {
 
     public UserPaymentStruct(
            long payTransId,
-           com.allegro.webapi.PaymentSellersStruct[] payTransSellers,
+           com.allegro.webapi.ArrayOfPaymentsellersstruct payTransSellers,
            java.lang.String payTransType,
            java.lang.String payTransStatus,
            float payTransAmount,
@@ -76,7 +76,7 @@ public class UserPaymentStruct  implements java.io.Serializable {
      * 
      * @return payTransSellers
      */
-    public com.allegro.webapi.PaymentSellersStruct[] getPayTransSellers() {
+    public com.allegro.webapi.ArrayOfPaymentsellersstruct getPayTransSellers() {
         return payTransSellers;
     }
 
@@ -86,7 +86,7 @@ public class UserPaymentStruct  implements java.io.Serializable {
      * 
      * @param payTransSellers
      */
-    public void setPayTransSellers(com.allegro.webapi.PaymentSellersStruct[] payTransSellers) {
+    public void setPayTransSellers(com.allegro.webapi.ArrayOfPaymentsellersstruct payTransSellers) {
         this.payTransSellers = payTransSellers;
     }
 
@@ -245,7 +245,7 @@ public class UserPaymentStruct  implements java.io.Serializable {
             this.payTransId == other.getPayTransId() &&
             ((this.payTransSellers==null && other.getPayTransSellers()==null) || 
              (this.payTransSellers!=null &&
-              java.util.Arrays.equals(this.payTransSellers, other.getPayTransSellers()))) &&
+              this.payTransSellers.equals(other.getPayTransSellers()))) &&
             ((this.payTransType==null && other.getPayTransType()==null) || 
              (this.payTransType!=null &&
               this.payTransType.equals(other.getPayTransType()))) &&
@@ -270,15 +270,7 @@ public class UserPaymentStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += new Long(getPayTransId()).hashCode();
         if (getPayTransSellers() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getPayTransSellers());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getPayTransSellers(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getPayTransSellers().hashCode();
         }
         if (getPayTransType() != null) {
             _hashCode += getPayTransType().hashCode();
@@ -300,58 +292,59 @@ public class UserPaymentStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(UserPaymentStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "UserPaymentStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "UserPaymentStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransSellers");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-sellers"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PaymentSellersStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransSellers"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPaymentsellersstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransType");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-type"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransStatus");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-status"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransStatus"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransCreateDate");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-create-date"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransCreateDate"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransPrice");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-price"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransPrice"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransPostageAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-postage-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransPostageAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("payTransIncomplete");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "pay-trans-incomplete"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "payTransIncomplete"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

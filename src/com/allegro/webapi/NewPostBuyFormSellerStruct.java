@@ -10,11 +10,13 @@ package com.allegro.webapi;
 public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
     private int sellerId;
 
-    private long[] sellerItemIds;
+    private com.allegro.webapi.ArrayOfLong sellerItemIds;
 
     private int sellerShipmentId;
 
-    private float sellerShipmentAmount;
+    private java.lang.Integer sellerGdId;
+
+    private java.lang.Float sellerShipmentAmount;
 
     private java.lang.String sellerMessageTo;
 
@@ -23,13 +25,15 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
 
     public NewPostBuyFormSellerStruct(
            int sellerId,
-           long[] sellerItemIds,
+           com.allegro.webapi.ArrayOfLong sellerItemIds,
            int sellerShipmentId,
-           float sellerShipmentAmount,
+           java.lang.Integer sellerGdId,
+           java.lang.Float sellerShipmentAmount,
            java.lang.String sellerMessageTo) {
            this.sellerId = sellerId;
            this.sellerItemIds = sellerItemIds;
            this.sellerShipmentId = sellerShipmentId;
+           this.sellerGdId = sellerGdId;
            this.sellerShipmentAmount = sellerShipmentAmount;
            this.sellerMessageTo = sellerMessageTo;
     }
@@ -60,7 +64,7 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
      * 
      * @return sellerItemIds
      */
-    public long[] getSellerItemIds() {
+    public com.allegro.webapi.ArrayOfLong getSellerItemIds() {
         return sellerItemIds;
     }
 
@@ -70,7 +74,7 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
      * 
      * @param sellerItemIds
      */
-    public void setSellerItemIds(long[] sellerItemIds) {
+    public void setSellerItemIds(com.allegro.webapi.ArrayOfLong sellerItemIds) {
         this.sellerItemIds = sellerItemIds;
     }
 
@@ -96,11 +100,31 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
 
 
     /**
+     * Gets the sellerGdId value for this NewPostBuyFormSellerStruct.
+     * 
+     * @return sellerGdId
+     */
+    public java.lang.Integer getSellerGdId() {
+        return sellerGdId;
+    }
+
+
+    /**
+     * Sets the sellerGdId value for this NewPostBuyFormSellerStruct.
+     * 
+     * @param sellerGdId
+     */
+    public void setSellerGdId(java.lang.Integer sellerGdId) {
+        this.sellerGdId = sellerGdId;
+    }
+
+
+    /**
      * Gets the sellerShipmentAmount value for this NewPostBuyFormSellerStruct.
      * 
      * @return sellerShipmentAmount
      */
-    public float getSellerShipmentAmount() {
+    public java.lang.Float getSellerShipmentAmount() {
         return sellerShipmentAmount;
     }
 
@@ -110,7 +134,7 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
      * 
      * @param sellerShipmentAmount
      */
-    public void setSellerShipmentAmount(float sellerShipmentAmount) {
+    public void setSellerShipmentAmount(java.lang.Float sellerShipmentAmount) {
         this.sellerShipmentAmount = sellerShipmentAmount;
     }
 
@@ -149,9 +173,14 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
             this.sellerId == other.getSellerId() &&
             ((this.sellerItemIds==null && other.getSellerItemIds()==null) || 
              (this.sellerItemIds!=null &&
-              java.util.Arrays.equals(this.sellerItemIds, other.getSellerItemIds()))) &&
+              this.sellerItemIds.equals(other.getSellerItemIds()))) &&
             this.sellerShipmentId == other.getSellerShipmentId() &&
-            this.sellerShipmentAmount == other.getSellerShipmentAmount() &&
+            ((this.sellerGdId==null && other.getSellerGdId()==null) || 
+             (this.sellerGdId!=null &&
+              this.sellerGdId.equals(other.getSellerGdId()))) &&
+            ((this.sellerShipmentAmount==null && other.getSellerShipmentAmount()==null) || 
+             (this.sellerShipmentAmount!=null &&
+              this.sellerShipmentAmount.equals(other.getSellerShipmentAmount()))) &&
             ((this.sellerMessageTo==null && other.getSellerMessageTo()==null) || 
              (this.sellerMessageTo!=null &&
               this.sellerMessageTo.equals(other.getSellerMessageTo())));
@@ -168,18 +197,15 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
         int _hashCode = 1;
         _hashCode += getSellerId();
         if (getSellerItemIds() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getSellerItemIds());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getSellerItemIds(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getSellerItemIds().hashCode();
         }
         _hashCode += getSellerShipmentId();
-        _hashCode += new Float(getSellerShipmentAmount()).hashCode();
+        if (getSellerGdId() != null) {
+            _hashCode += getSellerGdId().hashCode();
+        }
+        if (getSellerShipmentAmount() != null) {
+            _hashCode += getSellerShipmentAmount().hashCode();
+        }
         if (getSellerMessageTo() != null) {
             _hashCode += getSellerMessageTo().hashCode();
         }
@@ -192,35 +218,45 @@ public class NewPostBuyFormSellerStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(NewPostBuyFormSellerStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "NewPostBuyFormSellerStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "NewPostBuyFormSellerStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerItemIds");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-item-ids"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerItemIds"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerShipmentId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-shipment-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerShipmentId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("sellerGdId");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerGdId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerShipmentAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-shipment-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerShipmentAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("sellerMessageTo");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "seller-message-to"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellerMessageTo"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

@@ -10,14 +10,14 @@ package com.allegro.webapi;
 public class AttribStruct  implements java.io.Serializable {
     private java.lang.String attribName;
 
-    private java.lang.String[] attribValues;
+    private com.allegro.webapi.ArrayOfString attribValues;
 
     public AttribStruct() {
     }
 
     public AttribStruct(
            java.lang.String attribName,
-           java.lang.String[] attribValues) {
+           com.allegro.webapi.ArrayOfString attribValues) {
            this.attribName = attribName;
            this.attribValues = attribValues;
     }
@@ -48,7 +48,7 @@ public class AttribStruct  implements java.io.Serializable {
      * 
      * @return attribValues
      */
-    public java.lang.String[] getAttribValues() {
+    public com.allegro.webapi.ArrayOfString getAttribValues() {
         return attribValues;
     }
 
@@ -58,7 +58,7 @@ public class AttribStruct  implements java.io.Serializable {
      * 
      * @param attribValues
      */
-    public void setAttribValues(java.lang.String[] attribValues) {
+    public void setAttribValues(com.allegro.webapi.ArrayOfString attribValues) {
         this.attribValues = attribValues;
     }
 
@@ -79,7 +79,7 @@ public class AttribStruct  implements java.io.Serializable {
               this.attribName.equals(other.getAttribName()))) &&
             ((this.attribValues==null && other.getAttribValues()==null) || 
              (this.attribValues!=null &&
-              java.util.Arrays.equals(this.attribValues, other.getAttribValues())));
+              this.attribValues.equals(other.getAttribValues())));
         __equalsCalc = null;
         return _equals;
     }
@@ -95,15 +95,7 @@ public class AttribStruct  implements java.io.Serializable {
             _hashCode += getAttribName().hashCode();
         }
         if (getAttribValues() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getAttribValues());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getAttribValues(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getAttribValues().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -114,17 +106,18 @@ public class AttribStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(AttribStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "AttribStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AttribStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attribName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "attrib-name"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "attribName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("attribValues");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "attrib-values"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "attribValues"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

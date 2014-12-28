@@ -20,6 +20,8 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
 
     private float postBuyFormItPrice;
 
+    private com.allegro.webapi.ArrayOfPostbuyformitemdealsstruct postBuyFormItDeals;
+
     public PostBuyFormItemStruct() {
     }
 
@@ -29,13 +31,15 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
            long postBuyFormItId,
            java.lang.String postBuyFormItTitle,
            int postBuyFormItCountry,
-           float postBuyFormItPrice) {
+           float postBuyFormItPrice,
+           com.allegro.webapi.ArrayOfPostbuyformitemdealsstruct postBuyFormItDeals) {
            this.postBuyFormItQuantity = postBuyFormItQuantity;
            this.postBuyFormItAmount = postBuyFormItAmount;
            this.postBuyFormItId = postBuyFormItId;
            this.postBuyFormItTitle = postBuyFormItTitle;
            this.postBuyFormItCountry = postBuyFormItCountry;
            this.postBuyFormItPrice = postBuyFormItPrice;
+           this.postBuyFormItDeals = postBuyFormItDeals;
     }
 
 
@@ -158,6 +162,26 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
         this.postBuyFormItPrice = postBuyFormItPrice;
     }
 
+
+    /**
+     * Gets the postBuyFormItDeals value for this PostBuyFormItemStruct.
+     * 
+     * @return postBuyFormItDeals
+     */
+    public com.allegro.webapi.ArrayOfPostbuyformitemdealsstruct getPostBuyFormItDeals() {
+        return postBuyFormItDeals;
+    }
+
+
+    /**
+     * Sets the postBuyFormItDeals value for this PostBuyFormItemStruct.
+     * 
+     * @param postBuyFormItDeals
+     */
+    public void setPostBuyFormItDeals(com.allegro.webapi.ArrayOfPostbuyformitemdealsstruct postBuyFormItDeals) {
+        this.postBuyFormItDeals = postBuyFormItDeals;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof PostBuyFormItemStruct)) return false;
@@ -177,7 +201,10 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
              (this.postBuyFormItTitle!=null &&
               this.postBuyFormItTitle.equals(other.getPostBuyFormItTitle()))) &&
             this.postBuyFormItCountry == other.getPostBuyFormItCountry() &&
-            this.postBuyFormItPrice == other.getPostBuyFormItPrice();
+            this.postBuyFormItPrice == other.getPostBuyFormItPrice() &&
+            ((this.postBuyFormItDeals==null && other.getPostBuyFormItDeals()==null) || 
+             (this.postBuyFormItDeals!=null &&
+              this.postBuyFormItDeals.equals(other.getPostBuyFormItDeals())));
         __equalsCalc = null;
         return _equals;
     }
@@ -197,6 +224,9 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
         }
         _hashCode += getPostBuyFormItCountry();
         _hashCode += new Float(getPostBuyFormItPrice()).hashCode();
+        if (getPostBuyFormItDeals() != null) {
+            _hashCode += getPostBuyFormItDeals().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -206,41 +236,48 @@ public class PostBuyFormItemStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(PostBuyFormItemStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "PostBuyFormItemStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormItemStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItQuantity");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-quantity"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItQuantity"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItAmount");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-amount"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItAmount"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItTitle");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-title"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItTitle"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItCountry");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-country"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItCountry"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("postBuyFormItPrice");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "post-buy-form-it-price"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItPrice"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postBuyFormItDeals");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormItDeals"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPostbuyformitemdealsstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

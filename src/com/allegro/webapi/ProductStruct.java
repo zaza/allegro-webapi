@@ -14,9 +14,9 @@ public class ProductStruct  implements java.io.Serializable {
 
     private java.lang.String productDescription;
 
-    private java.lang.String[] productImagesList;
+    private com.allegro.webapi.ArrayOfString productImagesList;
 
-    private com.allegro.webapi.ProductParametersGroupStruct[] productParametersGroupList;
+    private com.allegro.webapi.ArrayOfProductparametersgroupstruct productParametersGroupList;
 
     public ProductStruct() {
     }
@@ -25,8 +25,8 @@ public class ProductStruct  implements java.io.Serializable {
            long productId,
            java.lang.String productName,
            java.lang.String productDescription,
-           java.lang.String[] productImagesList,
-           com.allegro.webapi.ProductParametersGroupStruct[] productParametersGroupList) {
+           com.allegro.webapi.ArrayOfString productImagesList,
+           com.allegro.webapi.ArrayOfProductparametersgroupstruct productParametersGroupList) {
            this.productId = productId;
            this.productName = productName;
            this.productDescription = productDescription;
@@ -100,7 +100,7 @@ public class ProductStruct  implements java.io.Serializable {
      * 
      * @return productImagesList
      */
-    public java.lang.String[] getProductImagesList() {
+    public com.allegro.webapi.ArrayOfString getProductImagesList() {
         return productImagesList;
     }
 
@@ -110,7 +110,7 @@ public class ProductStruct  implements java.io.Serializable {
      * 
      * @param productImagesList
      */
-    public void setProductImagesList(java.lang.String[] productImagesList) {
+    public void setProductImagesList(com.allegro.webapi.ArrayOfString productImagesList) {
         this.productImagesList = productImagesList;
     }
 
@@ -120,7 +120,7 @@ public class ProductStruct  implements java.io.Serializable {
      * 
      * @return productParametersGroupList
      */
-    public com.allegro.webapi.ProductParametersGroupStruct[] getProductParametersGroupList() {
+    public com.allegro.webapi.ArrayOfProductparametersgroupstruct getProductParametersGroupList() {
         return productParametersGroupList;
     }
 
@@ -130,7 +130,7 @@ public class ProductStruct  implements java.io.Serializable {
      * 
      * @param productParametersGroupList
      */
-    public void setProductParametersGroupList(com.allegro.webapi.ProductParametersGroupStruct[] productParametersGroupList) {
+    public void setProductParametersGroupList(com.allegro.webapi.ArrayOfProductparametersgroupstruct productParametersGroupList) {
         this.productParametersGroupList = productParametersGroupList;
     }
 
@@ -155,10 +155,10 @@ public class ProductStruct  implements java.io.Serializable {
               this.productDescription.equals(other.getProductDescription()))) &&
             ((this.productImagesList==null && other.getProductImagesList()==null) || 
              (this.productImagesList!=null &&
-              java.util.Arrays.equals(this.productImagesList, other.getProductImagesList()))) &&
+              this.productImagesList.equals(other.getProductImagesList()))) &&
             ((this.productParametersGroupList==null && other.getProductParametersGroupList()==null) || 
              (this.productParametersGroupList!=null &&
-              java.util.Arrays.equals(this.productParametersGroupList, other.getProductParametersGroupList())));
+              this.productParametersGroupList.equals(other.getProductParametersGroupList())));
         __equalsCalc = null;
         return _equals;
     }
@@ -178,26 +178,10 @@ public class ProductStruct  implements java.io.Serializable {
             _hashCode += getProductDescription().hashCode();
         }
         if (getProductImagesList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getProductImagesList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getProductImagesList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getProductImagesList().hashCode();
         }
         if (getProductParametersGroupList() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getProductParametersGroupList());
-                 i++) {
-                java.lang.Object obj = java.lang.reflect.Array.get(getProductParametersGroupList(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+            _hashCode += getProductParametersGroupList().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -208,35 +192,37 @@ public class ProductStruct  implements java.io.Serializable {
         new org.apache.axis.description.TypeDesc(ProductStruct.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ProductStruct"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ProductStruct"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productId");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-id"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "productId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productName");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-name"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "productName"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productDescription");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-description"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "productDescription"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productImagesList");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-images-list"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "productImagesList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfString"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("productParametersGroupList");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "product-parameters-group-list"));
-        elemField.setXmlType(new javax.xml.namespace.QName("urn:AllegroWebApi", "ProductParametersGroupStruct"));
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "productParametersGroupList"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfProductparametersgroupstruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }
