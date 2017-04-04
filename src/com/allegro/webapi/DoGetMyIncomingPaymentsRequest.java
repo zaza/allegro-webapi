@@ -22,6 +22,8 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
 
     private java.lang.Integer transOffset;
 
+    private java.lang.Integer strictedSearch;
+
     public DoGetMyIncomingPaymentsRequest() {
     }
 
@@ -32,7 +34,8 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
            java.lang.Long transRecvDateFrom,
            java.lang.Long transRecvDateTo,
            java.lang.Integer transPageLimit,
-           java.lang.Integer transOffset) {
+           java.lang.Integer transOffset,
+           java.lang.Integer strictedSearch) {
            this.sessionHandle = sessionHandle;
            this.buyerId = buyerId;
            this.itemId = itemId;
@@ -40,6 +43,7 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
            this.transRecvDateTo = transRecvDateTo;
            this.transPageLimit = transPageLimit;
            this.transOffset = transOffset;
+           this.strictedSearch = strictedSearch;
     }
 
 
@@ -182,6 +186,26 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
         this.transOffset = transOffset;
     }
 
+
+    /**
+     * Gets the strictedSearch value for this DoGetMyIncomingPaymentsRequest.
+     * 
+     * @return strictedSearch
+     */
+    public java.lang.Integer getStrictedSearch() {
+        return strictedSearch;
+    }
+
+
+    /**
+     * Sets the strictedSearch value for this DoGetMyIncomingPaymentsRequest.
+     * 
+     * @param strictedSearch
+     */
+    public void setStrictedSearch(java.lang.Integer strictedSearch) {
+        this.strictedSearch = strictedSearch;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoGetMyIncomingPaymentsRequest)) return false;
@@ -214,7 +238,10 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
               this.transPageLimit.equals(other.getTransPageLimit()))) &&
             ((this.transOffset==null && other.getTransOffset()==null) || 
              (this.transOffset!=null &&
-              this.transOffset.equals(other.getTransOffset())));
+              this.transOffset.equals(other.getTransOffset()))) &&
+            ((this.strictedSearch==null && other.getStrictedSearch()==null) || 
+             (this.strictedSearch!=null &&
+              this.strictedSearch.equals(other.getStrictedSearch())));
         __equalsCalc = null;
         return _equals;
     }
@@ -246,6 +273,9 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
         }
         if (getTransOffset() != null) {
             _hashCode += getTransOffset().hashCode();
+        }
+        if (getStrictedSearch() != null) {
+            _hashCode += getStrictedSearch().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -301,6 +331,13 @@ public class DoGetMyIncomingPaymentsRequest  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("transOffset");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "transOffset"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("strictedSearch");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "strictedSearch"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

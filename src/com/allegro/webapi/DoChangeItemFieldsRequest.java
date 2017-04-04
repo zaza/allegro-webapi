@@ -20,6 +20,10 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
 
     private com.allegro.webapi.ArrayOfVariantstruct variants;
 
+    private com.allegro.webapi.ArrayOfTagnamestruct tags;
+
+    private com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions;
+
     public DoChangeItemFieldsRequest() {
     }
 
@@ -29,13 +33,17 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
            com.allegro.webapi.ArrayOfFieldsvalue fieldsToModify,
            com.allegro.webapi.ArrayOfInt fieldsToRemove,
            java.lang.Integer previewOnly,
-           com.allegro.webapi.ArrayOfVariantstruct variants) {
+           com.allegro.webapi.ArrayOfVariantstruct variants,
+           com.allegro.webapi.ArrayOfTagnamestruct tags,
+           com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions) {
            this.sessionId = sessionId;
            this.itemId = itemId;
            this.fieldsToModify = fieldsToModify;
            this.fieldsToRemove = fieldsToRemove;
            this.previewOnly = previewOnly;
            this.variants = variants;
+           this.tags = tags;
+           this.afterSalesServiceConditions = afterSalesServiceConditions;
     }
 
 
@@ -158,6 +166,46 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
         this.variants = variants;
     }
 
+
+    /**
+     * Gets the tags value for this DoChangeItemFieldsRequest.
+     * 
+     * @return tags
+     */
+    public com.allegro.webapi.ArrayOfTagnamestruct getTags() {
+        return tags;
+    }
+
+
+    /**
+     * Sets the tags value for this DoChangeItemFieldsRequest.
+     * 
+     * @param tags
+     */
+    public void setTags(com.allegro.webapi.ArrayOfTagnamestruct tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * Gets the afterSalesServiceConditions value for this DoChangeItemFieldsRequest.
+     * 
+     * @return afterSalesServiceConditions
+     */
+    public com.allegro.webapi.AfterSalesServiceConditionsStruct getAfterSalesServiceConditions() {
+        return afterSalesServiceConditions;
+    }
+
+
+    /**
+     * Sets the afterSalesServiceConditions value for this DoChangeItemFieldsRequest.
+     * 
+     * @param afterSalesServiceConditions
+     */
+    public void setAfterSalesServiceConditions(com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions) {
+        this.afterSalesServiceConditions = afterSalesServiceConditions;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoChangeItemFieldsRequest)) return false;
@@ -185,7 +233,13 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
               this.previewOnly.equals(other.getPreviewOnly()))) &&
             ((this.variants==null && other.getVariants()==null) || 
              (this.variants!=null &&
-              this.variants.equals(other.getVariants())));
+              this.variants.equals(other.getVariants()))) &&
+            ((this.tags==null && other.getTags()==null) || 
+             (this.tags!=null &&
+              this.tags.equals(other.getTags()))) &&
+            ((this.afterSalesServiceConditions==null && other.getAfterSalesServiceConditions()==null) || 
+             (this.afterSalesServiceConditions!=null &&
+              this.afterSalesServiceConditions.equals(other.getAfterSalesServiceConditions())));
         __equalsCalc = null;
         return _equals;
     }
@@ -212,6 +266,12 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
         }
         if (getVariants() != null) {
             _hashCode += getVariants().hashCode();
+        }
+        if (getTags() != null) {
+            _hashCode += getTags().hashCode();
+        }
+        if (getAfterSalesServiceConditions() != null) {
+            _hashCode += getAfterSalesServiceConditions().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -260,6 +320,20 @@ public class DoChangeItemFieldsRequest  implements java.io.Serializable {
         elemField.setFieldName("variants");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "variants"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfVariantstruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("tags");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "tags"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfTagnamestruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("afterSalesServiceConditions");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "afterSalesServiceConditions"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AfterSalesServiceConditionsStruct"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

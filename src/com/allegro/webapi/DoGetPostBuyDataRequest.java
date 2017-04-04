@@ -12,14 +12,18 @@ public class DoGetPostBuyDataRequest  implements java.io.Serializable {
 
     private com.allegro.webapi.ArrayOfLong itemsArray;
 
+    private com.allegro.webapi.ArrayOfLong buyerFilterArray;
+
     public DoGetPostBuyDataRequest() {
     }
 
     public DoGetPostBuyDataRequest(
            java.lang.String sessionHandle,
-           com.allegro.webapi.ArrayOfLong itemsArray) {
+           com.allegro.webapi.ArrayOfLong itemsArray,
+           com.allegro.webapi.ArrayOfLong buyerFilterArray) {
            this.sessionHandle = sessionHandle;
            this.itemsArray = itemsArray;
+           this.buyerFilterArray = buyerFilterArray;
     }
 
 
@@ -62,6 +66,26 @@ public class DoGetPostBuyDataRequest  implements java.io.Serializable {
         this.itemsArray = itemsArray;
     }
 
+
+    /**
+     * Gets the buyerFilterArray value for this DoGetPostBuyDataRequest.
+     * 
+     * @return buyerFilterArray
+     */
+    public com.allegro.webapi.ArrayOfLong getBuyerFilterArray() {
+        return buyerFilterArray;
+    }
+
+
+    /**
+     * Sets the buyerFilterArray value for this DoGetPostBuyDataRequest.
+     * 
+     * @param buyerFilterArray
+     */
+    public void setBuyerFilterArray(com.allegro.webapi.ArrayOfLong buyerFilterArray) {
+        this.buyerFilterArray = buyerFilterArray;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoGetPostBuyDataRequest)) return false;
@@ -79,7 +103,10 @@ public class DoGetPostBuyDataRequest  implements java.io.Serializable {
               this.sessionHandle.equals(other.getSessionHandle()))) &&
             ((this.itemsArray==null && other.getItemsArray()==null) || 
              (this.itemsArray!=null &&
-              this.itemsArray.equals(other.getItemsArray())));
+              this.itemsArray.equals(other.getItemsArray()))) &&
+            ((this.buyerFilterArray==null && other.getBuyerFilterArray()==null) || 
+             (this.buyerFilterArray!=null &&
+              this.buyerFilterArray.equals(other.getBuyerFilterArray())));
         __equalsCalc = null;
         return _equals;
     }
@@ -96,6 +123,9 @@ public class DoGetPostBuyDataRequest  implements java.io.Serializable {
         }
         if (getItemsArray() != null) {
             _hashCode += getItemsArray().hashCode();
+        }
+        if (getBuyerFilterArray() != null) {
+            _hashCode += getBuyerFilterArray().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -116,6 +146,13 @@ public class DoGetPostBuyDataRequest  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemsArray");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemsArray"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("buyerFilterArray");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "buyerFilterArray"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfLong"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

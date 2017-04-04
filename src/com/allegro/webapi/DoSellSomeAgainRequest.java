@@ -20,6 +20,8 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
 
     private com.allegro.webapi.ArrayOfInt localIds;
 
+    private java.lang.Integer sellProlongOptions;
+
     public DoSellSomeAgainRequest() {
     }
 
@@ -29,13 +31,15 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
            java.lang.Long sellStartingTime,
            int sellAuctionDuration,
            java.lang.Integer sellOptions,
-           com.allegro.webapi.ArrayOfInt localIds) {
+           com.allegro.webapi.ArrayOfInt localIds,
+           java.lang.Integer sellProlongOptions) {
            this.sessionHandle = sessionHandle;
            this.sellItemsArray = sellItemsArray;
            this.sellStartingTime = sellStartingTime;
            this.sellAuctionDuration = sellAuctionDuration;
            this.sellOptions = sellOptions;
            this.localIds = localIds;
+           this.sellProlongOptions = sellProlongOptions;
     }
 
 
@@ -158,6 +162,26 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
         this.localIds = localIds;
     }
 
+
+    /**
+     * Gets the sellProlongOptions value for this DoSellSomeAgainRequest.
+     * 
+     * @return sellProlongOptions
+     */
+    public java.lang.Integer getSellProlongOptions() {
+        return sellProlongOptions;
+    }
+
+
+    /**
+     * Sets the sellProlongOptions value for this DoSellSomeAgainRequest.
+     * 
+     * @param sellProlongOptions
+     */
+    public void setSellProlongOptions(java.lang.Integer sellProlongOptions) {
+        this.sellProlongOptions = sellProlongOptions;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoSellSomeAgainRequest)) return false;
@@ -185,7 +209,10 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
               this.sellOptions.equals(other.getSellOptions()))) &&
             ((this.localIds==null && other.getLocalIds()==null) || 
              (this.localIds!=null &&
-              this.localIds.equals(other.getLocalIds())));
+              this.localIds.equals(other.getLocalIds()))) &&
+            ((this.sellProlongOptions==null && other.getSellProlongOptions()==null) || 
+             (this.sellProlongOptions!=null &&
+              this.sellProlongOptions.equals(other.getSellProlongOptions())));
         __equalsCalc = null;
         return _equals;
     }
@@ -212,6 +239,9 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
         }
         if (getLocalIds() != null) {
             _hashCode += getLocalIds().hashCode();
+        }
+        if (getSellProlongOptions() != null) {
+            _hashCode += getSellProlongOptions().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -260,6 +290,13 @@ public class DoSellSomeAgainRequest  implements java.io.Serializable {
         elemField.setFieldName("localIds");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "localIds"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfInt"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("sellProlongOptions");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "sellProlongOptions"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -20,6 +20,10 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
 
     private com.allegro.webapi.ArrayOfVariantstruct variants;
 
+    private com.allegro.webapi.ArrayOfTagnamestruct tags;
+
+    private com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions;
+
     public DoNewAuctionExtRequest() {
     }
 
@@ -29,13 +33,17 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
            java.lang.Integer itemTemplateId,
            java.lang.Integer localId,
            com.allegro.webapi.ItemTemplateCreateStruct itemTemplateCreate,
-           com.allegro.webapi.ArrayOfVariantstruct variants) {
+           com.allegro.webapi.ArrayOfVariantstruct variants,
+           com.allegro.webapi.ArrayOfTagnamestruct tags,
+           com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions) {
            this.sessionHandle = sessionHandle;
            this.fields = fields;
            this.itemTemplateId = itemTemplateId;
            this.localId = localId;
            this.itemTemplateCreate = itemTemplateCreate;
            this.variants = variants;
+           this.tags = tags;
+           this.afterSalesServiceConditions = afterSalesServiceConditions;
     }
 
 
@@ -158,6 +166,46 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         this.variants = variants;
     }
 
+
+    /**
+     * Gets the tags value for this DoNewAuctionExtRequest.
+     * 
+     * @return tags
+     */
+    public com.allegro.webapi.ArrayOfTagnamestruct getTags() {
+        return tags;
+    }
+
+
+    /**
+     * Sets the tags value for this DoNewAuctionExtRequest.
+     * 
+     * @param tags
+     */
+    public void setTags(com.allegro.webapi.ArrayOfTagnamestruct tags) {
+        this.tags = tags;
+    }
+
+
+    /**
+     * Gets the afterSalesServiceConditions value for this DoNewAuctionExtRequest.
+     * 
+     * @return afterSalesServiceConditions
+     */
+    public com.allegro.webapi.AfterSalesServiceConditionsStruct getAfterSalesServiceConditions() {
+        return afterSalesServiceConditions;
+    }
+
+
+    /**
+     * Sets the afterSalesServiceConditions value for this DoNewAuctionExtRequest.
+     * 
+     * @param afterSalesServiceConditions
+     */
+    public void setAfterSalesServiceConditions(com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions) {
+        this.afterSalesServiceConditions = afterSalesServiceConditions;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoNewAuctionExtRequest)) return false;
@@ -187,7 +235,13 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
               this.itemTemplateCreate.equals(other.getItemTemplateCreate()))) &&
             ((this.variants==null && other.getVariants()==null) || 
              (this.variants!=null &&
-              this.variants.equals(other.getVariants())));
+              this.variants.equals(other.getVariants()))) &&
+            ((this.tags==null && other.getTags()==null) || 
+             (this.tags!=null &&
+              this.tags.equals(other.getTags()))) &&
+            ((this.afterSalesServiceConditions==null && other.getAfterSalesServiceConditions()==null) || 
+             (this.afterSalesServiceConditions!=null &&
+              this.afterSalesServiceConditions.equals(other.getAfterSalesServiceConditions())));
         __equalsCalc = null;
         return _equals;
     }
@@ -216,6 +270,12 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         }
         if (getVariants() != null) {
             _hashCode += getVariants().hashCode();
+        }
+        if (getTags() != null) {
+            _hashCode += getTags().hashCode();
+        }
+        if (getAfterSalesServiceConditions() != null) {
+            _hashCode += getAfterSalesServiceConditions().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -265,6 +325,20 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         elemField.setFieldName("variants");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "variants"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfVariantstruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("tags");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "tags"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfTagnamestruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("afterSalesServiceConditions");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "afterSalesServiceConditions"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AfterSalesServiceConditionsStruct"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

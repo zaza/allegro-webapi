@@ -48,6 +48,8 @@ public class ItemInfo  implements java.io.Serializable {
 
     private java.lang.String itDescription;
 
+    private java.lang.String itStandardizedDescription;
+
     private int itOptions;
 
     private int itState;
@@ -82,6 +84,8 @@ public class ItemInfo  implements java.io.Serializable {
 
     private com.allegro.webapi.DurationInfoStruct itDurationInfo;
 
+    private java.lang.Integer itIsFulfillmentTimeActive;
+
     public ItemInfo() {
     }
 
@@ -106,6 +110,7 @@ public class ItemInfo  implements java.io.Serializable {
            int itHighBidder,
            java.lang.String itHighBidderLogin,
            java.lang.String itDescription,
+           java.lang.String itStandardizedDescription,
            int itOptions,
            int itState,
            int itIsEco,
@@ -122,7 +127,8 @@ public class ItemInfo  implements java.io.Serializable {
            int itIsAllegroStandard,
            int itIsNewUsed,
            java.lang.Integer itIsBrandZone,
-           com.allegro.webapi.DurationInfoStruct itDurationInfo) {
+           com.allegro.webapi.DurationInfoStruct itDurationInfo,
+           java.lang.Integer itIsFulfillmentTimeActive) {
            this.itId = itId;
            this.itCountry = itCountry;
            this.itName = itName;
@@ -143,6 +149,7 @@ public class ItemInfo  implements java.io.Serializable {
            this.itHighBidder = itHighBidder;
            this.itHighBidderLogin = itHighBidderLogin;
            this.itDescription = itDescription;
+           this.itStandardizedDescription = itStandardizedDescription;
            this.itOptions = itOptions;
            this.itState = itState;
            this.itIsEco = itIsEco;
@@ -160,6 +167,7 @@ public class ItemInfo  implements java.io.Serializable {
            this.itIsNewUsed = itIsNewUsed;
            this.itIsBrandZone = itIsBrandZone;
            this.itDurationInfo = itDurationInfo;
+           this.itIsFulfillmentTimeActive = itIsFulfillmentTimeActive;
     }
 
 
@@ -564,6 +572,26 @@ public class ItemInfo  implements java.io.Serializable {
 
 
     /**
+     * Gets the itStandardizedDescription value for this ItemInfo.
+     * 
+     * @return itStandardizedDescription
+     */
+    public java.lang.String getItStandardizedDescription() {
+        return itStandardizedDescription;
+    }
+
+
+    /**
+     * Sets the itStandardizedDescription value for this ItemInfo.
+     * 
+     * @param itStandardizedDescription
+     */
+    public void setItStandardizedDescription(java.lang.String itStandardizedDescription) {
+        this.itStandardizedDescription = itStandardizedDescription;
+    }
+
+
+    /**
      * Gets the itOptions value for this ItemInfo.
      * 
      * @return itOptions
@@ -902,6 +930,26 @@ public class ItemInfo  implements java.io.Serializable {
         this.itDurationInfo = itDurationInfo;
     }
 
+
+    /**
+     * Gets the itIsFulfillmentTimeActive value for this ItemInfo.
+     * 
+     * @return itIsFulfillmentTimeActive
+     */
+    public java.lang.Integer getItIsFulfillmentTimeActive() {
+        return itIsFulfillmentTimeActive;
+    }
+
+
+    /**
+     * Sets the itIsFulfillmentTimeActive value for this ItemInfo.
+     * 
+     * @param itIsFulfillmentTimeActive
+     */
+    public void setItIsFulfillmentTimeActive(java.lang.Integer itIsFulfillmentTimeActive) {
+        this.itIsFulfillmentTimeActive = itIsFulfillmentTimeActive;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ItemInfo)) return false;
@@ -944,6 +992,9 @@ public class ItemInfo  implements java.io.Serializable {
             ((this.itDescription==null && other.getItDescription()==null) || 
              (this.itDescription!=null &&
               this.itDescription.equals(other.getItDescription()))) &&
+            ((this.itStandardizedDescription==null && other.getItStandardizedDescription()==null) || 
+             (this.itStandardizedDescription!=null &&
+              this.itStandardizedDescription.equals(other.getItStandardizedDescription()))) &&
             this.itOptions == other.getItOptions() &&
             this.itState == other.getItState() &&
             this.itIsEco == other.getItIsEco() &&
@@ -970,7 +1021,10 @@ public class ItemInfo  implements java.io.Serializable {
               this.itIsBrandZone.equals(other.getItIsBrandZone()))) &&
             ((this.itDurationInfo==null && other.getItDurationInfo()==null) || 
              (this.itDurationInfo!=null &&
-              this.itDurationInfo.equals(other.getItDurationInfo())));
+              this.itDurationInfo.equals(other.getItDurationInfo()))) &&
+            ((this.itIsFulfillmentTimeActive==null && other.getItIsFulfillmentTimeActive()==null) || 
+             (this.itIsFulfillmentTimeActive!=null &&
+              this.itIsFulfillmentTimeActive.equals(other.getItIsFulfillmentTimeActive())));
         __equalsCalc = null;
         return _equals;
     }
@@ -1012,6 +1066,9 @@ public class ItemInfo  implements java.io.Serializable {
         if (getItDescription() != null) {
             _hashCode += getItDescription().hashCode();
         }
+        if (getItStandardizedDescription() != null) {
+            _hashCode += getItStandardizedDescription().hashCode();
+        }
         _hashCode += getItOptions();
         _hashCode += getItState();
         _hashCode += getItIsEco();
@@ -1038,6 +1095,9 @@ public class ItemInfo  implements java.io.Serializable {
         }
         if (getItDurationInfo() != null) {
             _hashCode += getItDurationInfo().hashCode();
+        }
+        if (getItIsFulfillmentTimeActive() != null) {
+            _hashCode += getItIsFulfillmentTimeActive().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -1170,6 +1230,13 @@ public class ItemInfo  implements java.io.Serializable {
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itStandardizedDescription");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itStandardizedDescription"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itOptions");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itOptions"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
@@ -1270,6 +1337,13 @@ public class ItemInfo  implements java.io.Serializable {
         elemField.setFieldName("itDurationInfo");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itDurationInfo"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DurationInfoStruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itIsFulfillmentTimeActive");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itIsFulfillmentTimeActive"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

@@ -18,6 +18,8 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
 
     private boolean dealWasDiscounted;
 
+    private com.allegro.webapi.PostBuyFormItemDealsVariantStruct dealVariant;
+
     public PostBuyFormItemDealsStruct() {
     }
 
@@ -26,12 +28,14 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
            float dealFinalPrice,
            int dealQuantity,
            java.util.Calendar dealDate,
-           boolean dealWasDiscounted) {
+           boolean dealWasDiscounted,
+           com.allegro.webapi.PostBuyFormItemDealsVariantStruct dealVariant) {
            this.dealId = dealId;
            this.dealFinalPrice = dealFinalPrice;
            this.dealQuantity = dealQuantity;
            this.dealDate = dealDate;
            this.dealWasDiscounted = dealWasDiscounted;
+           this.dealVariant = dealVariant;
     }
 
 
@@ -134,6 +138,26 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
         this.dealWasDiscounted = dealWasDiscounted;
     }
 
+
+    /**
+     * Gets the dealVariant value for this PostBuyFormItemDealsStruct.
+     * 
+     * @return dealVariant
+     */
+    public com.allegro.webapi.PostBuyFormItemDealsVariantStruct getDealVariant() {
+        return dealVariant;
+    }
+
+
+    /**
+     * Sets the dealVariant value for this PostBuyFormItemDealsStruct.
+     * 
+     * @param dealVariant
+     */
+    public void setDealVariant(com.allegro.webapi.PostBuyFormItemDealsVariantStruct dealVariant) {
+        this.dealVariant = dealVariant;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof PostBuyFormItemDealsStruct)) return false;
@@ -152,7 +176,10 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
             ((this.dealDate==null && other.getDealDate()==null) || 
              (this.dealDate!=null &&
               this.dealDate.equals(other.getDealDate()))) &&
-            this.dealWasDiscounted == other.isDealWasDiscounted();
+            this.dealWasDiscounted == other.isDealWasDiscounted() &&
+            ((this.dealVariant==null && other.getDealVariant()==null) || 
+             (this.dealVariant!=null &&
+              this.dealVariant.equals(other.getDealVariant())));
         __equalsCalc = null;
         return _equals;
     }
@@ -171,6 +198,9 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
             _hashCode += getDealDate().hashCode();
         }
         _hashCode += (isDealWasDiscounted() ? Boolean.TRUE : Boolean.FALSE).hashCode();
+        if (getDealVariant() != null) {
+            _hashCode += getDealVariant().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -209,6 +239,13 @@ public class PostBuyFormItemDealsStruct  implements java.io.Serializable {
         elemField.setFieldName("dealWasDiscounted");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "dealWasDiscounted"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "boolean"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("dealVariant");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "dealVariant"));
+        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "PostBuyFormItemDealsVariantStruct"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

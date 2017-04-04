@@ -22,6 +22,8 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
 
     private java.lang.Integer pageNumber;
 
+    private java.lang.Integer strictedSearch;
+
     public DoGetMyPaymentsRequest() {
     }
 
@@ -32,7 +34,8 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
            java.lang.Long paymentTimeFrom,
            java.lang.Long paymentTimeTo,
            java.lang.Integer pageSize,
-           java.lang.Integer pageNumber) {
+           java.lang.Integer pageNumber,
+           java.lang.Integer strictedSearch) {
            this.sessionId = sessionId;
            this.sellerId = sellerId;
            this.itemId = itemId;
@@ -40,6 +43,7 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
            this.paymentTimeTo = paymentTimeTo;
            this.pageSize = pageSize;
            this.pageNumber = pageNumber;
+           this.strictedSearch = strictedSearch;
     }
 
 
@@ -182,6 +186,26 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
         this.pageNumber = pageNumber;
     }
 
+
+    /**
+     * Gets the strictedSearch value for this DoGetMyPaymentsRequest.
+     * 
+     * @return strictedSearch
+     */
+    public java.lang.Integer getStrictedSearch() {
+        return strictedSearch;
+    }
+
+
+    /**
+     * Sets the strictedSearch value for this DoGetMyPaymentsRequest.
+     * 
+     * @param strictedSearch
+     */
+    public void setStrictedSearch(java.lang.Integer strictedSearch) {
+        this.strictedSearch = strictedSearch;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoGetMyPaymentsRequest)) return false;
@@ -214,7 +238,10 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
               this.pageSize.equals(other.getPageSize()))) &&
             ((this.pageNumber==null && other.getPageNumber()==null) || 
              (this.pageNumber!=null &&
-              this.pageNumber.equals(other.getPageNumber())));
+              this.pageNumber.equals(other.getPageNumber()))) &&
+            ((this.strictedSearch==null && other.getStrictedSearch()==null) || 
+             (this.strictedSearch!=null &&
+              this.strictedSearch.equals(other.getStrictedSearch())));
         __equalsCalc = null;
         return _equals;
     }
@@ -246,6 +273,9 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
         }
         if (getPageNumber() != null) {
             _hashCode += getPageNumber().hashCode();
+        }
+        if (getStrictedSearch() != null) {
+            _hashCode += getStrictedSearch().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -301,6 +331,13 @@ public class DoGetMyPaymentsRequest  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("pageNumber");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "pageNumber"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("strictedSearch");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "strictedSearch"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
