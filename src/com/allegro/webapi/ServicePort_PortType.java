@@ -8,7 +8,6 @@
 package com.allegro.webapi;
 
 public interface ServicePort_PortType extends java.rmi.Remote {
-    public com.allegro.webapi.DoAddDescToItemsResponse doAddDescToItems(com.allegro.webapi.DoAddDescToItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoAddPackageInfoToPostBuyFormResponse doAddPackageInfoToPostBuyForm(com.allegro.webapi.DoAddPackageInfoToPostBuyFormRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoAddToBlackListResponse doAddToBlackList(com.allegro.webapi.DoAddToBlackListRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoBidItemResponse doBidItem(com.allegro.webapi.DoBidItemRequest parameters) throws java.rmi.RemoteException;

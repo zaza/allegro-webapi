@@ -86,6 +86,8 @@ public class ItemInfo  implements java.io.Serializable {
 
     private java.lang.Integer itIsFulfillmentTimeActive;
 
+    private java.lang.String itEan;
+
     public ItemInfo() {
     }
 
@@ -128,7 +130,8 @@ public class ItemInfo  implements java.io.Serializable {
            int itIsNewUsed,
            java.lang.Integer itIsBrandZone,
            com.allegro.webapi.DurationInfoStruct itDurationInfo,
-           java.lang.Integer itIsFulfillmentTimeActive) {
+           java.lang.Integer itIsFulfillmentTimeActive,
+           java.lang.String itEan) {
            this.itId = itId;
            this.itCountry = itCountry;
            this.itName = itName;
@@ -168,6 +171,7 @@ public class ItemInfo  implements java.io.Serializable {
            this.itIsBrandZone = itIsBrandZone;
            this.itDurationInfo = itDurationInfo;
            this.itIsFulfillmentTimeActive = itIsFulfillmentTimeActive;
+           this.itEan = itEan;
     }
 
 
@@ -950,6 +954,26 @@ public class ItemInfo  implements java.io.Serializable {
         this.itIsFulfillmentTimeActive = itIsFulfillmentTimeActive;
     }
 
+
+    /**
+     * Gets the itEan value for this ItemInfo.
+     * 
+     * @return itEan
+     */
+    public java.lang.String getItEan() {
+        return itEan;
+    }
+
+
+    /**
+     * Sets the itEan value for this ItemInfo.
+     * 
+     * @param itEan
+     */
+    public void setItEan(java.lang.String itEan) {
+        this.itEan = itEan;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ItemInfo)) return false;
@@ -1024,7 +1048,10 @@ public class ItemInfo  implements java.io.Serializable {
               this.itDurationInfo.equals(other.getItDurationInfo()))) &&
             ((this.itIsFulfillmentTimeActive==null && other.getItIsFulfillmentTimeActive()==null) || 
              (this.itIsFulfillmentTimeActive!=null &&
-              this.itIsFulfillmentTimeActive.equals(other.getItIsFulfillmentTimeActive())));
+              this.itIsFulfillmentTimeActive.equals(other.getItIsFulfillmentTimeActive()))) &&
+            ((this.itEan==null && other.getItEan()==null) || 
+             (this.itEan!=null &&
+              this.itEan.equals(other.getItEan())));
         __equalsCalc = null;
         return _equals;
     }
@@ -1098,6 +1125,9 @@ public class ItemInfo  implements java.io.Serializable {
         }
         if (getItIsFulfillmentTimeActive() != null) {
             _hashCode += getItIsFulfillmentTimeActive().hashCode();
+        }
+        if (getItEan() != null) {
+            _hashCode += getItEan().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -1344,6 +1374,13 @@ public class ItemInfo  implements java.io.Serializable {
         elemField.setFieldName("itIsFulfillmentTimeActive");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itIsFulfillmentTimeActive"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itEan");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itEan"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
