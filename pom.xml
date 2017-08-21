@@ -1,8 +1,40 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>com.github.zaza</groupId>
 	<artifactId>allegro-webapi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
+
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Allegro Web API WSDL converted to Java</description>
+	<url>https://github.com/zaza/allegro-webapi</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Tomasz Zarna</name>
+			<email>tzarna@gmail.com</email>
+			<url>https://github.com/zaza</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/zaza/allegro-webapi.git</connection>
+		<developerConnection>scm:git:ssh://github.com:zaza/allegro-webapi.git</developerConnection>
+		<url>http://github.com/zaza/allegro-webapi</url>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/zaza/allegro-webapi/issues</url>
+	</issueManagement>
 
 	<dependencies>
 		<dependency>
@@ -59,10 +91,9 @@
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
-				</plugin> 
+				</plugin>
 			</plugins>
 		</pluginManagement>
-		<!-- To use the plugin goals in your POM or parent POM -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -86,7 +117,9 @@
 					</execution>
 				</executions>
 				<configuration>
-					<urls><url>https://webapi.allegro.pl/service.php?wsdl</url></urls>
+					<urls>
+						<url>https://webapi.allegro.pl/service.php?wsdl</url>
+					</urls>
 					<outputDirectory>src</outputDirectory>
 					<packageSpace>com.allegro.webapi</packageSpace>
 				</configuration>
