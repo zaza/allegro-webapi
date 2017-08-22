@@ -16,7 +16,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
     static org.apache.axis.description.OperationDesc [] _operations;
 
     static {
-        _operations = new org.apache.axis.description.OperationDesc[120];
+        _operations = new org.apache.axis.description.OperationDesc[118];
         _initOperationDesc1();
         _initOperationDesc2();
         _initOperationDesc3();
@@ -342,28 +342,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         _operations[26] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("doGetFavouriteCategories");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetFavouriteCategoriesRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFavouriteCategoriesRequest"), com.allegro.webapi.DoGetFavouriteCategoriesRequest.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">doGetFavouriteCategoriesResponse"));
-        oper.setReturnClass(com.allegro.webapi.DoGetFavouriteCategoriesResponse.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetFavouriteCategoriesResponse"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[27] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("doGetFavouriteSellers");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetFavouriteSellersRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFavouriteSellersRequest"), com.allegro.webapi.DoGetFavouriteSellersRequest.class, false, false);
-        oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">doGetFavouriteSellersResponse"));
-        oper.setReturnClass(com.allegro.webapi.DoGetFavouriteSellersResponse.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetFavouriteSellersResponse"));
-        oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
-        oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[28] = oper;
-
-        oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetFeedback");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetFeedbackRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFeedbackRequest"), com.allegro.webapi.DoGetFeedbackRequest.class, false, false);
         oper.addParameter(param);
@@ -372,13 +350,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetFeedbackResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[29] = oper;
+        _operations[27] = oper;
 
-    }
-
-    private static void _initOperationDesc4(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetFilledPostBuyForms");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetFilledPostBuyFormsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFilledPostBuyFormsRequest"), com.allegro.webapi.DoGetFilledPostBuyFormsRequest.class, false, false);
@@ -388,7 +361,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetFilledPostBuyFormsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[30] = oper;
+        _operations[28] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetFreeDeliveryAmount");
@@ -399,8 +372,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetFreeDeliveryAmountResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[31] = oper;
+        _operations[29] = oper;
 
+    }
+
+    private static void _initOperationDesc4(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetItemFields");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetItemFieldsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetItemFieldsRequest"), com.allegro.webapi.DoGetItemFieldsRequest.class, false, false);
@@ -410,7 +388,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetItemFieldsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[32] = oper;
+        _operations[30] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetItemTemplates");
@@ -421,7 +399,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetItemTemplatesResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[33] = oper;
+        _operations[31] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetItemsImages");
@@ -432,7 +410,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetItemsImagesResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[34] = oper;
+        _operations[32] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetItemsInfo");
@@ -443,7 +421,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetItemsInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[35] = oper;
+        _operations[33] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetItemsList");
@@ -454,7 +432,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetItemsListResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[36] = oper;
+        _operations[34] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMessageToBuyer");
@@ -465,7 +443,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMessageToBuyerResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[37] = oper;
+        _operations[35] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyAddresses");
@@ -476,7 +454,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyAddressesResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[38] = oper;
+        _operations[36] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyBidItems");
@@ -487,13 +465,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyBidItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[39] = oper;
+        _operations[37] = oper;
 
-    }
-
-    private static void _initOperationDesc5(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyCurrentShipmentPriceType");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetMyCurrentShipmentPriceTypeRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMyCurrentShipmentPriceTypeRequest"), com.allegro.webapi.DoGetMyCurrentShipmentPriceTypeRequest.class, false, false);
@@ -503,7 +476,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyCurrentShipmentPriceTypeResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[40] = oper;
+        _operations[38] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyData");
@@ -514,8 +487,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyDataResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[41] = oper;
+        _operations[39] = oper;
 
+    }
+
+    private static void _initOperationDesc5(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyFutureItems");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetMyFutureItemsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMyFutureItemsRequest"), com.allegro.webapi.DoGetMyFutureItemsRequest.class, false, false);
@@ -525,7 +503,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyFutureItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[42] = oper;
+        _operations[40] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyIncomingPayments");
@@ -536,7 +514,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyIncomingPaymentsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[43] = oper;
+        _operations[41] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyIncomingPaymentsRefunds");
@@ -547,7 +525,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyIncomingPaymentsRefundsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[44] = oper;
+        _operations[42] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyNotSoldItems");
@@ -558,7 +536,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyNotSoldItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[45] = oper;
+        _operations[43] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyNotWonItems");
@@ -569,7 +547,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyNotWonItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[46] = oper;
+        _operations[44] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyPayments");
@@ -580,7 +558,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyPaymentsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[47] = oper;
+        _operations[45] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyPaymentsInfo");
@@ -591,7 +569,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyPaymentsInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[48] = oper;
+        _operations[46] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyPaymentsRefunds");
@@ -602,13 +580,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyPaymentsRefundsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[49] = oper;
+        _operations[47] = oper;
 
-    }
-
-    private static void _initOperationDesc6(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyPayouts");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetMyPayoutsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMyPayoutsRequest"), com.allegro.webapi.DoGetMyPayoutsRequest.class, false, false);
@@ -618,7 +591,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyPayoutsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[50] = oper;
+        _operations[48] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyPayoutsDetails");
@@ -629,8 +602,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyPayoutsDetailsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[51] = oper;
+        _operations[49] = oper;
 
+    }
+
+    private static void _initOperationDesc6(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMySellItems");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetMySellItemsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMySellItemsRequest"), com.allegro.webapi.DoGetMySellItemsRequest.class, false, false);
@@ -640,7 +618,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMySellItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[52] = oper;
+        _operations[50] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMySellRating");
@@ -651,7 +629,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMySellRatingResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[53] = oper;
+        _operations[51] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMySoldItems");
@@ -662,7 +640,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMySoldItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[54] = oper;
+        _operations[52] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetMyWonItems");
@@ -673,7 +651,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetMyWonItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[55] = oper;
+        _operations[53] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPaymentData");
@@ -684,7 +662,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPaymentDataResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[56] = oper;
+        _operations[54] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPaymentMethods");
@@ -695,7 +673,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPaymentMethodsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[57] = oper;
+        _operations[55] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPostBuyData");
@@ -706,7 +684,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPostBuyDataResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[58] = oper;
+        _operations[56] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPostBuyFormsDataForBuyers");
@@ -717,13 +695,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPostBuyFormsDataForBuyersResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[59] = oper;
+        _operations[57] = oper;
 
-    }
-
-    private static void _initOperationDesc7(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPostBuyFormsDataForSellers");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetPostBuyFormsDataForSellersRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetPostBuyFormsDataForSellersRequest"), com.allegro.webapi.DoGetPostBuyFormsDataForSellersRequest.class, false, false);
@@ -733,7 +706,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPostBuyFormsDataForSellersResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[60] = oper;
+        _operations[58] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPostBuyFormsIds");
@@ -744,8 +717,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPostBuyFormsIdsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[61] = oper;
+        _operations[59] = oper;
 
+    }
+
+    private static void _initOperationDesc7(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetPostBuyItemInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetPostBuyItemInfoRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetPostBuyItemInfoRequest"), com.allegro.webapi.DoGetPostBuyItemInfoRequest.class, false, false);
@@ -755,7 +733,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetPostBuyItemInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[62] = oper;
+        _operations[60] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetRefundsDeals");
@@ -766,7 +744,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetRefundsDealsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[63] = oper;
+        _operations[61] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetRefundsList");
@@ -777,7 +755,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetRefundsListResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[64] = oper;
+        _operations[62] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetRefundsReasons");
@@ -788,7 +766,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetRefundsReasonsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[65] = oper;
+        _operations[63] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetRelatedItems");
@@ -799,7 +777,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetRelatedItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[66] = oper;
+        _operations[64] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormAttribs");
@@ -810,7 +788,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormAttribsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[67] = oper;
+        _operations[65] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormFields");
@@ -821,7 +799,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormFieldsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[68] = oper;
+        _operations[66] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormFieldsExt");
@@ -832,13 +810,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormFieldsExtResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[69] = oper;
+        _operations[67] = oper;
 
-    }
-
-    private static void _initOperationDesc8(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormFieldsExtLimit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetSellFormFieldsExtLimitRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetSellFormFieldsExtLimitRequest"), com.allegro.webapi.DoGetSellFormFieldsExtLimitRequest.class, false, false);
@@ -848,7 +821,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormFieldsExtLimitResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[70] = oper;
+        _operations[68] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormFieldsForCategory");
@@ -859,8 +832,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormFieldsForCategoryResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[71] = oper;
+        _operations[69] = oper;
 
+    }
+
+    private static void _initOperationDesc8(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellFormFieldsLimit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetSellFormFieldsLimitRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetSellFormFieldsLimitRequest"), com.allegro.webapi.DoGetSellFormFieldsLimitRequest.class, false, false);
@@ -870,7 +848,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellFormFieldsLimitResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[72] = oper;
+        _operations[70] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSellRatingReasons");
@@ -881,7 +859,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSellRatingReasonsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[73] = oper;
+        _operations[71] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSessionHandleForWidget");
@@ -892,7 +870,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSessionHandleForWidgetResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[74] = oper;
+        _operations[72] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetShipmentData");
@@ -903,7 +881,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetShipmentDataResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[75] = oper;
+        _operations[73] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetShipmentDataForRelatedItems");
@@ -914,7 +892,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetShipmentDataForRelatedItemsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[76] = oper;
+        _operations[74] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetShipmentPriceTypes");
@@ -925,7 +903,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetShipmentPriceTypesResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[77] = oper;
+        _operations[75] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetShopsTags");
@@ -936,7 +914,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetShopsTagsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[78] = oper;
+        _operations[76] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSiteJournal");
@@ -947,13 +925,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSiteJournalResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[79] = oper;
+        _operations[77] = oper;
 
-    }
-
-    private static void _initOperationDesc9(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSiteJournalDeals");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetSiteJournalDealsRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetSiteJournalDealsRequest"), com.allegro.webapi.DoGetSiteJournalDealsRequest.class, false, false);
@@ -963,7 +936,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSiteJournalDealsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[80] = oper;
+        _operations[78] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSiteJournalDealsInfo");
@@ -974,8 +947,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSiteJournalDealsInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[81] = oper;
+        _operations[79] = oper;
 
+    }
+
+    private static void _initOperationDesc9(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSiteJournalInfo");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetSiteJournalInfoRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetSiteJournalInfoRequest"), com.allegro.webapi.DoGetSiteJournalInfoRequest.class, false, false);
@@ -985,7 +963,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSiteJournalInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[82] = oper;
+        _operations[80] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetStatesInfo");
@@ -996,7 +974,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetStatesInfoResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[83] = oper;
+        _operations[81] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetSystemTime");
@@ -1007,7 +985,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetSystemTimeResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[84] = oper;
+        _operations[82] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetTransactionsIDs");
@@ -1018,7 +996,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetTransactionsIDsResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[85] = oper;
+        _operations[83] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetUserID");
@@ -1029,7 +1007,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetUserIDResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[86] = oper;
+        _operations[84] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetUserLicenceDate");
@@ -1040,7 +1018,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetUserLicenceDateResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[87] = oper;
+        _operations[85] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetUserLogin");
@@ -1051,7 +1029,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetUserLoginResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[88] = oper;
+        _operations[86] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetWaitingFeedbacks");
@@ -1062,13 +1040,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetWaitingFeedbacksResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[89] = oper;
+        _operations[87] = oper;
 
-    }
-
-    private static void _initOperationDesc10(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doGetWaitingFeedbacksCount");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoGetWaitingFeedbacksCountRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetWaitingFeedbacksCountRequest"), com.allegro.webapi.DoGetWaitingFeedbacksCountRequest.class, false, false);
@@ -1078,7 +1051,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doGetWaitingFeedbacksCountResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[90] = oper;
+        _operations[88] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doLogin");
@@ -1089,8 +1062,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doLoginResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[91] = oper;
+        _operations[89] = oper;
 
+    }
+
+    private static void _initOperationDesc10(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doLoginEnc");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoLoginEncRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoLoginEncRequest"), com.allegro.webapi.DoLoginEncRequest.class, false, false);
@@ -1100,7 +1078,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doLoginEncResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[92] = oper;
+        _operations[90] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doLoginWithAccessToken");
@@ -1111,7 +1089,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doLoginWithAccessTokenResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[93] = oper;
+        _operations[91] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyAccount2");
@@ -1122,7 +1100,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyAccount2Response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[94] = oper;
+        _operations[92] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyAccountItemsCount");
@@ -1133,7 +1111,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyAccountItemsCountResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[95] = oper;
+        _operations[93] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyBilling");
@@ -1144,7 +1122,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyBillingResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[96] = oper;
+        _operations[94] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyBillingItem");
@@ -1155,7 +1133,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyBillingItemResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[97] = oper;
+        _operations[95] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyContact");
@@ -1166,7 +1144,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyContactResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[98] = oper;
+        _operations[96] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyFeedback2");
@@ -1177,13 +1155,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyFeedback2Response"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[99] = oper;
+        _operations[97] = oper;
 
-    }
-
-    private static void _initOperationDesc11(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doMyFeedback2Limit");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoMyFeedback2LimitRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoMyFeedback2LimitRequest"), com.allegro.webapi.DoMyFeedback2LimitRequest.class, false, false);
@@ -1193,7 +1166,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doMyFeedback2LimitResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[100] = oper;
+        _operations[98] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doNewAuctionExt");
@@ -1204,8 +1177,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doNewAuctionExtResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[101] = oper;
+        _operations[99] = oper;
 
+    }
+
+    private static void _initOperationDesc11(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doQueryAllSysStatus");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoQueryAllSysStatusRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoQueryAllSysStatusRequest"), com.allegro.webapi.DoQueryAllSysStatusRequest.class, false, false);
@@ -1215,7 +1193,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doQueryAllSysStatusResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[102] = oper;
+        _operations[100] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doQuerySysStatus");
@@ -1226,7 +1204,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doQuerySysStatusResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[103] = oper;
+        _operations[101] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doRemoveFromBlackList");
@@ -1237,7 +1215,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doRemoveFromBlackListResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[104] = oper;
+        _operations[102] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doRemoveItemTemplates");
@@ -1248,7 +1226,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doRemoveItemTemplatesResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[105] = oper;
+        _operations[103] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doRequestCancelBid");
@@ -1259,7 +1237,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doRequestCancelBidResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[106] = oper;
+        _operations[104] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doRequestPayout");
@@ -1270,7 +1248,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doRequestPayoutResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[107] = oper;
+        _operations[105] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doRequestSurcharge");
@@ -1281,7 +1259,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doRequestSurchargeResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[108] = oper;
+        _operations[106] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSellSomeAgain");
@@ -1292,13 +1270,8 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSellSomeAgainResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[109] = oper;
+        _operations[107] = oper;
 
-    }
-
-    private static void _initOperationDesc12(){
-        org.apache.axis.description.OperationDesc oper;
-        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSellSomeAgainInShop");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoSellSomeAgainInShopRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoSellSomeAgainInShopRequest"), com.allegro.webapi.DoSellSomeAgainInShopRequest.class, false, false);
@@ -1308,7 +1281,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSellSomeAgainInShopResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[110] = oper;
+        _operations[108] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSendEmailToUser");
@@ -1319,8 +1292,13 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSendEmailToUserResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[111] = oper;
+        _operations[109] = oper;
 
+    }
+
+    private static void _initOperationDesc12(){
+        org.apache.axis.description.OperationDesc oper;
+        org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSendPostBuyForm");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "DoSendPostBuyFormRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoSendPostBuyFormRequest"), com.allegro.webapi.DoSendPostBuyFormRequest.class, false, false);
@@ -1330,7 +1308,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSendPostBuyFormResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[112] = oper;
+        _operations[110] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSendRefundForm");
@@ -1341,7 +1319,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSendRefundFormResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[113] = oper;
+        _operations[111] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSetFreeDeliveryAmount");
@@ -1352,7 +1330,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSetFreeDeliveryAmountResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[114] = oper;
+        _operations[112] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSetShipmentPriceType");
@@ -1363,7 +1341,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSetShipmentPriceTypeResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[115] = oper;
+        _operations[113] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doSetUserLicenceDate");
@@ -1374,7 +1352,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doSetUserLicenceDateResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[116] = oper;
+        _operations[114] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doShowItemInfoExt");
@@ -1385,7 +1363,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doShowItemInfoExtResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[117] = oper;
+        _operations[115] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doShowUser");
@@ -1396,7 +1374,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doShowUserResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[118] = oper;
+        _operations[116] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
         oper.setName("doVerifyItem");
@@ -1407,7 +1385,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
         oper.setReturnQName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "doVerifyItemResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
-        _operations[119] = oper;
+        _operations[117] = oper;
 
     }
 
@@ -1840,34 +1818,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFavouriteCategoriesRequest");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.DoGetFavouriteCategoriesRequest.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">doGetFavouriteCategoriesResponse");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.DoGetFavouriteCategoriesResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFavouriteSellersRequest");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.DoGetFavouriteSellersRequest.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">doGetFavouriteSellersResponse");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.DoGetFavouriteSellersResponse.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetFeedbackRequest");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.DoGetFeedbackRequest.class;
@@ -2162,21 +2112,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings1() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMyPayoutsDetailsRequest");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.DoGetMyPayoutsDetailsRequest.class;
@@ -2205,6 +2140,21 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings1() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoGetMySellItemsRequest");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.DoGetMySellItemsRequest.class;
@@ -2877,21 +2827,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings2() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoMyFeedback2Request");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.DoMyFeedback2Request.class;
@@ -2920,6 +2855,21 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings2() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", ">DoQueryAllSysStatusRequest");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.DoQueryAllSysStatusRequest.class;
@@ -3333,20 +3283,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfFavouritescategoriesstruct");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.ArrayOfFavouritescategoriesstruct.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfFavouritessellersstruct");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.ArrayOfFavouritessellersstruct.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfFeedbacklist");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.ArrayOfFeedbacklist.class;
@@ -3592,21 +3528,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings3() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPaymentmethodstruct");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.ArrayOfPaymentmethodstruct.class;
@@ -3649,6 +3570,21 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings3() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfPostagestruct");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.ArrayOfPostagestruct.class;
@@ -4146,20 +4082,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FavouritesCategoriesStruct");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.FavouritesCategoriesStruct.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
-            qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FavouritesSellersStruct");
-            cachedSerQNames.add(qName);
-            cls = com.allegro.webapi.FavouritesSellersStruct.class;
-            cachedSerClasses.add(cls);
-            cachedSerFactories.add(beansf);
-            cachedDeserFactories.add(beandf);
-
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "FeedbackList");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.FeedbackList.class;
@@ -4307,21 +4229,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings4() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemImageList");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.ItemImageList.class;
@@ -4378,6 +4285,21 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings4() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ItemsListType");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.ItemsListType.class;
@@ -5022,21 +4944,6 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
-    }
-    private void addBindings5() {
-            java.lang.Class cls;
-            javax.xml.namespace.QName qName;
-            javax.xml.namespace.QName qName2;
-            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
-            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
-            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
-            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
-            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
-            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
-            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
-            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
-            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
-            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "StateInfoStruct");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.StateInfoStruct.class;
@@ -5093,6 +5000,21 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
 
+    }
+    private void addBindings5() {
+            java.lang.Class cls;
+            javax.xml.namespace.QName qName;
+            javax.xml.namespace.QName qName2;
+            java.lang.Class beansf = org.apache.axis.encoding.ser.BeanSerializerFactory.class;
+            java.lang.Class beandf = org.apache.axis.encoding.ser.BeanDeserializerFactory.class;
+            java.lang.Class enumsf = org.apache.axis.encoding.ser.EnumSerializerFactory.class;
+            java.lang.Class enumdf = org.apache.axis.encoding.ser.EnumDeserializerFactory.class;
+            java.lang.Class arraysf = org.apache.axis.encoding.ser.ArraySerializerFactory.class;
+            java.lang.Class arraydf = org.apache.axis.encoding.ser.ArrayDeserializerFactory.class;
+            java.lang.Class simplesf = org.apache.axis.encoding.ser.SimpleSerializerFactory.class;
+            java.lang.Class simpledf = org.apache.axis.encoding.ser.SimpleDeserializerFactory.class;
+            java.lang.Class simplelistsf = org.apache.axis.encoding.ser.SimpleListSerializerFactory.class;
+            java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "UserDataStruct");
             cachedSerQNames.add(qName);
             cls = com.allegro.webapi.UserDataStruct.class;
@@ -6175,80 +6097,12 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
 }
     }
 
-    public com.allegro.webapi.DoGetFavouriteCategoriesResponse doGetFavouriteCategories(com.allegro.webapi.DoGetFavouriteCategoriesRequest parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[27]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("#doGetFavouriteCategories");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "doGetFavouriteCategories"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.allegro.webapi.DoGetFavouriteCategoriesResponse) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.allegro.webapi.DoGetFavouriteCategoriesResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.allegro.webapi.DoGetFavouriteCategoriesResponse.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
-    public com.allegro.webapi.DoGetFavouriteSellersResponse doGetFavouriteSellers(com.allegro.webapi.DoGetFavouriteSellersRequest parameters) throws java.rmi.RemoteException {
-        if (super.cachedEndpoint == null) {
-            throw new org.apache.axis.NoEndPointException();
-        }
-        org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[28]);
-        _call.setUseSOAPAction(true);
-        _call.setSOAPActionURI("#doGetFavouriteSellers");
-        _call.setEncodingStyle(null);
-        _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
-        _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
-        _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("", "doGetFavouriteSellers"));
-
-        setRequestHeaders(_call);
-        setAttachments(_call);
- try {        java.lang.Object _resp = _call.invoke(new java.lang.Object[] {parameters});
-
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return (com.allegro.webapi.DoGetFavouriteSellersResponse) _resp;
-            } catch (java.lang.Exception _exception) {
-                return (com.allegro.webapi.DoGetFavouriteSellersResponse) org.apache.axis.utils.JavaUtils.convert(_resp, com.allegro.webapi.DoGetFavouriteSellersResponse.class);
-            }
-        }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
-    }
-
     public com.allegro.webapi.DoGetFeedbackResponse doGetFeedback(com.allegro.webapi.DoGetFeedbackRequest parameters) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[29]);
+        _call.setOperation(_operations[27]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetFeedback");
         _call.setEncodingStyle(null);
@@ -6282,7 +6136,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[30]);
+        _call.setOperation(_operations[28]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetFilledPostBuyForms");
         _call.setEncodingStyle(null);
@@ -6316,7 +6170,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[31]);
+        _call.setOperation(_operations[29]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetFreeDeliveryAmount");
         _call.setEncodingStyle(null);
@@ -6350,7 +6204,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[32]);
+        _call.setOperation(_operations[30]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetItemFields");
         _call.setEncodingStyle(null);
@@ -6384,7 +6238,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[33]);
+        _call.setOperation(_operations[31]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetItemTemplates");
         _call.setEncodingStyle(null);
@@ -6418,7 +6272,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[34]);
+        _call.setOperation(_operations[32]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetItemsImages");
         _call.setEncodingStyle(null);
@@ -6452,7 +6306,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[35]);
+        _call.setOperation(_operations[33]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetItemsInfo");
         _call.setEncodingStyle(null);
@@ -6486,7 +6340,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[36]);
+        _call.setOperation(_operations[34]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetItemsList");
         _call.setEncodingStyle(null);
@@ -6520,7 +6374,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[37]);
+        _call.setOperation(_operations[35]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMessageToBuyer");
         _call.setEncodingStyle(null);
@@ -6554,7 +6408,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[38]);
+        _call.setOperation(_operations[36]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyAddresses");
         _call.setEncodingStyle(null);
@@ -6588,7 +6442,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[39]);
+        _call.setOperation(_operations[37]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyBidItems");
         _call.setEncodingStyle(null);
@@ -6622,7 +6476,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[40]);
+        _call.setOperation(_operations[38]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyCurrentShipmentPriceType");
         _call.setEncodingStyle(null);
@@ -6656,7 +6510,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[41]);
+        _call.setOperation(_operations[39]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyData");
         _call.setEncodingStyle(null);
@@ -6690,7 +6544,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[42]);
+        _call.setOperation(_operations[40]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyFutureItems");
         _call.setEncodingStyle(null);
@@ -6724,7 +6578,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[43]);
+        _call.setOperation(_operations[41]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyIncomingPayments");
         _call.setEncodingStyle(null);
@@ -6758,7 +6612,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[44]);
+        _call.setOperation(_operations[42]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyIncomingPaymentsRefunds");
         _call.setEncodingStyle(null);
@@ -6792,7 +6646,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[45]);
+        _call.setOperation(_operations[43]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyNotSoldItems");
         _call.setEncodingStyle(null);
@@ -6826,7 +6680,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[46]);
+        _call.setOperation(_operations[44]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyNotWonItems");
         _call.setEncodingStyle(null);
@@ -6860,7 +6714,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[47]);
+        _call.setOperation(_operations[45]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyPayments");
         _call.setEncodingStyle(null);
@@ -6894,7 +6748,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[48]);
+        _call.setOperation(_operations[46]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyPaymentsInfo");
         _call.setEncodingStyle(null);
@@ -6928,7 +6782,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[49]);
+        _call.setOperation(_operations[47]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyPaymentsRefunds");
         _call.setEncodingStyle(null);
@@ -6962,7 +6816,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[50]);
+        _call.setOperation(_operations[48]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyPayouts");
         _call.setEncodingStyle(null);
@@ -6996,7 +6850,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[51]);
+        _call.setOperation(_operations[49]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyPayoutsDetails");
         _call.setEncodingStyle(null);
@@ -7030,7 +6884,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[52]);
+        _call.setOperation(_operations[50]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMySellItems");
         _call.setEncodingStyle(null);
@@ -7064,7 +6918,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[53]);
+        _call.setOperation(_operations[51]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMySellRating");
         _call.setEncodingStyle(null);
@@ -7098,7 +6952,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[54]);
+        _call.setOperation(_operations[52]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMySoldItems");
         _call.setEncodingStyle(null);
@@ -7132,7 +6986,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[55]);
+        _call.setOperation(_operations[53]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetMyWonItems");
         _call.setEncodingStyle(null);
@@ -7166,7 +7020,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[56]);
+        _call.setOperation(_operations[54]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPaymentData");
         _call.setEncodingStyle(null);
@@ -7200,7 +7054,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[57]);
+        _call.setOperation(_operations[55]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPaymentMethods");
         _call.setEncodingStyle(null);
@@ -7234,7 +7088,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[58]);
+        _call.setOperation(_operations[56]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPostBuyData");
         _call.setEncodingStyle(null);
@@ -7268,7 +7122,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[59]);
+        _call.setOperation(_operations[57]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPostBuyFormsDataForBuyers");
         _call.setEncodingStyle(null);
@@ -7302,7 +7156,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[60]);
+        _call.setOperation(_operations[58]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPostBuyFormsDataForSellers");
         _call.setEncodingStyle(null);
@@ -7336,7 +7190,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[61]);
+        _call.setOperation(_operations[59]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPostBuyFormsIds");
         _call.setEncodingStyle(null);
@@ -7370,7 +7224,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[62]);
+        _call.setOperation(_operations[60]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetPostBuyItemInfo");
         _call.setEncodingStyle(null);
@@ -7404,7 +7258,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[63]);
+        _call.setOperation(_operations[61]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetRefundsDeals");
         _call.setEncodingStyle(null);
@@ -7438,7 +7292,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[64]);
+        _call.setOperation(_operations[62]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetRefundsList");
         _call.setEncodingStyle(null);
@@ -7472,7 +7326,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[65]);
+        _call.setOperation(_operations[63]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetRefundsReasons");
         _call.setEncodingStyle(null);
@@ -7506,7 +7360,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[66]);
+        _call.setOperation(_operations[64]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetRelatedItems");
         _call.setEncodingStyle(null);
@@ -7540,7 +7394,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[67]);
+        _call.setOperation(_operations[65]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormAttribs");
         _call.setEncodingStyle(null);
@@ -7574,7 +7428,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[68]);
+        _call.setOperation(_operations[66]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormFields");
         _call.setEncodingStyle(null);
@@ -7608,7 +7462,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[69]);
+        _call.setOperation(_operations[67]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormFieldsExt");
         _call.setEncodingStyle(null);
@@ -7642,7 +7496,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[70]);
+        _call.setOperation(_operations[68]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormFieldsExtLimit");
         _call.setEncodingStyle(null);
@@ -7676,7 +7530,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[71]);
+        _call.setOperation(_operations[69]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormFieldsForCategory");
         _call.setEncodingStyle(null);
@@ -7710,7 +7564,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[72]);
+        _call.setOperation(_operations[70]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellFormFieldsLimit");
         _call.setEncodingStyle(null);
@@ -7744,7 +7598,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[73]);
+        _call.setOperation(_operations[71]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSellRatingReasons");
         _call.setEncodingStyle(null);
@@ -7778,7 +7632,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[74]);
+        _call.setOperation(_operations[72]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSessionHandleForWidget");
         _call.setEncodingStyle(null);
@@ -7812,7 +7666,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[75]);
+        _call.setOperation(_operations[73]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetShipmentData");
         _call.setEncodingStyle(null);
@@ -7846,7 +7700,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[76]);
+        _call.setOperation(_operations[74]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetShipmentDataForRelatedItems");
         _call.setEncodingStyle(null);
@@ -7880,7 +7734,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[77]);
+        _call.setOperation(_operations[75]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetShipmentPriceTypes");
         _call.setEncodingStyle(null);
@@ -7914,7 +7768,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[78]);
+        _call.setOperation(_operations[76]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetShopsTags");
         _call.setEncodingStyle(null);
@@ -7948,7 +7802,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[79]);
+        _call.setOperation(_operations[77]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSiteJournal");
         _call.setEncodingStyle(null);
@@ -7982,7 +7836,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[80]);
+        _call.setOperation(_operations[78]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSiteJournalDeals");
         _call.setEncodingStyle(null);
@@ -8016,7 +7870,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[81]);
+        _call.setOperation(_operations[79]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSiteJournalDealsInfo");
         _call.setEncodingStyle(null);
@@ -8050,7 +7904,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[82]);
+        _call.setOperation(_operations[80]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSiteJournalInfo");
         _call.setEncodingStyle(null);
@@ -8084,7 +7938,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[83]);
+        _call.setOperation(_operations[81]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetStatesInfo");
         _call.setEncodingStyle(null);
@@ -8118,7 +7972,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[84]);
+        _call.setOperation(_operations[82]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetSystemTime");
         _call.setEncodingStyle(null);
@@ -8152,7 +8006,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[85]);
+        _call.setOperation(_operations[83]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetTransactionsIDs");
         _call.setEncodingStyle(null);
@@ -8186,7 +8040,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[86]);
+        _call.setOperation(_operations[84]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetUserID");
         _call.setEncodingStyle(null);
@@ -8220,7 +8074,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[87]);
+        _call.setOperation(_operations[85]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetUserLicenceDate");
         _call.setEncodingStyle(null);
@@ -8254,7 +8108,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[88]);
+        _call.setOperation(_operations[86]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetUserLogin");
         _call.setEncodingStyle(null);
@@ -8288,7 +8142,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[89]);
+        _call.setOperation(_operations[87]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetWaitingFeedbacks");
         _call.setEncodingStyle(null);
@@ -8322,7 +8176,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[90]);
+        _call.setOperation(_operations[88]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doGetWaitingFeedbacksCount");
         _call.setEncodingStyle(null);
@@ -8356,7 +8210,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[91]);
+        _call.setOperation(_operations[89]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doLogin");
         _call.setEncodingStyle(null);
@@ -8390,7 +8244,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[92]);
+        _call.setOperation(_operations[90]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doLoginEnc");
         _call.setEncodingStyle(null);
@@ -8424,7 +8278,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[93]);
+        _call.setOperation(_operations[91]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doLoginWithAccessToken");
         _call.setEncodingStyle(null);
@@ -8458,7 +8312,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[94]);
+        _call.setOperation(_operations[92]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyAccount2");
         _call.setEncodingStyle(null);
@@ -8492,7 +8346,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[95]);
+        _call.setOperation(_operations[93]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyAccountItemsCount");
         _call.setEncodingStyle(null);
@@ -8526,7 +8380,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[96]);
+        _call.setOperation(_operations[94]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyBilling");
         _call.setEncodingStyle(null);
@@ -8560,7 +8414,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[97]);
+        _call.setOperation(_operations[95]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyBillingItem");
         _call.setEncodingStyle(null);
@@ -8594,7 +8448,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[98]);
+        _call.setOperation(_operations[96]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyContact");
         _call.setEncodingStyle(null);
@@ -8628,7 +8482,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[99]);
+        _call.setOperation(_operations[97]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyFeedback2");
         _call.setEncodingStyle(null);
@@ -8662,7 +8516,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[100]);
+        _call.setOperation(_operations[98]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doMyFeedback2Limit");
         _call.setEncodingStyle(null);
@@ -8696,7 +8550,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[101]);
+        _call.setOperation(_operations[99]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doNewAuctionExt");
         _call.setEncodingStyle(null);
@@ -8730,7 +8584,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[102]);
+        _call.setOperation(_operations[100]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doQueryAllSysStatus");
         _call.setEncodingStyle(null);
@@ -8764,7 +8618,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[103]);
+        _call.setOperation(_operations[101]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doQuerySysStatus");
         _call.setEncodingStyle(null);
@@ -8798,7 +8652,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[104]);
+        _call.setOperation(_operations[102]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doRemoveFromBlackList");
         _call.setEncodingStyle(null);
@@ -8832,7 +8686,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[105]);
+        _call.setOperation(_operations[103]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doRemoveItemTemplates");
         _call.setEncodingStyle(null);
@@ -8866,7 +8720,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[106]);
+        _call.setOperation(_operations[104]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doRequestCancelBid");
         _call.setEncodingStyle(null);
@@ -8900,7 +8754,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[107]);
+        _call.setOperation(_operations[105]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doRequestPayout");
         _call.setEncodingStyle(null);
@@ -8934,7 +8788,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[108]);
+        _call.setOperation(_operations[106]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doRequestSurcharge");
         _call.setEncodingStyle(null);
@@ -8968,7 +8822,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[109]);
+        _call.setOperation(_operations[107]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSellSomeAgain");
         _call.setEncodingStyle(null);
@@ -9002,7 +8856,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[110]);
+        _call.setOperation(_operations[108]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSellSomeAgainInShop");
         _call.setEncodingStyle(null);
@@ -9036,7 +8890,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[111]);
+        _call.setOperation(_operations[109]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSendEmailToUser");
         _call.setEncodingStyle(null);
@@ -9070,7 +8924,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[112]);
+        _call.setOperation(_operations[110]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSendPostBuyForm");
         _call.setEncodingStyle(null);
@@ -9104,7 +8958,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[113]);
+        _call.setOperation(_operations[111]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSendRefundForm");
         _call.setEncodingStyle(null);
@@ -9138,7 +8992,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[114]);
+        _call.setOperation(_operations[112]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSetFreeDeliveryAmount");
         _call.setEncodingStyle(null);
@@ -9172,7 +9026,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[115]);
+        _call.setOperation(_operations[113]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSetShipmentPriceType");
         _call.setEncodingStyle(null);
@@ -9206,7 +9060,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[116]);
+        _call.setOperation(_operations[114]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doSetUserLicenceDate");
         _call.setEncodingStyle(null);
@@ -9240,7 +9094,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[117]);
+        _call.setOperation(_operations[115]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doShowItemInfoExt");
         _call.setEncodingStyle(null);
@@ -9274,7 +9128,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[118]);
+        _call.setOperation(_operations[116]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doShowUser");
         _call.setEncodingStyle(null);
@@ -9308,7 +9162,7 @@ public class ServiceBindingStub extends org.apache.axis.client.Stub implements c
             throw new org.apache.axis.NoEndPointException();
         }
         org.apache.axis.client.Call _call = createCall();
-        _call.setOperation(_operations[119]);
+        _call.setOperation(_operations[117]);
         _call.setUseSOAPAction(true);
         _call.setSOAPActionURI("#doVerifyItem");
         _call.setEncodingStyle(null);
