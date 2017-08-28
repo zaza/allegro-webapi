@@ -1,4 +1,7 @@
 # allegro-webapi
+
+![Travis CI status](https://travis-ci.org/zaza/allegro-webapi.svg?branch=master)
+
 Allegro Web API WSDL converted to Java
 
 ```
