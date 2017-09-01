@@ -1,8 +1,9 @@
 # allegro-webapi
 
 ![Travis CI status](https://travis-ci.org/zaza/allegro-webapi.svg?branch=master)
+![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.zaza/allegro-webapi/badge.svg)
 
-Allegro Web API WSDL converted to Java
+[Allegro Web API](http://allegro.pl/webapi) [WSDL](https://webapi.allegro.pl/service.php?wsdl) converted to Java
 
 ```
 <dependency>
