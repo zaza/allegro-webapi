@@ -29,7 +29,7 @@ public class WebapiChangelogTest {
 	}
 
 	private Date lastTimeSourcesGenerated() throws ParseException {
-		return new SimpleDateFormat("yyyy-MM-dd").parse("2017-08-21");
+		return new SimpleDateFormat("yyyy-MM-dd").parse("2017-09-19");
 	}
 
 	private Date latestChangelogEntryPublished() throws IllegalArgumentException, IOException, FeedException {

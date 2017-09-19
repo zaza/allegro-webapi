@@ -24,7 +24,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
 
     private com.allegro.webapi.ProductStruct itemProductInfo;
 
-    private com.allegro.webapi.ArrayOfItemvariantstruct itemVariants;
+    private java.lang.String itemVariants;
 
     private com.allegro.webapi.AfterSalesServiceConditionsStruct itemAfterSalesServiceConditions;
 
@@ -40,7 +40,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
            com.allegro.webapi.ItemPaymentOptions itemPaymentOptions,
            com.allegro.webapi.CompanyInfoStruct itemCompanyInfo,
            com.allegro.webapi.ProductStruct itemProductInfo,
-           com.allegro.webapi.ArrayOfItemvariantstruct itemVariants,
+           java.lang.String itemVariants,
            com.allegro.webapi.AfterSalesServiceConditionsStruct itemAfterSalesServiceConditions) {
            this.itemListInfoExt = itemListInfoExt;
            this.itemCatPath = itemCatPath;
@@ -220,7 +220,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
      * 
      * @return itemVariants
      */
-    public com.allegro.webapi.ArrayOfItemvariantstruct getItemVariants() {
+    public java.lang.String getItemVariants() {
         return itemVariants;
     }
 
@@ -230,7 +230,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
      * 
      * @param itemVariants
      */
-    public void setItemVariants(com.allegro.webapi.ArrayOfItemvariantstruct itemVariants) {
+    public void setItemVariants(java.lang.String itemVariants) {
         this.itemVariants = itemVariants;
     }
 
@@ -402,7 +402,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itemVariants");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemVariants"));
-        elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "ArrayOfItemvariantstruct"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
