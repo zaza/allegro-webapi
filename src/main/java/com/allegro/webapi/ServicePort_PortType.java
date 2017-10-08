@@ -21,8 +21,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoCheckItemDescriptionResponse doCheckItemDescription(com.allegro.webapi.DoCheckItemDescriptionRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoCheckNewAuctionExtResponse doCheckNewAuctionExt(com.allegro.webapi.DoCheckNewAuctionExtRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoCreateItemTemplateResponse doCreateItemTemplate(com.allegro.webapi.DoCreateItemTemplateRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoFeedbackResponse doFeedback(com.allegro.webapi.DoFeedbackRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoFeedbackManyResponse doFeedbackMany(com.allegro.webapi.DoFeedbackManyRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoFinishItemResponse doFinishItem(com.allegro.webapi.DoFinishItemRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoFinishItemsResponse doFinishItems(com.allegro.webapi.DoFinishItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetAdminUserLicenceDateResponse doGetAdminUserLicenceDate(com.allegro.webapi.DoGetAdminUserLicenceDateRequest parameters) throws java.rmi.RemoteException;
@@ -35,7 +33,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetCatsDataLimitResponse doGetCatsDataLimit(com.allegro.webapi.DoGetCatsDataLimitRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetCountriesResponse doGetCountries(com.allegro.webapi.DoGetCountriesRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetDealsResponse doGetDeals(com.allegro.webapi.DoGetDealsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetFeedbackResponse doGetFeedback(com.allegro.webapi.DoGetFeedbackRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetFilledPostBuyFormsResponse doGetFilledPostBuyForms(com.allegro.webapi.DoGetFilledPostBuyFormsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetFreeDeliveryAmountResponse doGetFreeDeliveryAmount(com.allegro.webapi.DoGetFreeDeliveryAmountRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetItemFieldsResponse doGetItemFields(com.allegro.webapi.DoGetItemFieldsRequest parameters) throws java.rmi.RemoteException;
@@ -59,7 +56,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetMyPayoutsResponse doGetMyPayouts(com.allegro.webapi.DoGetMyPayoutsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMyPayoutsDetailsResponse doGetMyPayoutsDetails(com.allegro.webapi.DoGetMyPayoutsDetailsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMySellItemsResponse doGetMySellItems(com.allegro.webapi.DoGetMySellItemsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetMySellRatingResponse doGetMySellRating(com.allegro.webapi.DoGetMySellRatingRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMySoldItemsResponse doGetMySoldItems(com.allegro.webapi.DoGetMySoldItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMyWonItemsResponse doGetMyWonItems(com.allegro.webapi.DoGetMyWonItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetPaymentDataResponse doGetPaymentData(com.allegro.webapi.DoGetPaymentDataRequest parameters) throws java.rmi.RemoteException;
@@ -73,13 +69,7 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetRefundsListResponse doGetRefundsList(com.allegro.webapi.DoGetRefundsListRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetRefundsReasonsResponse doGetRefundsReasons(com.allegro.webapi.DoGetRefundsReasonsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetRelatedItemsResponse doGetRelatedItems(com.allegro.webapi.DoGetRelatedItemsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellFormAttribsResponse doGetSellFormAttribs(com.allegro.webapi.DoGetSellFormAttribsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellFormFieldsResponse doGetSellFormFields(com.allegro.webapi.DoGetSellFormFieldsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellFormFieldsExtResponse doGetSellFormFieldsExt(com.allegro.webapi.DoGetSellFormFieldsExtRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellFormFieldsExtLimitResponse doGetSellFormFieldsExtLimit(com.allegro.webapi.DoGetSellFormFieldsExtLimitRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetSellFormFieldsForCategoryResponse doGetSellFormFieldsForCategory(com.allegro.webapi.DoGetSellFormFieldsForCategoryRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellFormFieldsLimitResponse doGetSellFormFieldsLimit(com.allegro.webapi.DoGetSellFormFieldsLimitRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetSellRatingReasonsResponse doGetSellRatingReasons(com.allegro.webapi.DoGetSellRatingReasonsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetSessionHandleForWidgetResponse doGetSessionHandleForWidget(com.allegro.webapi.DoGetSessionHandleForWidgetRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetShipmentDataResponse doGetShipmentData(com.allegro.webapi.DoGetShipmentDataRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetShipmentDataForRelatedItemsResponse doGetShipmentDataForRelatedItems(com.allegro.webapi.DoGetShipmentDataForRelatedItemsRequest parameters) throws java.rmi.RemoteException;
@@ -95,8 +85,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetUserIDResponse doGetUserID(com.allegro.webapi.DoGetUserIDRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetUserLicenceDateResponse doGetUserLicenceDate(com.allegro.webapi.DoGetUserLicenceDateRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetUserLoginResponse doGetUserLogin(com.allegro.webapi.DoGetUserLoginRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetWaitingFeedbacksResponse doGetWaitingFeedbacks(com.allegro.webapi.DoGetWaitingFeedbacksRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetWaitingFeedbacksCountResponse doGetWaitingFeedbacksCount(com.allegro.webapi.DoGetWaitingFeedbacksCountRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoLoginResponse doLogin(com.allegro.webapi.DoLoginRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoLoginEncResponse doLoginEnc(com.allegro.webapi.DoLoginEncRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoLoginWithAccessTokenResponse doLoginWithAccessToken(com.allegro.webapi.DoLoginWithAccessTokenRequest parameters) throws java.rmi.RemoteException;
@@ -105,8 +93,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoMyBillingResponse doMyBilling(com.allegro.webapi.DoMyBillingRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoMyBillingItemResponse doMyBillingItem(com.allegro.webapi.DoMyBillingItemRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoMyContactResponse doMyContact(com.allegro.webapi.DoMyContactRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoMyFeedback2Response doMyFeedback2(com.allegro.webapi.DoMyFeedback2Request parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoMyFeedback2LimitResponse doMyFeedback2Limit(com.allegro.webapi.DoMyFeedback2LimitRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoNewAuctionExtResponse doNewAuctionExt(com.allegro.webapi.DoNewAuctionExtRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoQueryAllSysStatusResponse doQueryAllSysStatus(com.allegro.webapi.DoQueryAllSysStatusRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoQuerySysStatusResponse doQuerySysStatus(com.allegro.webapi.DoQuerySysStatusRequest parameters) throws java.rmi.RemoteException;
