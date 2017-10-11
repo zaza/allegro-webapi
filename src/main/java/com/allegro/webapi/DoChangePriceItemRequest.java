@@ -18,6 +18,8 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
 
     private java.lang.Float newBuyNowPrice;
 
+    private java.lang.Float newAdvertisementPrice;
+
     public DoChangePriceItemRequest() {
     }
 
@@ -26,12 +28,14 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
            long itemId,
            java.lang.Float newStartingPrice,
            java.lang.Float newReservePrice,
-           java.lang.Float newBuyNowPrice) {
+           java.lang.Float newBuyNowPrice,
+           java.lang.Float newAdvertisementPrice) {
            this.sessionHandle = sessionHandle;
            this.itemId = itemId;
            this.newStartingPrice = newStartingPrice;
            this.newReservePrice = newReservePrice;
            this.newBuyNowPrice = newBuyNowPrice;
+           this.newAdvertisementPrice = newAdvertisementPrice;
     }
 
 
@@ -134,6 +138,26 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
         this.newBuyNowPrice = newBuyNowPrice;
     }
 
+
+    /**
+     * Gets the newAdvertisementPrice value for this DoChangePriceItemRequest.
+     * 
+     * @return newAdvertisementPrice
+     */
+    public java.lang.Float getNewAdvertisementPrice() {
+        return newAdvertisementPrice;
+    }
+
+
+    /**
+     * Sets the newAdvertisementPrice value for this DoChangePriceItemRequest.
+     * 
+     * @param newAdvertisementPrice
+     */
+    public void setNewAdvertisementPrice(java.lang.Float newAdvertisementPrice) {
+        this.newAdvertisementPrice = newAdvertisementPrice;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoChangePriceItemRequest)) return false;
@@ -158,7 +182,10 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
               this.newReservePrice.equals(other.getNewReservePrice()))) &&
             ((this.newBuyNowPrice==null && other.getNewBuyNowPrice()==null) || 
              (this.newBuyNowPrice!=null &&
-              this.newBuyNowPrice.equals(other.getNewBuyNowPrice())));
+              this.newBuyNowPrice.equals(other.getNewBuyNowPrice()))) &&
+            ((this.newAdvertisementPrice==null && other.getNewAdvertisementPrice()==null) || 
+             (this.newAdvertisementPrice!=null &&
+              this.newAdvertisementPrice.equals(other.getNewAdvertisementPrice())));
         __equalsCalc = null;
         return _equals;
     }
@@ -182,6 +209,9 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
         }
         if (getNewBuyNowPrice() != null) {
             _hashCode += getNewBuyNowPrice().hashCode();
+        }
+        if (getNewAdvertisementPrice() != null) {
+            _hashCode += getNewAdvertisementPrice().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -222,6 +252,13 @@ public class DoChangePriceItemRequest  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("newBuyNowPrice");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "newBuyNowPrice"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("newAdvertisementPrice");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "newAdvertisementPrice"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

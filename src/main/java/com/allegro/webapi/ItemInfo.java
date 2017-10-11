@@ -42,6 +42,10 @@ public class ItemInfo  implements java.io.Serializable {
 
     private int itBuyNowActive;
 
+    private java.lang.Float itAdvertisementPrice;
+
+    private java.lang.Integer itAdvertisementActive;
+
     private int itHighBidder;
 
     private java.lang.String itHighBidderLogin;
@@ -113,6 +117,8 @@ public class ItemInfo  implements java.io.Serializable {
            java.lang.String itLocation,
            float itBuyNowPrice,
            int itBuyNowActive,
+           java.lang.Float itAdvertisementPrice,
+           java.lang.Integer itAdvertisementActive,
            int itHighBidder,
            java.lang.String itHighBidderLogin,
            java.lang.String itDescription,
@@ -155,6 +161,8 @@ public class ItemInfo  implements java.io.Serializable {
            this.itLocation = itLocation;
            this.itBuyNowPrice = itBuyNowPrice;
            this.itBuyNowActive = itBuyNowActive;
+           this.itAdvertisementPrice = itAdvertisementPrice;
+           this.itAdvertisementActive = itAdvertisementActive;
            this.itHighBidder = itHighBidder;
            this.itHighBidderLogin = itHighBidderLogin;
            this.itDescription = itDescription;
@@ -520,6 +528,46 @@ public class ItemInfo  implements java.io.Serializable {
      */
     public void setItBuyNowActive(int itBuyNowActive) {
         this.itBuyNowActive = itBuyNowActive;
+    }
+
+
+    /**
+     * Gets the itAdvertisementPrice value for this ItemInfo.
+     * 
+     * @return itAdvertisementPrice
+     */
+    public java.lang.Float getItAdvertisementPrice() {
+        return itAdvertisementPrice;
+    }
+
+
+    /**
+     * Sets the itAdvertisementPrice value for this ItemInfo.
+     * 
+     * @param itAdvertisementPrice
+     */
+    public void setItAdvertisementPrice(java.lang.Float itAdvertisementPrice) {
+        this.itAdvertisementPrice = itAdvertisementPrice;
+    }
+
+
+    /**
+     * Gets the itAdvertisementActive value for this ItemInfo.
+     * 
+     * @return itAdvertisementActive
+     */
+    public java.lang.Integer getItAdvertisementActive() {
+        return itAdvertisementActive;
+    }
+
+
+    /**
+     * Sets the itAdvertisementActive value for this ItemInfo.
+     * 
+     * @param itAdvertisementActive
+     */
+    public void setItAdvertisementActive(java.lang.Integer itAdvertisementActive) {
+        this.itAdvertisementActive = itAdvertisementActive;
     }
 
 
@@ -1057,6 +1105,12 @@ public class ItemInfo  implements java.io.Serializable {
               this.itLocation.equals(other.getItLocation()))) &&
             this.itBuyNowPrice == other.getItBuyNowPrice() &&
             this.itBuyNowActive == other.getItBuyNowActive() &&
+            ((this.itAdvertisementPrice==null && other.getItAdvertisementPrice()==null) || 
+             (this.itAdvertisementPrice!=null &&
+              this.itAdvertisementPrice.equals(other.getItAdvertisementPrice()))) &&
+            ((this.itAdvertisementActive==null && other.getItAdvertisementActive()==null) || 
+             (this.itAdvertisementActive!=null &&
+              this.itAdvertisementActive.equals(other.getItAdvertisementActive()))) &&
             this.itHighBidder == other.getItHighBidder() &&
             ((this.itHighBidderLogin==null && other.getItHighBidderLogin()==null) || 
              (this.itHighBidderLogin!=null &&
@@ -1136,6 +1190,12 @@ public class ItemInfo  implements java.io.Serializable {
         }
         _hashCode += new Float(getItBuyNowPrice()).hashCode();
         _hashCode += getItBuyNowActive();
+        if (getItAdvertisementPrice() != null) {
+            _hashCode += getItAdvertisementPrice().hashCode();
+        }
+        if (getItAdvertisementActive() != null) {
+            _hashCode += getItAdvertisementActive().hashCode();
+        }
         _hashCode += getItHighBidder();
         if (getItHighBidderLogin() != null) {
             _hashCode += getItHighBidderLogin().hashCode();
@@ -1291,6 +1351,20 @@ public class ItemInfo  implements java.io.Serializable {
         elemField.setFieldName("itBuyNowActive");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itBuyNowActive"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itAdvertisementPrice");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itAdvertisementPrice"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itAdvertisementActive");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itAdvertisementActive"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

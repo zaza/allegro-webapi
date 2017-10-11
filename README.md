@@ -9,6 +9,6 @@
 <dependency>
     <groupId>com.github.zaza</groupId>
     <artifactId>allegro-webapi</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
 </dependency>
 ```

@@ -4,7 +4,7 @@
 
 	<groupId>com.github.zaza</groupId>
 	<artifactId>allegro-webapi</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Allegro Web API WSDL converted to Java</description>
@@ -124,6 +124,16 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/src/main/java/com/allegro/webapi</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
