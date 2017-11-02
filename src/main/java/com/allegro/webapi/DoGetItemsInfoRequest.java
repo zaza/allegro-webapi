@@ -28,6 +28,8 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
 
     private java.lang.Integer getEan;
 
+    private java.lang.Integer getAdditionalServicesGroup;
+
     public DoGetItemsInfoRequest() {
     }
 
@@ -41,7 +43,8 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
            java.lang.Integer getCompanyInfo,
            java.lang.Integer getProductInfo,
            java.lang.Integer getAfterSalesServiceConditions,
-           java.lang.Integer getEan) {
+           java.lang.Integer getEan,
+           java.lang.Integer getAdditionalServicesGroup) {
            this.sessionHandle = sessionHandle;
            this.itemsIdArray = itemsIdArray;
            this.getDesc = getDesc;
@@ -52,6 +55,7 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
            this.getProductInfo = getProductInfo;
            this.getAfterSalesServiceConditions = getAfterSalesServiceConditions;
            this.getEan = getEan;
+           this.getAdditionalServicesGroup = getAdditionalServicesGroup;
     }
 
 
@@ -254,6 +258,26 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
         this.getEan = getEan;
     }
 
+
+    /**
+     * Gets the getAdditionalServicesGroup value for this DoGetItemsInfoRequest.
+     * 
+     * @return getAdditionalServicesGroup
+     */
+    public java.lang.Integer getGetAdditionalServicesGroup() {
+        return getAdditionalServicesGroup;
+    }
+
+
+    /**
+     * Sets the getAdditionalServicesGroup value for this DoGetItemsInfoRequest.
+     * 
+     * @param getAdditionalServicesGroup
+     */
+    public void setGetAdditionalServicesGroup(java.lang.Integer getAdditionalServicesGroup) {
+        this.getAdditionalServicesGroup = getAdditionalServicesGroup;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoGetItemsInfoRequest)) return false;
@@ -295,7 +319,10 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
               this.getAfterSalesServiceConditions.equals(other.getGetAfterSalesServiceConditions()))) &&
             ((this.getEan==null && other.getGetEan()==null) || 
              (this.getEan!=null &&
-              this.getEan.equals(other.getGetEan())));
+              this.getEan.equals(other.getGetEan()))) &&
+            ((this.getAdditionalServicesGroup==null && other.getGetAdditionalServicesGroup()==null) || 
+             (this.getAdditionalServicesGroup!=null &&
+              this.getAdditionalServicesGroup.equals(other.getGetAdditionalServicesGroup())));
         __equalsCalc = null;
         return _equals;
     }
@@ -336,6 +363,9 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
         }
         if (getGetEan() != null) {
             _hashCode += getGetEan().hashCode();
+        }
+        if (getGetAdditionalServicesGroup() != null) {
+            _hashCode += getGetAdditionalServicesGroup().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -412,6 +442,13 @@ public class DoGetItemsInfoRequest  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("getEan");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "getEan"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("getAdditionalServicesGroup");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "getAdditionalServicesGroup"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

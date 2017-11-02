@@ -24,6 +24,8 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
 
     private com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions;
 
+    private java.lang.String additionalServicesGroup;
+
     public DoNewAuctionExtRequest() {
     }
 
@@ -35,7 +37,8 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
            com.allegro.webapi.ItemTemplateCreateStruct itemTemplateCreate,
            com.allegro.webapi.ArrayOfVariantstruct variants,
            com.allegro.webapi.ArrayOfTagnamestruct tags,
-           com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions) {
+           com.allegro.webapi.AfterSalesServiceConditionsStruct afterSalesServiceConditions,
+           java.lang.String additionalServicesGroup) {
            this.sessionHandle = sessionHandle;
            this.fields = fields;
            this.itemTemplateId = itemTemplateId;
@@ -44,6 +47,7 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
            this.variants = variants;
            this.tags = tags;
            this.afterSalesServiceConditions = afterSalesServiceConditions;
+           this.additionalServicesGroup = additionalServicesGroup;
     }
 
 
@@ -206,6 +210,26 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         this.afterSalesServiceConditions = afterSalesServiceConditions;
     }
 
+
+    /**
+     * Gets the additionalServicesGroup value for this DoNewAuctionExtRequest.
+     * 
+     * @return additionalServicesGroup
+     */
+    public java.lang.String getAdditionalServicesGroup() {
+        return additionalServicesGroup;
+    }
+
+
+    /**
+     * Sets the additionalServicesGroup value for this DoNewAuctionExtRequest.
+     * 
+     * @param additionalServicesGroup
+     */
+    public void setAdditionalServicesGroup(java.lang.String additionalServicesGroup) {
+        this.additionalServicesGroup = additionalServicesGroup;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoNewAuctionExtRequest)) return false;
@@ -241,7 +265,10 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
               this.tags.equals(other.getTags()))) &&
             ((this.afterSalesServiceConditions==null && other.getAfterSalesServiceConditions()==null) || 
              (this.afterSalesServiceConditions!=null &&
-              this.afterSalesServiceConditions.equals(other.getAfterSalesServiceConditions())));
+              this.afterSalesServiceConditions.equals(other.getAfterSalesServiceConditions()))) &&
+            ((this.additionalServicesGroup==null && other.getAdditionalServicesGroup()==null) || 
+             (this.additionalServicesGroup!=null &&
+              this.additionalServicesGroup.equals(other.getAdditionalServicesGroup())));
         __equalsCalc = null;
         return _equals;
     }
@@ -276,6 +303,9 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         }
         if (getAfterSalesServiceConditions() != null) {
             _hashCode += getAfterSalesServiceConditions().hashCode();
+        }
+        if (getAdditionalServicesGroup() != null) {
+            _hashCode += getAdditionalServicesGroup().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -339,6 +369,13 @@ public class DoNewAuctionExtRequest  implements java.io.Serializable {
         elemField.setFieldName("afterSalesServiceConditions");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "afterSalesServiceConditions"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AfterSalesServiceConditionsStruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("additionalServicesGroup");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "additionalServicesGroup"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

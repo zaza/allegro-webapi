@@ -28,6 +28,8 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
 
     private com.allegro.webapi.AfterSalesServiceConditionsStruct itemAfterSalesServiceConditions;
 
+    private java.lang.String itemAdditionalServicesGroup;
+
     public DoShowItemInfoExtResponse() {
     }
 
@@ -41,7 +43,8 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
            com.allegro.webapi.CompanyInfoStruct itemCompanyInfo,
            com.allegro.webapi.ProductStruct itemProductInfo,
            java.lang.String itemVariants,
-           com.allegro.webapi.AfterSalesServiceConditionsStruct itemAfterSalesServiceConditions) {
+           com.allegro.webapi.AfterSalesServiceConditionsStruct itemAfterSalesServiceConditions,
+           java.lang.String itemAdditionalServicesGroup) {
            this.itemListInfoExt = itemListInfoExt;
            this.itemCatPath = itemCatPath;
            this.itemImgList = itemImgList;
@@ -52,6 +55,7 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
            this.itemProductInfo = itemProductInfo;
            this.itemVariants = itemVariants;
            this.itemAfterSalesServiceConditions = itemAfterSalesServiceConditions;
+           this.itemAdditionalServicesGroup = itemAdditionalServicesGroup;
     }
 
 
@@ -254,6 +258,26 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
         this.itemAfterSalesServiceConditions = itemAfterSalesServiceConditions;
     }
 
+
+    /**
+     * Gets the itemAdditionalServicesGroup value for this DoShowItemInfoExtResponse.
+     * 
+     * @return itemAdditionalServicesGroup
+     */
+    public java.lang.String getItemAdditionalServicesGroup() {
+        return itemAdditionalServicesGroup;
+    }
+
+
+    /**
+     * Sets the itemAdditionalServicesGroup value for this DoShowItemInfoExtResponse.
+     * 
+     * @param itemAdditionalServicesGroup
+     */
+    public void setItemAdditionalServicesGroup(java.lang.String itemAdditionalServicesGroup) {
+        this.itemAdditionalServicesGroup = itemAdditionalServicesGroup;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof DoShowItemInfoExtResponse)) return false;
@@ -295,7 +319,10 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
               this.itemVariants.equals(other.getItemVariants()))) &&
             ((this.itemAfterSalesServiceConditions==null && other.getItemAfterSalesServiceConditions()==null) || 
              (this.itemAfterSalesServiceConditions!=null &&
-              this.itemAfterSalesServiceConditions.equals(other.getItemAfterSalesServiceConditions())));
+              this.itemAfterSalesServiceConditions.equals(other.getItemAfterSalesServiceConditions()))) &&
+            ((this.itemAdditionalServicesGroup==null && other.getItemAdditionalServicesGroup()==null) || 
+             (this.itemAdditionalServicesGroup!=null &&
+              this.itemAdditionalServicesGroup.equals(other.getItemAdditionalServicesGroup())));
         __equalsCalc = null;
         return _equals;
     }
@@ -336,6 +363,9 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
         }
         if (getItemAfterSalesServiceConditions() != null) {
             _hashCode += getItemAfterSalesServiceConditions().hashCode();
+        }
+        if (getItemAdditionalServicesGroup() != null) {
+            _hashCode += getItemAdditionalServicesGroup().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -410,6 +440,13 @@ public class DoShowItemInfoExtResponse  implements java.io.Serializable {
         elemField.setFieldName("itemAfterSalesServiceConditions");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemAfterSalesServiceConditions"));
         elemField.setXmlType(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "AfterSalesServiceConditionsStruct"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itemAdditionalServicesGroup");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itemAdditionalServicesGroup"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

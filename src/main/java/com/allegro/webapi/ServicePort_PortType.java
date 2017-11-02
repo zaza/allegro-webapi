@@ -57,7 +57,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetMySellItemsResponse doGetMySellItems(com.allegro.webapi.DoGetMySellItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMySoldItemsResponse doGetMySoldItems(com.allegro.webapi.DoGetMySoldItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetMyWonItemsResponse doGetMyWonItems(com.allegro.webapi.DoGetMyWonItemsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetPaymentDataResponse doGetPaymentData(com.allegro.webapi.DoGetPaymentDataRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetPaymentMethodsResponse doGetPaymentMethods(com.allegro.webapi.DoGetPaymentMethodsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetPostBuyDataResponse doGetPostBuyData(com.allegro.webapi.DoGetPostBuyDataRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetPostBuyFormsDataForBuyersResponse doGetPostBuyFormsDataForBuyers(com.allegro.webapi.DoGetPostBuyFormsDataForBuyersRequest parameters) throws java.rmi.RemoteException;

@@ -4,7 +4,7 @@
 
 	<groupId>com.github.zaza</groupId>
 	<artifactId>allegro-webapi</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Allegro Web API WSDL converted to Java</description>
