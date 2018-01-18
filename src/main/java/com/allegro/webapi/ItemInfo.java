@@ -96,6 +96,8 @@ public class ItemInfo  implements java.io.Serializable {
 
     private java.lang.String itEan;
 
+    private java.lang.String itContact;
+
     public ItemInfo() {
     }
 
@@ -143,7 +145,8 @@ public class ItemInfo  implements java.io.Serializable {
            java.lang.Integer itIsBrandZone,
            com.allegro.webapi.DurationInfoStruct itDurationInfo,
            java.lang.Integer itIsFulfillmentTimeActive,
-           java.lang.String itEan) {
+           java.lang.String itEan,
+           java.lang.String itContact) {
            this.itId = itId;
            this.itCountry = itCountry;
            this.itName = itName;
@@ -188,6 +191,7 @@ public class ItemInfo  implements java.io.Serializable {
            this.itDurationInfo = itDurationInfo;
            this.itIsFulfillmentTimeActive = itIsFulfillmentTimeActive;
            this.itEan = itEan;
+           this.itContact = itContact;
     }
 
 
@@ -1070,6 +1074,26 @@ public class ItemInfo  implements java.io.Serializable {
         this.itEan = itEan;
     }
 
+
+    /**
+     * Gets the itContact value for this ItemInfo.
+     * 
+     * @return itContact
+     */
+    public java.lang.String getItContact() {
+        return itContact;
+    }
+
+
+    /**
+     * Sets the itContact value for this ItemInfo.
+     * 
+     * @param itContact
+     */
+    public void setItContact(java.lang.String itContact) {
+        this.itContact = itContact;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof ItemInfo)) return false;
@@ -1155,7 +1179,10 @@ public class ItemInfo  implements java.io.Serializable {
               this.itIsFulfillmentTimeActive.equals(other.getItIsFulfillmentTimeActive()))) &&
             ((this.itEan==null && other.getItEan()==null) || 
              (this.itEan!=null &&
-              this.itEan.equals(other.getItEan())));
+              this.itEan.equals(other.getItEan()))) &&
+            ((this.itContact==null && other.getItContact()==null) || 
+             (this.itContact!=null &&
+              this.itContact.equals(other.getItContact())));
         __equalsCalc = null;
         return _equals;
     }
@@ -1240,6 +1267,9 @@ public class ItemInfo  implements java.io.Serializable {
         }
         if (getItEan() != null) {
             _hashCode += getItEan().hashCode();
+        }
+        if (getItContact() != null) {
+            _hashCode += getItContact().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -1518,6 +1548,13 @@ public class ItemInfo  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("itEan");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itEan"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("itContact");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "itContact"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
