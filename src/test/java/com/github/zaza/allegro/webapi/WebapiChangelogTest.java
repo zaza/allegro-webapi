@@ -33,7 +33,7 @@ public class WebapiChangelogTest {
 	}
 
 	private Date latestChangelogEntryPublished() throws IllegalArgumentException, IOException, FeedException {
-		return fetchFeed("http://allegro.pl/rss.php/webapi?all=0").getEntries().iterator().next().getPublishedDate();
+		return fetchFeed("https://allegro.pl/rss.php/webapi?all=0").getEntries().iterator().next().getPublishedDate();
 	}
 
 	private SyndFeed fetchFeed(String url) throws IllegalArgumentException, IOException, FeedException {
