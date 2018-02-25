@@ -20,7 +20,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoChangeQuantityItemResponse doChangeQuantityItem(com.allegro.webapi.DoChangeQuantityItemRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoCheckItemDescriptionResponse doCheckItemDescription(com.allegro.webapi.DoCheckItemDescriptionRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoCheckNewAuctionExtResponse doCheckNewAuctionExt(com.allegro.webapi.DoCheckNewAuctionExtRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoCreateItemTemplateResponse doCreateItemTemplate(com.allegro.webapi.DoCreateItemTemplateRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoFinishItemResponse doFinishItem(com.allegro.webapi.DoFinishItemRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoFinishItemsResponse doFinishItems(com.allegro.webapi.DoFinishItemsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetArchiveRefundsListResponse doGetArchiveRefundsList(com.allegro.webapi.DoGetArchiveRefundsListRequest parameters) throws java.rmi.RemoteException;
@@ -35,7 +34,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoGetFilledPostBuyFormsResponse doGetFilledPostBuyForms(com.allegro.webapi.DoGetFilledPostBuyFormsRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetFreeDeliveryAmountResponse doGetFreeDeliveryAmount(com.allegro.webapi.DoGetFreeDeliveryAmountRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetItemFieldsResponse doGetItemFields(com.allegro.webapi.DoGetItemFieldsRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoGetItemTemplatesResponse doGetItemTemplates(com.allegro.webapi.DoGetItemTemplatesRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetItemsImagesResponse doGetItemsImages(com.allegro.webapi.DoGetItemsImagesRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetItemsInfoResponse doGetItemsInfo(com.allegro.webapi.DoGetItemsInfoRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoGetItemsListResponse doGetItemsList(com.allegro.webapi.DoGetItemsListRequest parameters) throws java.rmi.RemoteException;
@@ -94,7 +92,6 @@ public interface ServicePort_PortType extends java.rmi.Remote {
     public com.allegro.webapi.DoQueryAllSysStatusResponse doQueryAllSysStatus(com.allegro.webapi.DoQueryAllSysStatusRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoQuerySysStatusResponse doQuerySysStatus(com.allegro.webapi.DoQuerySysStatusRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoRemoveFromBlackListResponse doRemoveFromBlackList(com.allegro.webapi.DoRemoveFromBlackListRequest parameters) throws java.rmi.RemoteException;
-    public com.allegro.webapi.DoRemoveItemTemplatesResponse doRemoveItemTemplates(com.allegro.webapi.DoRemoveItemTemplatesRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoRequestCancelBidResponse doRequestCancelBid(com.allegro.webapi.DoRequestCancelBidRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoRequestPayoutResponse doRequestPayout(com.allegro.webapi.DoRequestPayoutRequest parameters) throws java.rmi.RemoteException;
     public com.allegro.webapi.DoRequestSurchargeResponse doRequestSurcharge(com.allegro.webapi.DoRequestSurchargeRequest parameters) throws java.rmi.RemoteException;
