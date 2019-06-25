@@ -10,6 +10,8 @@ package com.allegro.webapi;
 public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable {
     private int postBuyFormOperatorId;
 
+    private java.lang.String postBuyFormOperatorName;
+
     private java.lang.String postBuyFormPackageId;
 
     private java.lang.String postBuyFormPackageStatus;
@@ -19,9 +21,11 @@ public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable 
 
     public PostBuyFormShipmentTrackingStruct(
            int postBuyFormOperatorId,
+           java.lang.String postBuyFormOperatorName,
            java.lang.String postBuyFormPackageId,
            java.lang.String postBuyFormPackageStatus) {
            this.postBuyFormOperatorId = postBuyFormOperatorId;
+           this.postBuyFormOperatorName = postBuyFormOperatorName;
            this.postBuyFormPackageId = postBuyFormPackageId;
            this.postBuyFormPackageStatus = postBuyFormPackageStatus;
     }
@@ -44,6 +48,26 @@ public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable 
      */
     public void setPostBuyFormOperatorId(int postBuyFormOperatorId) {
         this.postBuyFormOperatorId = postBuyFormOperatorId;
+    }
+
+
+    /**
+     * Gets the postBuyFormOperatorName value for this PostBuyFormShipmentTrackingStruct.
+     * 
+     * @return postBuyFormOperatorName
+     */
+    public java.lang.String getPostBuyFormOperatorName() {
+        return postBuyFormOperatorName;
+    }
+
+
+    /**
+     * Sets the postBuyFormOperatorName value for this PostBuyFormShipmentTrackingStruct.
+     * 
+     * @param postBuyFormOperatorName
+     */
+    public void setPostBuyFormOperatorName(java.lang.String postBuyFormOperatorName) {
+        this.postBuyFormOperatorName = postBuyFormOperatorName;
     }
 
 
@@ -99,6 +123,9 @@ public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable 
         boolean _equals;
         _equals = true && 
             this.postBuyFormOperatorId == other.getPostBuyFormOperatorId() &&
+            ((this.postBuyFormOperatorName==null && other.getPostBuyFormOperatorName()==null) || 
+             (this.postBuyFormOperatorName!=null &&
+              this.postBuyFormOperatorName.equals(other.getPostBuyFormOperatorName()))) &&
             ((this.postBuyFormPackageId==null && other.getPostBuyFormPackageId()==null) || 
              (this.postBuyFormPackageId!=null &&
               this.postBuyFormPackageId.equals(other.getPostBuyFormPackageId()))) &&
@@ -117,6 +144,9 @@ public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable 
         __hashCodeCalc = true;
         int _hashCode = 1;
         _hashCode += getPostBuyFormOperatorId();
+        if (getPostBuyFormOperatorName() != null) {
+            _hashCode += getPostBuyFormOperatorName().hashCode();
+        }
         if (getPostBuyFormPackageId() != null) {
             _hashCode += getPostBuyFormPackageId().hashCode();
         }
@@ -137,6 +167,12 @@ public class PostBuyFormShipmentTrackingStruct  implements java.io.Serializable 
         elemField.setFieldName("postBuyFormOperatorId");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormOperatorId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postBuyFormOperatorName");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormOperatorName"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
         elemField = new org.apache.axis.description.ElementDesc();

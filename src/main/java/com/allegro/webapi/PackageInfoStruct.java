@@ -12,14 +12,18 @@ public class PackageInfoStruct  implements java.io.Serializable {
 
     private java.lang.String packageId;
 
+    private java.lang.String operatorName;
+
     public PackageInfoStruct() {
     }
 
     public PackageInfoStruct(
            int operatorId,
-           java.lang.String packageId) {
+           java.lang.String packageId,
+           java.lang.String operatorName) {
            this.operatorId = operatorId;
            this.packageId = packageId;
+           this.operatorName = operatorName;
     }
 
 
@@ -62,6 +66,26 @@ public class PackageInfoStruct  implements java.io.Serializable {
         this.packageId = packageId;
     }
 
+
+    /**
+     * Gets the operatorName value for this PackageInfoStruct.
+     * 
+     * @return operatorName
+     */
+    public java.lang.String getOperatorName() {
+        return operatorName;
+    }
+
+
+    /**
+     * Sets the operatorName value for this PackageInfoStruct.
+     * 
+     * @param operatorName
+     */
+    public void setOperatorName(java.lang.String operatorName) {
+        this.operatorName = operatorName;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof PackageInfoStruct)) return false;
@@ -77,7 +101,10 @@ public class PackageInfoStruct  implements java.io.Serializable {
             this.operatorId == other.getOperatorId() &&
             ((this.packageId==null && other.getPackageId()==null) || 
              (this.packageId!=null &&
-              this.packageId.equals(other.getPackageId())));
+              this.packageId.equals(other.getPackageId()))) &&
+            ((this.operatorName==null && other.getOperatorName()==null) || 
+             (this.operatorName!=null &&
+              this.operatorName.equals(other.getOperatorName())));
         __equalsCalc = null;
         return _equals;
     }
@@ -92,6 +119,9 @@ public class PackageInfoStruct  implements java.io.Serializable {
         _hashCode += getOperatorId();
         if (getPackageId() != null) {
             _hashCode += getPackageId().hashCode();
+        }
+        if (getOperatorName() != null) {
+            _hashCode += getOperatorName().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -113,6 +143,13 @@ public class PackageInfoStruct  implements java.io.Serializable {
         elemField.setFieldName("packageId");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "packageId"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("operatorName");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "operatorName"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

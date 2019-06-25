@@ -28,6 +28,8 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
 
     private int postBuyFormAdrType;
 
+    private java.lang.String postBuyFormAdrId;
+
     public PostBuyFormAddressStruct() {
     }
 
@@ -41,7 +43,8 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
            java.lang.String postBuyFormAdrPhone,
            java.lang.String postBuyFormAdrNip,
            java.lang.String postBuyFormCreatedDate,
-           int postBuyFormAdrType) {
+           int postBuyFormAdrType,
+           java.lang.String postBuyFormAdrId) {
            this.postBuyFormAdrCountry = postBuyFormAdrCountry;
            this.postBuyFormAdrStreet = postBuyFormAdrStreet;
            this.postBuyFormAdrPostcode = postBuyFormAdrPostcode;
@@ -52,6 +55,7 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
            this.postBuyFormAdrNip = postBuyFormAdrNip;
            this.postBuyFormCreatedDate = postBuyFormCreatedDate;
            this.postBuyFormAdrType = postBuyFormAdrType;
+           this.postBuyFormAdrId = postBuyFormAdrId;
     }
 
 
@@ -254,6 +258,26 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
         this.postBuyFormAdrType = postBuyFormAdrType;
     }
 
+
+    /**
+     * Gets the postBuyFormAdrId value for this PostBuyFormAddressStruct.
+     * 
+     * @return postBuyFormAdrId
+     */
+    public java.lang.String getPostBuyFormAdrId() {
+        return postBuyFormAdrId;
+    }
+
+
+    /**
+     * Sets the postBuyFormAdrId value for this PostBuyFormAddressStruct.
+     * 
+     * @param postBuyFormAdrId
+     */
+    public void setPostBuyFormAdrId(java.lang.String postBuyFormAdrId) {
+        this.postBuyFormAdrId = postBuyFormAdrId;
+    }
+
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof PostBuyFormAddressStruct)) return false;
@@ -291,7 +315,10 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
             ((this.postBuyFormCreatedDate==null && other.getPostBuyFormCreatedDate()==null) || 
              (this.postBuyFormCreatedDate!=null &&
               this.postBuyFormCreatedDate.equals(other.getPostBuyFormCreatedDate()))) &&
-            this.postBuyFormAdrType == other.getPostBuyFormAdrType();
+            this.postBuyFormAdrType == other.getPostBuyFormAdrType() &&
+            ((this.postBuyFormAdrId==null && other.getPostBuyFormAdrId()==null) || 
+             (this.postBuyFormAdrId!=null &&
+              this.postBuyFormAdrId.equals(other.getPostBuyFormAdrId())));
         __equalsCalc = null;
         return _equals;
     }
@@ -329,6 +356,9 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
             _hashCode += getPostBuyFormCreatedDate().hashCode();
         }
         _hashCode += getPostBuyFormAdrType();
+        if (getPostBuyFormAdrId() != null) {
+            _hashCode += getPostBuyFormAdrId().hashCode();
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
@@ -397,6 +427,13 @@ public class PostBuyFormAddressStruct  implements java.io.Serializable {
         elemField.setFieldName("postBuyFormAdrType");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormAdrType"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+        elemField.setNillable(false);
+        typeDesc.addFieldDesc(elemField);
+        elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("postBuyFormAdrId");
+        elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "postBuyFormAdrId"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
     }

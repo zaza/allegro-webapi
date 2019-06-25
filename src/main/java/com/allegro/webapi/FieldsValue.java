@@ -18,7 +18,7 @@ public class FieldsValue  implements java.io.Serializable {
 
     private byte[] fvalueImage;
 
-    private java.lang.Float fvalueDatetime;
+    private java.lang.Long fvalueDatetime;
 
     private java.lang.String fvalueDate;
 
@@ -37,7 +37,7 @@ public class FieldsValue  implements java.io.Serializable {
            java.lang.Integer fvalueInt,
            java.lang.Float fvalueFloat,
            byte[] fvalueImage,
-           java.lang.Float fvalueDatetime,
+           java.lang.Long fvalueDatetime,
            java.lang.String fvalueDate,
            com.allegro.webapi.RangeIntValueStruct fvalueRangeInt,
            com.allegro.webapi.RangeFloatValueStruct fvalueRangeFloat,
@@ -160,7 +160,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @return fvalueDatetime
      */
-    public java.lang.Float getFvalueDatetime() {
+    public java.lang.Long getFvalueDatetime() {
         return fvalueDatetime;
     }
 
@@ -170,7 +170,7 @@ public class FieldsValue  implements java.io.Serializable {
      * 
      * @param fvalueDatetime
      */
-    public void setFvalueDatetime(java.lang.Float fvalueDatetime) {
+    public void setFvalueDatetime(java.lang.Long fvalueDatetime) {
         this.fvalueDatetime = fvalueDatetime;
     }
 
@@ -388,7 +388,7 @@ public class FieldsValue  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("fvalueDatetime");
         elemField.setXmlName(new javax.xml.namespace.QName("https://webapi.allegro.pl/service.php", "fvalueDatetime"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "float"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "long"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);
